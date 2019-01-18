@@ -12,10 +12,11 @@ li {
 
 li a { 
     display: block;
+    text-align: center;
+    padding: 15px 50px;
     text-decoration:none; 
 }
 
-a.nav {
-    text-align: center;
-    padding: 15px 50px;
+a.home {
+    padding-left: 5px;
 }
