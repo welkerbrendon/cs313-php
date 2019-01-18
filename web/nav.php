@@ -1,7 +1,7 @@
 <?php
 echo "<ul>
-<li><a href="">Home</a></li>
-<li><a href="">About Me</a></li>
-<li><a href="">Assignments</a></li>
+<li><a href="homepage.php">Home</a></li>
+<li><a href="homepage.php">About Me</a></li>
+<li><a href="homepage.php">Assignments</a></li>
 </ul>";
 ?>
