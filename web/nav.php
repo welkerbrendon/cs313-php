@@ -1,3 +1,6 @@
 <?php
-echo "<ul><li>Home</li><li>About Me</li><li>Assignments</li>";
+echo "<ul>
+<li><a href="">Home</a></li>
+<li><a href="">About Me</a></li>
+<li><a href="">Assignments</a></li>";
 ?>
