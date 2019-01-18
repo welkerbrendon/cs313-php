@@ -1,5 +1,7 @@
 <?php
-echo "<a class='logo' href='homepage.php'><img src=BMW-Emblem.jpg></a>
+echo "<div>
+<a class='logo' href='homepage.php'><img src=BMW-Emblem.jpg></a>
+</div>
 <ul>
 <li><a href=''>Assignments</a></li>
 <li><a href=''>About Me</a></li>
