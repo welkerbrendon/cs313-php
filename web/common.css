@@ -22,4 +22,5 @@ img {
     height: 50px;
     float: left;
     position: absolute;
+    padding-left: 30px;
 }
