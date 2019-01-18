@@ -7,7 +7,7 @@ ul {
 }
 
 li {
-    float: left;
+    float: right;
 }
 
 li a { 
@@ -15,8 +15,4 @@ li a {
     text-align: center;
     padding: 15px 50px;
     text-decoration:none; 
-}
-
-a.home {
-    padding-left: 5px;
 }
