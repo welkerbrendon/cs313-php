@@ -1,4 +1,4 @@
-img {
+img.navbar {
     width: 62px;
     height: 62px;
     float: left;
@@ -68,4 +68,8 @@ img {
 
 #second-dropdwn:hover #second-content {
   display:block;
+}
+
+img.banner {
+    width: 100%;
 }

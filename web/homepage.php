@@ -6,5 +6,6 @@
     </head>
     <body>
         <?php include 'nav.php';?>
+        <img class="banner" src="weddingpic.jpg">
     </body>
 </html>
