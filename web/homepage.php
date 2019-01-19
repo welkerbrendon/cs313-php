@@ -7,5 +7,6 @@
     <body>
         <?php include 'nav.php';?>
         <img class="banner" src="weddingpic.jpg">
+        <h1>Get ready to get to know the great Brendon Welker!</h1>
     </body>
 </html>
