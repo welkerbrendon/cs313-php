@@ -18,10 +18,10 @@
             <img src="me on car.jpg">
         </div>
         <div class="right">
-            Get to know the man behind the curtain by:</br>
-            <a href:"">Get to know his testimony</a></br>
-            <a href:"">Get to know his better half</a></br>
-            <a href:"">Get to know his hobbies</a>
+            Get to know the man behind the curtain by:</br></br>
+            <a href:"#">Get to know his testimony</a></br></br>
+            <a href:"#">Get to know his better half</a></br></br>
+            <a href:"#">Get to know his hobbies</a>
         </div>
     </body>
 </html>
