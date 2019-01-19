@@ -13,10 +13,10 @@ img {
   
   .navbar a {
     float: right;
-    font-size: 16px;
+    font-size: 130%;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px 30px;
     text-decoration: none;
   }
   
@@ -29,7 +29,7 @@ img {
     font-size: 16px;  
     border: none;
     outline: none;
-    padding: 14px 16px;
+    padding: 15px 30px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -51,7 +51,7 @@ img {
   .dropdown-content a {
     float: none;
     color: black;
-    padding: 12px 16px;
+    padding: 15px 30px;
     text-decoration: none;
     display: block;
     text-align: left;
