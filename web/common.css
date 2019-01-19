@@ -81,5 +81,7 @@ h1 {
 }
 
 p {
-    font-size: 120%;
+    font-size: 200%;
+    padding-left: 20px;
+    padding-right: 50%;
 }
