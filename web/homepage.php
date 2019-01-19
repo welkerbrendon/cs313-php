@@ -14,10 +14,10 @@
             know the man, the myth, the legend. Then see his skills in
             action through his class assignments which can be accessed here.
         </p>
-        <table border="1">
+        <table border="1" align="center">
             <tr>
                 <td align="center"><img src="me on car.jpg"></td>
-                <td slign="center"><p>
+                <td align="center"><p>
                     Take time to get to know the man behind the curtain by learning about his:
                 </p>
                 <a href="">Testimony</a></br>
