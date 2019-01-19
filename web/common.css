@@ -89,13 +89,10 @@ p.intro {
     padding-right: 50%;
 }
 
-table {
-    border: 1;
-    border-color: black;
-    border-width: 5px;
-    text-align: center;
-}
-
 a {
     font-size: 150%;
+}
+
+td {
+    width: 50%;
 }
