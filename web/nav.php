@@ -5,6 +5,7 @@ echo "
 <li><a href='' class='dropdown'>Assignments</button></li>
 <div class='dropdown-links'>
 <a href=''>assignment1</a>
+</div>
 <li><a href='' class='dropdown'>About Me</button></li>
 <div class='dropdown-links'>
 <a href=''>Wife</a>
