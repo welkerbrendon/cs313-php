@@ -93,6 +93,7 @@ div.left {
 }
 
 div.right {
+    font-size: 150%;
     padding-left: 55%;
     position: absolute;
 }
