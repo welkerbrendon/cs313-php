@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>Brendon Welker: Homepage</title>
-        <link rel="stylesheet" href="common.css">
+        <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="navbar.css">
     </head>
     <body>
         <?php include 'nav.php';?>

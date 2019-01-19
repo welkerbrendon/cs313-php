@@ -2,10 +2,10 @@
 <html>
     <head>
         <title>Brendon Welker: Assignment1</title>
-        <link rel="stylesheet" href="../home/common.css">
+        <link rel="stylesheet" href="../home/navbar.css">
     </head>
     <body>
         <?php include '../home/nav.php';?>
-        <h1>COMMING SOON!</h1>
+        <h1>COMING SOON!</h1>
     </body>
 </html>
