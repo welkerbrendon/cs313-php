@@ -9,12 +9,13 @@ ul {
 
 li {
     float: right;
+    font-size: 110%;
 }
 
 li a { 
     display: block;
     text-align: center;
-    padding: 15px 60px;
+    padding: 20px 60px;
     text-decoration:none; 
 }
 
