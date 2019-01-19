@@ -26,3 +26,11 @@ img {
     position: absolute;
     padding-left: 30px;
 }
+
+.dropdown-links {
+    display: none;
+}
+
+.dropdown:hover .dropdown-links{
+    display: block;
+}
