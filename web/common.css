@@ -27,10 +27,10 @@ img {
     padding-left: 30px;
 }
 
-.dropdown-links {
+.choices {
     display: none;
 }
 
-.dropdown:hover .dropdown-links{
+.dropdown:hover .choices{
     display: block;
 }
