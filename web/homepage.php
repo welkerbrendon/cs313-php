@@ -25,10 +25,13 @@
                 <a href="">Hobbies</a>
             </tr>
             <tr>
-                <td><img src="stc.jpg"></td>
-                <td><p>
+            <td>
+                <p>
                     Now see the great work he does:
-                </p></td>
+                </p>
+                <a href="">Assignment1</a></br>
+            </td>
+                <td><img src="stc.jpg"></td>
             </tr>
         </table>
     </body>

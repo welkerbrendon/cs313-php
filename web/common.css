@@ -91,12 +91,9 @@ p.intro {
 
 table {
     border: 1;
+    border-color: black;
     border-width: 5px;
-}
-
-td {
-    width: 50%;
-    align-content: center;
+    text-align: center;
 }
 
 a {
