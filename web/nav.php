@@ -7,7 +7,7 @@ echo "
       <i class='fa fa-caret-down'></i>
     </button>
     <div class='dropdown-content' id='first-content'>
-      <a href='#'>Assignment1</a>
+      <a href='assignments/assignment1.php'>Assignment1</a>
     </div>
   </div> 
   <div class='dropdown' id='second-dropdwn'>
@@ -15,11 +15,11 @@ echo "
       <i class='fa fa-caret-down'></i>
     </button>
     <div class='dropdown-content' id='second-content'>
-      <a href='#'>Testimony</a>
-      <a href='#'>Wife</a>
-      <a href='#'>Hobbies</a>
+      <a href='aboutme/testimony.php'>Testimony</a>
+      <a href='aboutme/wife.php'>Wife</a>
+      <a href='aboutme/hobbies.php'>Hobbies</a>
     </div>
   </div> 
-  <a href='#home'>Home</a>
+  <a href='homepage.php'>Home</a>
 </div>";
 ?>
