@@ -14,5 +14,14 @@
             know the man, the myth, the legend. Then see his skills in
             action through his class assignments which can be accessed here.
         </p>
+        <div class="left">
+            <img src="me on car.jpg">
+        </div>
+        <div class="right">
+            <p>Get to know the man behind the curtain by:</br>
+            <a href:"">Get to know his testimony</a></br>
+            <a href:"">Get to know his better half</a></br>
+            <a href:"">Get to know his hobbies</a></p>
+        </div>
     </body>
 </html>
