@@ -83,3 +83,11 @@ h1 {
 table {
     border: 1;
 }
+
+td {
+    width: 50%;
+}
+
+p {
+    font-size: 120%;
+}
