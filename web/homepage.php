@@ -19,9 +19,9 @@
         </div>
         <div class="right">
             Get to know the man behind the curtain by:</br></br>
-            <a href:"#">Get to know his testimony</a></br></br>
-            <a href:"#">Get to know his better half</a></br></br>
-            <a href:"#">Get to know his hobbies</a>
+            <a href:"homepage.php">Get to know his testimony</a></br></br>
+            <a href:"homepage.php">Get to know his better half</a></br></br>
+            <a href:"homepage.php">Get to know his hobbies</a>
         </div>
     </body>
 </html>
