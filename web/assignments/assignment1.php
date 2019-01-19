@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Brendon Welker: Assignment1</title>
-        <link rel="stylesheet" href="common.css">
+        <link rel="stylesheet" href="../home/common.css">
     </head>
     <body>
         <?php include '../home/nav.php';?>
