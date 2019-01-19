@@ -20,16 +20,16 @@
                 <td align="center"><p>
                     Take time to get to know the man behind the curtain by learning about his:
                 </p>
-                <a href="aboutme/testimony.php">Testimony</a></br>
-                <a href="aboutme/wife.php">Better Half</a></br>
-                <a href="aboutme/hobbies.php">Hobbies</a>
+                <a href="../aboutme/testimony.php">Testimony</a></br>
+                <a href="../aboutme/wife.php">Better Half</a></br>
+                <a href="../aboutme/hobbies.php">Hobbies</a>
             </tr>
             <tr>
                 <td align="center">
                     <p>
                     Now see the great work he does:
                     </p>
-                    <a href="assignments/assignment1.php">Assignment1</a></br>
+                    <a href="../assignments/assignment1.php">Assignment1</a></br>
                 </td>
                 <td align="center"><img src="../pictures/stc.jpg"></td>
             </tr>
