@@ -1,6 +1,6 @@
 img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     float: left;
     position: absolute;
     padding-left: 30px;
@@ -16,7 +16,7 @@ img {
   font-size: 120%;
   color: black;
   text-align: center;
-  padding: 22px 30px;
+  padding: 20px 30px;
   text-decoration: none;
 }
 
@@ -29,7 +29,7 @@ img {
   font-size: 16px;  
   border: none;
   outline: none;
-  padding: 22px 30px;
+  padding: 20px 30px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
