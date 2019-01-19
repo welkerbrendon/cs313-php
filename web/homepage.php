@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php include 'nav.php';?>
-        <img class="banner" src="weddingpic.jpg">
+        <img class="banner" src="pirctures/weddingpic.jpg">
         <h1>Get ready to get to know the great Brendon Welker!</h1>
         <p class="intro">This website is dedicated to the brilliant Brendon Welker.
             It will give information as to who he is and it will
@@ -16,7 +16,7 @@
         </p>
         <table border="1" align="center">
             <tr>
-                <td align="center"><img src="me on car.jpg"></td>
+                <td align="center"><img src="pirctures/me on car.jpg"></td>
                 <td align="center"><p>
                     Take time to get to know the man behind the curtain by learning about his:
                 </p>
@@ -31,7 +31,7 @@
                     </p>
                     <a href="">Assignment1</a></br>
                 </td>
-                <td align="center"><img src="stc.jpg"></td>
+                <td align="center"><img src="pictures/stc.jpg"></td>
             </tr>
         </table>
     </body>
