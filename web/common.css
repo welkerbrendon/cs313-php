@@ -80,14 +80,25 @@ h1 {
     font-weight: bolder;
 }
 
+p {
+    font-size: 150%;
+}
+
+p.intro {
+    padding-left: 5%;
+    padding-right: 50%;
+}
+
 table {
     border: 1;
+    border-width: 5px;
 }
 
 td {
     width: 50%;
+    align-content: center;
 }
 
-p {
-    font-size: 120%;
+a {
+    font-size: 150%;
 }
