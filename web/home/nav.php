@@ -1,6 +1,6 @@
 <?php
 echo "
-<a class='logo' href='homepage.php'><img class='navbar' src=pictures/BMW-Emblem.jpg></a>
+<a class='logo' href='homepage.php'><img class='navbar' src=../pictures/BMW-Emblem.jpg></a>
 <div class='navbar'>
   <div class='dropdown' id='first-dropdwn'>
     <button class='dropbtn'>Assignments 

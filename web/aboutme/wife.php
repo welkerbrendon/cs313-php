@@ -2,8 +2,9 @@
 <html>
     <head>
         <title>Brendon Welker: Better Half</title>
+        <link rel="stylesheet" href="common.css">
     </head>
     <body>
-        <?php include 'nav.php';?>
+        <?php include '../home/nav.php';?>
     </body>
 </html>
