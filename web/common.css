@@ -80,25 +80,6 @@ h1 {
     font-weight: bolder;
 }
 
-p {
-    font-size: 150%;
-    padding-left: 5%;
-    padding-right: 50%;
-}
-
-div.left {
-    padding-left: 5%;
-    padding-right: 55%;
-    position: absolute;
-}
-
-div.right {
-    font-size: 150%;
-    padding-left: 55%;
-    position: absolute;
-}
-
-div.right a {
-    color: #0645AD;
-    text-decoration: underline;
+table {
+    border: 1;
 }
