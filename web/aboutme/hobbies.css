@@ -4,6 +4,7 @@ img.banner {
 
 .side-by-side{
     display: flex;
+    width: 100%;
 }
 
 #stang {
