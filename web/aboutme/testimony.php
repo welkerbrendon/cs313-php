@@ -3,6 +3,7 @@
     <head>
         <title>Brendon Welker: Testimony</title>
         <link rel="stylesheet" href="../home/navbar.css">
+        <link rel="stylesheet" href="testimony.css">
     </head>
     <body>
         <?php include '../home/nav.php';?>
