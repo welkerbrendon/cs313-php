@@ -26,7 +26,7 @@
         services and more importantly, I never forgot the feelings I had when I lived
         those teachings.</p>
         <h3>The Book of Mormon</h3>
-        <section class="side-by-side">
+        <div class="side-by-side">
             <div class="left">
                 <img src="../pictures/BOM.jpg">
             </div>
@@ -43,7 +43,7 @@
             Jesus Christ and prayed to know if it was true and if what it contained was fact
             or fiction. I felt without a doubt it was true.</p>
             </div>
-        </section>
+        </div>
         <h3>The Great California Ventura Mission</h3>
         <p>After I felt it was all true I felt the need to share that with as many as
         I could. So I served a 2 year mission for The Church of Jesus Christ of Latter-day
