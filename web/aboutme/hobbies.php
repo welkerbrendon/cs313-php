@@ -7,7 +7,9 @@
     </head>
     <body>
         <?php include '../home/nav.php';?>
-        <img class="banner" src="../pictures/vikings.jpg">
-        <img class="banner" id="stang" src="../pictures/mustang.jpg">
+        <div class="side-by-side">
+            <img class="banner" id="vikings" src="../pictures/vikings.jpg">
+            <img class="banner" id="stang" src="../pictures/mustang.jpg">
+        </div>
     </body>
 </html>

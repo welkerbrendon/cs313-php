@@ -1,7 +1,15 @@
 img.banner {
-    width: 100%;
+    height: 250px;
 }
 
-#stang{
-    height: 200px;
+.side-by-side{
+    display: flex;
+}
+
+#stang {
+    flex:50%;
+}
+
+#vikings {
+    flex:50%;
 }
