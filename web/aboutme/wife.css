@@ -7,3 +7,7 @@ img.resize {
     width: 300px;
     height: 300px;
 }
+
+p {
+    padding-right: 25%;
+}
