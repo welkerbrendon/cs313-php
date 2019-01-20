@@ -1,11 +1,11 @@
 .left {
-    float: left;
+    flex: 50%;
 }
 
 .right {
-    float: right;
+    flex: 50%;
 }
 
 .side-by-side {
-    display: table;
+    display: flex;
 }
