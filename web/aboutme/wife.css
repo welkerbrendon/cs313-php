@@ -2,3 +2,16 @@ img.banner {
     width: 100%;
     height: 250px;
 }
+
+.left {
+    flex: 50%;
+}
+
+.right {
+    flex: 50%;
+    justify-content: center;
+}
+
+.side-by-side {
+    display: flex;
+}
