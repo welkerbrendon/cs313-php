@@ -1,9 +1,9 @@
 .left {
-    flex: 20%;
+    flex: 15%;
 }
 
 .right {
-    flex: 80%;
+    flex: 85%;
 }
 
 .side-by-side {
@@ -13,4 +13,8 @@
 h3 {
     text-decoration: underline;
     font-weight: bold;
+}
+
+h1 {
+    text-align: center;
 }
