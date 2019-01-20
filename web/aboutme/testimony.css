@@ -1,9 +1,9 @@
 .left {
-    flex: 50%;
+    flex: 20%;
 }
 
 .right {
-    flex: 50%;
+    flex: 80%;
 }
 
 .side-by-side {
