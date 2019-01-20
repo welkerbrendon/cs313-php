@@ -9,3 +9,8 @@
 .side-by-side {
     display: flex;
 }
+
+h3 {
+    text-decoration: underline;
+    font-weight: bold;
+}
