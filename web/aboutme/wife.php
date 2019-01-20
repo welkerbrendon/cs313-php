@@ -8,7 +8,7 @@
     <body>
         <?php include '../home/nav.php';?>
         <img class="banner" src="../pictures/Ashley-Wedding.jpg">
-        <h1>Ashley Nicol Welker</h1>
+        <h1>Ashley Nicole Welker</h1>
         <p>I met my wife in Rexburg, Idaho. We lived in the same apartment
         complex and attended the same congregation for our first 3 years
         at Brigham Young University.</p>

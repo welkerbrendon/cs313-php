@@ -7,10 +7,13 @@ img.banner {
     flex: 50%;
 }
 
-.right {
-    flex: 50%;
+img.right {
     width: 100px;
     height: 100px;
+}
+
+.right {
+    flex: 50%;
 }
 
 .side-by-side {
