@@ -8,9 +8,11 @@ img.banner {
 }
 
 #stang {
-    flex:50%;
+    flex: 50%;
+    width: 50%;
 }
 
 #vikings {
-    flex:50%;
+    flex: 50%;
+    width: 50%;
 }
