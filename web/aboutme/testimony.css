@@ -1,10 +1,7 @@
-.side-by-side {
-    display: flex;
-    flex-flow: row wrap;
+.left {
+    float: left;
 }
 
-.left .right {
-    width: 48%;
-    flex: 1 0 15em;
-    margin: .5em;
+.right {
+    float: right;
 }
