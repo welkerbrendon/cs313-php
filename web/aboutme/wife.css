@@ -3,19 +3,7 @@ img.banner {
     height: 250px;
 }
 
-.left {
-    flex: 50%;
-}
-
-img.right {
+img.resize {
     width: 100px;
     height: 100px;
-}
-
-.right {
-    flex: 50%;
-}
-
-.side-by-side {
-    display: flex;
 }

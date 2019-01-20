@@ -26,18 +26,12 @@
            I decided I wanted to date her again. I still sometimes cannot believe she
            took me back.
         </p>
-        <div class="side-to-side">
-            <div class="left">
-                <p>After about another year of dating I took her to California to visit my
-                    mission and introduce her to the wonderful people I met there. What she
-                    did not realize, I was planning to propose to her in California. Gratefully
-                    she said yes, and we were married 4 months later.
-                </p>
-            </div>
-            <div class="right">
-                <img src="../pictures/proposal.jpg">
-            </div>
-        </div>
+        <p>After about another year of dating I took her to California to visit my
+            mission and introduce her to the wonderful people I met there. What she
+            did not realize, I was planning to propose to her in California. Gratefully
+            she said yes, and we were married 4 months later.
+        </p>
+        <img class="resize" src="../pictures/proposal.jpg">
         <p>Ashley is the love of my life. She is everything I could ever ask for.
             I count myself lucky every day to call her my wife. In a word she is
             awsome!
