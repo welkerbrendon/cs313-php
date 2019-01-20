@@ -1,7 +1,8 @@
-.left {
-    float: left;
+.side-by-side {
+    display: flex;
+    flex-flow: row wrap;
 }
 
-.right {
-    float: right;
+.left .right {
+    width: 48%;
 }

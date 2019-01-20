@@ -25,22 +25,24 @@
         services and more importantly, I never forgot the feelings I had when I lived
         those teachings.</p>
         <h3>The Book of Mormon</h3>
-        <div class="left">
-            <img src="../pictures/BOM.jpg">
-        </div>
-        <div class="right">
-        <p>Eventually, in my later teenage years, I started attending The Church of
-        Jesus Christ of Latter-day Saints again. This lead to some of those feelings
-        I had when I was younger returning. I noticed there was a joy which I had
-        been missing when I was not living the things taught through the modern
-        prophets. Because of this I decided to find for myself if it was simply something
-        good or if it was actually all what it claimed to be. I decided to know once and
-        for all if The Church of Jesus Christ of Latter-day Saints was really the only
-        true and living church on the face of the Earth and the only one authorized by
-        God to act in the His name. So I read The Book of Mormon: Another Testament of
-        Jesus Christ and prayed to know if it was true and if what it contained was fact
-        or fiction. I felt without a doubt it was true.</p>
-        </div>
+        <section class="side-by-side">
+            <div class="left">
+                <img src="../pictures/BOM.jpg">
+            </div>
+            <div class="right">
+            <p>Eventually, in my later teenage years, I started attending The Church of
+            Jesus Christ of Latter-day Saints again. This lead to some of those feelings
+            I had when I was younger returning. I noticed there was a joy which I had
+            been missing when I was not living the things taught through the modern
+            prophets. Because of this I decided to find for myself if it was simply something
+            good or if it was actually all what it claimed to be. I decided to know once and
+            for all if The Church of Jesus Christ of Latter-day Saints was really the only
+            true and living church on the face of the Earth and the only one authorized by
+            God to act in the His name. So I read The Book of Mormon: Another Testament of
+            Jesus Christ and prayed to know if it was true and if what it contained was fact
+            or fiction. I felt without a doubt it was true.</p>
+            </div>
+        </section>
         <h3>The Great California Ventura Mission</h3>
         <p>After I felt it was all true I felt the need to share that with as many as
         I could. So I served a 2 year mission for The Church of Jesus Christ of Latter-day
