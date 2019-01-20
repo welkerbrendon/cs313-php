@@ -69,3 +69,8 @@ img.navbar {
 #second-dropdwn:hover #second-content {
   display:block;
 }
+
+img.banner {
+    width: 100%;
+    height: 250px;
+}

@@ -6,5 +6,6 @@
     </head>
     <body>
         <?php include '../home/nav.php';?>
+        <img class="banner" src="picture/ventura.jpg">
     </body>
 </html>
