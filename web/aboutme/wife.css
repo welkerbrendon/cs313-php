@@ -9,7 +9,8 @@ img.banner {
 
 .right {
     flex: 50%;
-    justify-content: center;
+    width: 100px;
+    height: 100px;
 }
 
 .side-by-side {
