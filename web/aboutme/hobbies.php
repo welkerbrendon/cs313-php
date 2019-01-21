@@ -12,7 +12,7 @@
             <img class="banner" id="right" src="../pictures/mustang.jpg">
         </div>
         <h1 align="center">These are the hobbies of the great Brendon Welker!</h1>
-        <table border="1" align="center">
+        <table align="center">
             <tr>
                 <th colspan="2"><h2>Minnesota Vikings</h2></th>
             </tr>
