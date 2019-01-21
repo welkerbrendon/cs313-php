@@ -1,13 +1,9 @@
 img.banner {
     height: 250px;
+    width: 50%;
 }
 
 .side-by-side{
     display: flex;
     width: 100%;
-}
-
-#left, #right {
-    flex: 50%;
-    width: 50%;
 }

@@ -8,8 +8,8 @@
     <body>
         <?php include '../home/nav.php';?>
         <div class="side-by-side">
-            <img class="banner" id="left" src="../pictures/vikings.jpg">
-            <img class="banner" id="right" src="../pictures/mustang.jpg">
+            <img class="banner" src="../pictures/vikings.jpg">
+            <img class="banner" src="../pictures/mustang.jpg">
         </div>
         <h1 align="center">These are the hobbies of the great Brendon Welker!</h1>
         <table align="center">
