@@ -17,7 +17,7 @@
                 <th colspan="2"><h2>Minnesota Vikings</h2></th>
             </tr>
             <tr>
-                <td height="300px" width="300px">
+                <td>
                     <p id="left">I have been a Minnesota Vikings fan all my life.
                         My dad has been a fan all his life. When he was
                         young and first started watching football the
@@ -28,18 +28,18 @@
                         myself mostly durring the Randy Moss era of the Vikings.
                     </p>
                 </td>
-                <td height="300px" width="300px">
-                    <img class="sized" src="../pictures/franTarkenton.jpg" id="right">
+                <td>
+                    <img class="sized" src="../pictures/franTarkenton.jpg" id="right" height="300px" width="300px">
                 </td>
             </tr>
             <tr>
                 <th colspan="2"><h2>BOISE STATE</h2></th>
             </tr>
             <tr>
-                <td height="300px" width="300px">
-                    <img class="sized" src="../pictures/boise-state.jpg" id="left">
+                <td>
+                    <img class="sized" src="../pictures/boise-state.jpg" id="left" height="300px" width="300px">
                 </td>
-                <td height="300px" width="300px">
+                <td>
                     <p id="right">I was born in Idaho so naturally I also became a
                         Boise State football fan. Most of my time watching college
                         football was during the era of Coach Chris Petterson who led
@@ -53,7 +53,7 @@
                 <th colspan="2"><h2>FORD MUSTANG</h2></th>
             </tr>
             <tr>
-                <td height="300px" width="300px">
+                <td>
                     <p id="left">I also love cars, specifically american muscle cars.
                         My favorite of all american muscle cars is the Ford Mustang.
                         I am currently working to restore the one depicted at the top
@@ -65,8 +65,8 @@
                         pinion steering; 4 wheel, power assist disc brakes; a 5 point
                         racing harness; and the Shelby white with blue racing stripes paint job.</p>
                 </td>
-                <td height="300px" width="300px">
-                    <img class="sized" src="../pictures/68mustang.jpg" id="right">
+                <td>
+                    <img class="sized" src="../pictures/68mustang.jpg" id="right" height="300px" width="300px">
                 </td>
             </tr>
         </table>
