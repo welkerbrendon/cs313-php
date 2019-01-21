@@ -29,7 +29,7 @@
                     </p>
                 </td>
                 <td>
-                    <img class="sized" src="../pictures/franTarkenton.jpg" id="right" height="300px" width="500px">
+                    <img class="sized" src="../pictures/franTarkenton.jpg" id="right" height="300px" width="400px">
                 </td>
             </tr>
             <tr>
