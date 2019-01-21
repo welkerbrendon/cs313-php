@@ -21,7 +21,7 @@
         <h3>Childhood</h3>
         <p>I was born into a family who attended The Church of Jesus Christ of
         Latter-day Saints. Because of this I was taken to this church with my family
-        durring my childhood. Even though I stopped going when I started reaching my
+        during my childhood. Even though I stopped going when I started reaching my
         early teenage years, I never forgot the things which I learned going to the
         services and more importantly, I never forgot the feelings I had when I lived
         those teachings.</p>
@@ -39,7 +39,7 @@
             good or if it was actually all what it claimed to be. I decided to know once and
             for all if The Church of Jesus Christ of Latter-day Saints was really the only
             true and living church on the face of the Earth and the only one authorized by
-            God to act in the His name. So I read The Book of Mormon: Another Testament of
+            God to act in His name. So I read The Book of Mormon: Another Testament of
             Jesus Christ and prayed to know if it was true and if what it contained was fact
             or fiction. I felt without a doubt it was true.</p>
             </div>
