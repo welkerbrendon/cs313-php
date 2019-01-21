@@ -12,10 +12,9 @@
             <img class="banner" id="right" src="../pictures/mustang.jpg">
         </div>
         <h1>These are the hobbies of the great Brendon Welker!</h1>
-        <h2>FOOTBALL</h2>
         <table border="1">
             <tr>
-                <th><h3>Minnesota Vikings</h3></th>
+                <th colspan="2"><h2>Minnesota Vikings</h2></th>
             </tr>
             <tr>
                 <td>
@@ -34,7 +33,7 @@
                 </td>
             </tr>
             <tr>
-                <th><h3>BOISE STATE</h3></th>
+                <th colspan="2"><h2>BOISE STATE</h2></th>
             </tr>
             <tr>
                 <td>
@@ -51,7 +50,7 @@
                 </td>
             </tr>
             <tr>
-                <th><h3>FORD MUSTANG</h3></th>
+                <th colspan="2"><h2>FORD MUSTANG</h2></th>
             </tr>
             <tr>
                 <td>
