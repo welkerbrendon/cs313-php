@@ -23,11 +23,11 @@
                 scramble for a very long time and still pass the ball.
                 I was then raised as a fan by my dad but I became a fan
                 myself mostly durring the Randy Moss era of the Vikings.</p>
-            <img class="body" src="../pictures/franTarkenton.jpg" id="right">
+            <img class="sized" src="../pictures/franTarkenton.jpg" id="right">
         </div>
         <h3>BOISE STATE</h3>
         <div>
-            <img class="body" src="../pictures/boise-state.jpg" id="left">
+            <img class="sized" src="../pictures/boise-state.jpg" id="left">
             <p id="right">I was born in Idaho so naturally I also became a
                 Boise State football fan. Most of my time watching college
                 football was during the era of Coach Chris Petterson who led
@@ -48,7 +48,7 @@
                 manual transmission; Ford, 9 inch, positraction rear end; rack and
                 pinion steering; 4 wheel, power assist disc brakes; a 5 point
                 racing harness; and the Shelby white with blue racing stripes paint job.</p>
-            <img class="body" src="../pictures/68mustang.jpg" id="right">
+            <img class="sized" src="../pictures/68mustang.jpg" id="right">
         </div>
     </body>
 </html>
