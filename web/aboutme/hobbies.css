@@ -7,12 +7,7 @@ img.banner {
     width: 100%;
 }
 
-#stang {
-    flex: 50%;
-    width: 50%;
-}
-
-#vikings {
+#left #right {
     flex: 50%;
     width: 50%;
 }
