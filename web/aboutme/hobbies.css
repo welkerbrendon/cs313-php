@@ -11,3 +11,8 @@ img.banner {
     flex: 50%;
     width: 50%;
 }
+
+img.body {
+    height: 100px;
+    width: 100px;
+}
