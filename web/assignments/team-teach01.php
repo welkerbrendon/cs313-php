@@ -4,13 +4,14 @@
         <title>January 22 Team Activity</title>
     </head>
     <body>
+        <?php $radio_majors = array("CS", "WDD", "CIT", "CE")?>
         <form action="team-teach01-result.php" method="post">
             Name: <input type="text" name="name"><br>
             Email: <input type="text" name="email"><br>
-            Major: <input type="radio" name="majors" value="CS">CS 
-            <input type="radio" name="majors" value="WDD">WDD 
-            <input type="radio" name="majors" value="CIT">CIT 
-            <input type="radio" name="majors" value="CE">CE<br>
+            Major: <?php foreach($radio_majors as $value){
+                echo "<input type='radio' name='majors' value=$value>$value ";
+            }?>
+            <br>
             Continents Visted: <br>
             <input type="checkbox" name="NA" value="NA">North  America<br>
             <input type="checkbox" name="SA" value="SA">South America<br>

@@ -8,29 +8,29 @@
             $name_response = 'Name: ' . $_POST['name'];
             $email_response = "Email: " . $_POST["email"];
             $major_response = "Major: " . $_POST["majors"];
-            $cont_response = "Continents Visted: ";
+            $cont_response = "Continents Visted: <br>";
             foreach($_POST as $value) {
                 switch($value) {
                     case "NA":
-                        $cont_response .= "North America ";
+                        $cont_response .= "North America<br>";
                         break;
                     case "SA":
-                        $cont_response .= "South America ";
+                        $cont_response .= "South America<br>";
                         break;
                     case "EU":
-                        $cont_response .= "Europe ";
+                        $cont_response .= "Europe<br>";
                         break;
                     case "AS":
-                        $cont_response .= "Asia ";
+                        $cont_response .= "Asia<br>";
                         break;
                     case "AU":
-                        $cont_response .= "Australia ";
+                        $cont_response .= "Australia<br>";
                         break;
                     case "AF":
-                        $cont_response .= "Africa ";
+                        $cont_response .= "Africa<br>";
                         break;
                     case "AN":
-                        $cont_response .= "Antartica ";
+                        $cont_response .= "Antartica<br>";
                         break;
                     default:
                         break;
