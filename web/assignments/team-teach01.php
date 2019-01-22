@@ -4,7 +4,7 @@
         <title>January 22 Team Activity</title>
     </head>
     <body>
-        <form action="team-teach01-response.php" method="post">
+        <form action="team-teach01-result.php" method="post">
             Name: <input type="text" name="name"><br>
             Email: <input type="text" name="email"><br>
             Major: <input type="radio" name="majors">CS 
