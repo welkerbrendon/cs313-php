@@ -7,10 +7,10 @@
         <form action="team-teach01-result.php" method="post">
             Name: <input type="text" name="name"><br>
             Email: <input type="text" name="email"><br>
-            Major: <input type="radio" name="majors">CS 
-            <input type="radio" name="majors">WDD 
-            <input type="radio" name="majors">CIT 
-            <input type="radio" name="majors">CE<br>
+            Major: <input type="radio" name="majors" value="CS">CS 
+            <input type="radio" name="majors" value="WDD">WDD 
+            <input type="radio" name="majors" value="CIT">CIT 
+            <input type="radio" name="majors" value="CE">CE<br>
             Comments: <textarea name="comments"></textarea><br>
             <input type="submit">
         </form>
