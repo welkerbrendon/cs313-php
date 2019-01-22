@@ -5,8 +5,8 @@
     </head>
     <body>
         <form action="team-teach01-response.php" method="post">
-            Name: <input type="text"><br>
-            Email: <input type="text"><br>
+            Name: <input type="text" name="name"><br>
+            Email: <input type="text" name="email"><br>
             Major: <input type="radio" name="majors">CS 
             <input type="radio" name="majors">WDD 
             <input type="radio" name="majors">CIT 
