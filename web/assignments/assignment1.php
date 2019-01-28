@@ -60,8 +60,8 @@
                     <p>Power Steering</p>
                 </td>
             </tr>
-            <tr colspan="2" class="seperate">
-                <td>$300,000.00  <button value="1969 Mustang Boss 429">Add To Cart</button></td>
+            <tr class="seperate">
+                <td colspan="2">$300,000.00  <button value="1969 Mustang Boss 429">Add To Cart</button></td>
             </tr>
         </table>
     </body>
