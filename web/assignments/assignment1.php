@@ -25,7 +25,7 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$25,000.00  <button value="1964.5 Mustang Convertable">Add To Cart</button></td>
+                <td colspan="2">$25,000.00  <button class="add" value="1964.5 Mustang Convertable">Add To Cart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/shelby350.jpg" class="item"></td>
@@ -37,7 +37,7 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$45,000.00  <button value="1965 Mustang Shelby GT350">Add To Cart</button></td>
+                <td colspan="2">$45,000.00  <button class="add" value="1965 Mustang Shelby GT350">Add To Cart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/shelby500.jpg" class="item"></td>
@@ -49,7 +49,7 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$65,000.00  <button value="1967 Mustang Shelby GT500">Add To Cart</button></td>
+                <td colspan="2">$65,000.00  <button class="add" value="1967 Mustang Shelby GT500">Add To Cart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/boss429.png" ></td>
@@ -61,7 +61,7 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$300,000.00  <button value="1969 Mustang Boss 429">Add To Cart</button></td>
+                <td colspan="2">$300,000.00  <button class="add" value="1969 Mustang Boss 429">Add To Cart</button></td>
             </tr>
         </table>
     </body>
