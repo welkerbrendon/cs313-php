@@ -17,7 +17,7 @@
             </tr>
             <tr>
                 <td><button value="25000">$25,000.00</td>
-                <td><img src="../pictures/car-shopping/convertable.jpg"></td>
+                <td><img src="../pictures/car-shopping/convertable.jpg" class="item"></td>
                 <td><p>1964 1/2 Ford Mustang Convertable</p>
                     <p>300 CID Straight 6 Engine</p>
                     <p>3 Speed C4 Automatic Transmission</p>
@@ -26,7 +26,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" value="45000">$45,000.00</td>
+                <td><input type="checkbox" value="45000" class="item">$45,000.00</td>
                 <td><img src="../pictures/car-shopping/shelby350.jpg"></td>
                 <td><p>1964 Ford Mustang Shelby GT350</p>
                     <p>271 HP 289 CID V8 Engine</p>
@@ -35,7 +35,7 @@
                     <p>Manual Steering</p>
                 </td>
             </tr><tr>
-                <td><input type="checkbox" value="65000">$65,000.00</td>
+                <td><input type="checkbox" value="65000" class="item">$65,000.00</td>
                 <td><img src="../pictures/car-shopping/shelby500.jpg"></td>
                 <td><p>1967 Ford Mustang Shelby GT500</p>
                     <p>355 HP 427 CID V8 Engine</p>
@@ -44,7 +44,7 @@
                     <p>Power Steering</p>
                 </td>
             </tr><tr>
-                <td><input type="checkbox" value="300000">$300,000.00</td>
+                <td><input type="checkbox" value="300000" class="item">$300,000.00</td>
                 <td><img src="../pictures/car-shopping/boss529.jpg"></td>
                 <td><p>1969 Ford Mustang Boss 429</p>
                     <p>375 HP 429 CID V8 Engine</p>
