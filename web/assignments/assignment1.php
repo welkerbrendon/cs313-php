@@ -17,7 +17,7 @@
             </tr>
             <tr>
                 <td><p>$25,000.00</p>
-                    <button value="Add To Cart">
+                    <button value="25000">Add To Cart</button>
                 </td>
                 <td><img src="../pictures/car-shopping/convertable.jpg" class="item"></td>
                 <td><p>1964 1/2 Ford Mustang Convertable</p>
