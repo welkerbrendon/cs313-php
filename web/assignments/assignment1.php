@@ -16,7 +16,7 @@
                 <th colspan="2">Mustangs</th>
             </tr>
             <tr>
-                <td><input type="checkbox" value="25000">$25,000.00</td>
+                <td><button value="25000">$25,000.00</td>
                 <td><img src="../pictures/car-shopping/convertable.jpg"></td>
                 <td><p>1964 1/2 Ford Mustang Convertable</p>
                     <p>300 CID Straight 6 Engine</p>
