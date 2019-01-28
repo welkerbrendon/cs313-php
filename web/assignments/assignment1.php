@@ -3,7 +3,7 @@
     <head>
         <title>Brendon Welker: Assignment1</title>
         <link rel="stylesheet" href="../../home/navbar.css">
-        <link rel="stylesheet" href="assignment1.css">
+        <link rel="stylesheet" href="./assignment1helpers/assignment1.css">
     </head>
     <body>
         <?php include '../home/nav.php';?>
