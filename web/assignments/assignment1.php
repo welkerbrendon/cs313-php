@@ -11,9 +11,9 @@
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
         </div>
         <h1>Welcome to the greatest selection of classic Fords ever assebled!</h1>
-        <table rule="rows">
+        <table>
             <tr>
-                <th colspan="2"><h2>Mustangs<h2></th>
+                <th><h2>Mustangs<h2></th>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/convertable.jpg" class="item"></td>
@@ -25,19 +25,21 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">$25,000.00  <button value="25000">Add To Cart</button></td>
+                <td>$25,000.00  <button value="1964.5 Mustang Convertable">Add To Cart</button></td>
             </tr>
-            <!--<tr>
-                <td><input type="checkbox" value="45000">$45,000.00</td>
+            <tr>
                 <td><img src="../pictures/car-shopping/shelby350.jpg" class="item"></td>
-                <td><p>1964 Ford Mustang Shelby GT350</p>
+                <td><p>1965 Ford Mustang Shelby GT350</p>
                     <p>271 HP 289 CID V8 Engine</p>
                     <p>4 Speed Toploader Manual Transmission</p>
                     <p>Front Disc Rear Drum Manual Brakes</p>
                     <p>Manual Steering</p>
                 </td>
-            </tr><tr>
-                <td><input type="checkbox" value="65000">$65,000.00</td>
+            </tr>
+            <tr>
+                <td>$45,000.00  <button value="1965 Mustang Shelby GT350">Add To Cart</button></td>
+            </tr>
+            <tr>
                 <td><img src="../pictures/car-shopping/shelby500.jpg" class="item"></td>
                 <td><p>1967 Ford Mustang Shelby GT500</p>
                     <p>355 HP 427 CID V8 Engine</p>
@@ -45,8 +47,11 @@
                     <p>Front Disc Rear Drum Power Brakes</p>
                     <p>Power Steering</p>
                 </td>
-            </tr><tr>
-                <td><input type="checkbox" value="300000">$300,000.00</td>
+            </tr>
+            <tr>
+                <td>$65,000.00  <button value="1967 Mustang Shelby GT500">Add To Cart</button></td>
+            </tr>
+            <tr>
                 <td><img src="../pictures/car-shopping/boss429.png" ></td>
                 <td><p>1969 Ford Mustang Boss 429</p>
                     <p>375 HP 429 CID V8 Engine</p>
@@ -54,7 +59,10 @@
                     <p>4 Power Disc Brakes</p>
                     <p>Power Steering</p>
                 </td>
-            </tr>-->
+            </tr>
+            <tr>
+                <td>$300,000.00  <button value="1969 Mustang Boss 429">Add To Cart</button></td>
+            </tr>
         </table>
     </body>
 </html>
