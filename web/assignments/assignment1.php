@@ -10,7 +10,7 @@
         <div id="shopping-cart">
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
         </div>
-        <h1>Welcome to the greatest selection of classic Fords ever assebled!<h1>
+        <h1>Welcome to the greatest selection of classic Fords ever assebled!</h1>
         <table>
             <tr>
                 <th colspan="2">Mustangs</th>
