@@ -6,6 +6,8 @@
     </head>
     <body>
         <?php include '../home/nav.php';?>
-        <h1>COMING SOON!</h1>
+        <div id="shopping-cart">
+            <img src="./pictures/shopping-cart.jpg" class="shopping-cart">
+        </div>
     </body>
 </html>
