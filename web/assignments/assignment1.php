@@ -47,7 +47,7 @@
                 </td>
             </tr><tr>
                 <td><input type="checkbox" value="300000">$300,000.00</td>
-                <td><img src="../pictures/car-shopping/boss529.png" ></td>
+                <td><img src="../pictures/car-shopping/boss429.png" ></td>
                 <td><p>1969 Ford Mustang Boss 429</p>
                     <p>375 HP 429 CID V8 Engine</p>
                     <p>4 Speed Toploader Manual Transmission</p>
