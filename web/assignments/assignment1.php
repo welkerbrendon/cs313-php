@@ -27,7 +27,7 @@
             <tr>
                 <td>$25,000.00  <button value="25000">Add To Cart</button></td>
             </tr>
-            <tr>
+            <!--<tr>
                 <td><input type="checkbox" value="45000">$45,000.00</td>
                 <td><img src="../pictures/car-shopping/shelby350.jpg" class="item"></td>
                 <td><p>1964 Ford Mustang Shelby GT350</p>
@@ -54,7 +54,7 @@
                     <p>4 Power Disc Brakes</p>
                     <p>Power Steering</p>
                 </td>
-            </tr>
+            </tr>-->
         </table>
     </body>
 </html>
