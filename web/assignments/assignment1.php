@@ -16,9 +16,6 @@
                 <th colspan="2"><h2>Mustangs<h2></th>
             </tr>
             <tr>
-                <td><p>$25,000.00</p>
-                    <button value="25000">Add To Cart</button>
-                </td>
                 <td><img src="../pictures/car-shopping/convertable.jpg" class="item"></td>
                 <td><p>1964 1/2 Ford Mustang Convertable</p>
                     <p>300 CID Straight 6 Engine</p>
@@ -27,6 +24,8 @@
                     <p>Power Steering</p>
                 </td>
             </tr>
+            <tr>
+                <td>$25,000.00  <button value="25000">Add To Cart</button></td>
             <tr>
                 <td><input type="checkbox" value="45000">$45,000.00</td>
                 <td><img src="../pictures/car-shopping/shelby350.jpg" class="item"></td>

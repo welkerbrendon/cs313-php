@@ -18,7 +18,12 @@ h1 {
     text-decoration: underline;
 }
 
-p {
+td {
     font-size: 150%;
     font-weight: bold;
+}
+
+tr {
+    position: absolute;
+    padding-left: 92px;
 }
