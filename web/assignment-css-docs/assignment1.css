@@ -23,7 +23,7 @@ td {
     font-weight: bold;
 }
 
-tr {
-    position: relative;
+table {
+    position: absolute;
     padding-left: 92px;
 }
