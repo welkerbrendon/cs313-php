@@ -3,7 +3,7 @@ echo "
 <a class='logo' href='../home/homepage.php'><img class='navbar' src=../pictures/BMW-Emblem.jpg></a>
 <div class='navbar'>
   <div class='dropdown' id='shopping-cart-dropdwn'>
-    <button class='dropdtn'><img src=../pircutes/shopping-cart.jpg>
+    <img class='dropdown' src=../pircutes/shopping-cart.jpg>
       <i class='fa fa-caret-down'></i>
     </button>
     <div class='dropdown-content' id='shopping-cart-content'>
