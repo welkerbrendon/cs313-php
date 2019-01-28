@@ -12,7 +12,7 @@
         </div>
         <h1>Welcome to the greatest selection of classic Fords ever assebled!</h1>
         <table>
-            <tr class="seperate">
+            <tr colspan="2" class="seperate">
                 <th><h2>Mustangs<h2></th>
             </tr>
             <tr>
@@ -24,7 +24,7 @@
                     <p>Power Steering</p>
                 </td>
             </tr>
-            <tr class="seperate">
+            <tr colspan="2" class="seperate">
                 <td>$25,000.00  <button value="1964.5 Mustang Convertable">Add To Cart</button></td>
             </tr>
             <tr>
@@ -36,7 +36,7 @@
                     <p>Manual Steering</p>
                 </td>
             </tr>
-            <tr class="seperate">
+            <tr colspan="2" class="seperate">
                 <td>$45,000.00  <button value="1965 Mustang Shelby GT350">Add To Cart</button></td>
             </tr>
             <tr>
@@ -48,7 +48,7 @@
                     <p>Power Steering</p>
                 </td>
             </tr>
-            <tr class="seperate">
+            <tr colspan="2" class="seperate">
                 <td>$65,000.00  <button value="1967 Mustang Shelby GT500">Add To Cart</button></td>
             </tr>
             <tr>
@@ -60,7 +60,7 @@
                     <p>Power Steering</p>
                 </td>
             </tr>
-            <tr class="seperate">
+            <tr colspan="2" class="seperate">
                 <td>$300,000.00  <button value="1969 Mustang Boss 429">Add To Cart</button></td>
             </tr>
         </table>
