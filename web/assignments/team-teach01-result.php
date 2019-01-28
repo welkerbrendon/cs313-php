@@ -6,10 +6,10 @@
     <body>
         <?php 
             $name_response = 'Name: ' . $_POST['name'];
-            $email_response = "Email: " . $_POST["email"];
+            $email_response = $_POST["email"];
             $major_response = "Major: " . $_POST["majors"];
             $cont_response = "Continents Visted: <br>";
-            foreach($_POST as $value) {
+            foreach($_POST[] as $value) {
                 switch($value) {
                     case "NA":
                         $cont_response .= "North America<br>";
@@ -38,7 +38,7 @@
             }
             $comments_response = "comments: " . $_POST["comments"];
             echo "<p>$name_response</p>
-            <a href='mailto: ' . $email_response>$email_response</a><br>
+            Email: <a href='mailto: ' . $email_response>$email_response</a><br>
             <p>$major_response</p>
             <p>$cont_response</p>
             <p>$comments_response</p>";
