@@ -24,5 +24,6 @@ td {
 }
 
 tr {
+    position: relative;
     padding-left: 92px;
 }
