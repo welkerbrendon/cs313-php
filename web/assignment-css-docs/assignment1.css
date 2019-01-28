@@ -8,7 +8,7 @@ img.shopping-cart {
     height: 70px;
 }
 
-img.item {
-    width: 150px;
-    height:150px;
+item {
+    width: 50%;
+    height: 50%;
 }
