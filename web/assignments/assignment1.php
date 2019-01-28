@@ -7,7 +7,7 @@
     <body>
         <?php include '../home/nav.php';?>
         <div id="shopping-cart">
-            <img src="./pictures/shopping-cart.jpg" class="shopping-cart">
+            <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
         </div>
     </body>
 </html>
