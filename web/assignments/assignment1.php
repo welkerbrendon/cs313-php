@@ -11,7 +11,7 @@
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
         </div>
         <h1>Welcome to the greatest selection of classic Fords ever assebled!</h1>
-        <table>
+        <table rule="rows">
             <tr>
                 <th colspan="2"><h2>Mustangs<h2></th>
             </tr>
