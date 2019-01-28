@@ -25,7 +25,7 @@
                 </td>
             </tr>
             <tr>
-                <td>$25,000.00  <button value="25000">Add To Cart</button></td>
+                <td colspan="2">$25,000.00  <button value="25000">Add To Cart</button></td>
             </tr>
             <!--<tr>
                 <td><input type="checkbox" value="45000">$45,000.00</td>
