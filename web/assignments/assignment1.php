@@ -12,8 +12,8 @@
         </div>
         <h1>Welcome to the greatest selection of classic Fords ever assebled!</h1>
         <table>
-            <tr colspan="2" class="seperate">
-                <th><h2>Mustangs<h2></th>
+            <tr class="seperate">
+                <th colspan="2"><h2>Mustangs<h2></th>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/convertable.jpg" class="item"></td>
@@ -24,8 +24,8 @@
                     <p>Power Steering</p>
                 </td>
             </tr>
-            <tr colspan="2" class="seperate">
-                <td>$25,000.00  <button value="1964.5 Mustang Convertable">Add To Cart</button></td>
+            <tr class="seperate">
+                <td colspan="2">$25,000.00  <button value="1964.5 Mustang Convertable">Add To Cart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/shelby350.jpg" class="item"></td>
@@ -36,8 +36,8 @@
                     <p>Manual Steering</p>
                 </td>
             </tr>
-            <tr colspan="2" class="seperate">
-                <td>$45,000.00  <button value="1965 Mustang Shelby GT350">Add To Cart</button></td>
+            <tr class="seperate">
+                <td colspan="2">$45,000.00  <button value="1965 Mustang Shelby GT350">Add To Cart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/shelby500.jpg" class="item"></td>
@@ -48,8 +48,8 @@
                     <p>Power Steering</p>
                 </td>
             </tr>
-            <tr colspan="2" class="seperate">
-                <td>$65,000.00  <button value="1967 Mustang Shelby GT500">Add To Cart</button></td>
+            <tr class="seperate">
+                <td colspan="2">$65,000.00  <button value="1967 Mustang Shelby GT500">Add To Cart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/boss429.png" ></td>
