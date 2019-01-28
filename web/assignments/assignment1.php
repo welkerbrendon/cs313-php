@@ -13,7 +13,7 @@
         <h1>Welcome to the greatest selection of classic Fords ever assebled!</h1>
         <table>
             <tr>
-                <th colspan="2">Mustangs</th>
+                <th colspan="2"><h2>Mustangs<h2></th>
             </tr>
             <tr>
                 <td><p>$25,000.00</p>
