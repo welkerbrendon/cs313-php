@@ -27,3 +27,7 @@ table {
     position: absolute;
     padding-left: 92px;
 }
+
+tr.seperate{
+    border-bottom: 1px;
+}
