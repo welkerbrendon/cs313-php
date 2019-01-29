@@ -68,7 +68,7 @@
                             $total_number_formated = number_format($_SESSION["total"], 2);
                             echo("<input disabled name='items[]' value='$selectedItem' size='$string_length' maxlength='$string_length'><br><br>");
                         }
-                        echo("<input disabled size='20' id='total' value='Total: $" . $total_number_formated "' name='cart-total'>";
+                        echo("<input disabled size='20' id='total' value='Total: $$total_number_formated' name='cart-total'>");
                     ?>
                     <input type="submit" value="Checkout">
                 </form>
