@@ -12,7 +12,9 @@
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
             <div class="dropdown-content" id="cart">
                 <p id="total" value="0";>Total: $0:00</p>
-                <button type="submit">Checkout</button>
+                <form action="checkout.php" methor="post">
+                    <input type="submit">Checkout</button>
+                </form>
             </div>
         </div>
         <h1>Welcome to the greatest selection of classic Fords ever assembled!</h1>
@@ -68,6 +70,13 @@
             <tr class="seperate">
                 <td colspan="2">$300,000.00<button class="add" onclick="addToCart(this)" value="1969 Boss 429: $300,000">Add To Cart</button></td>
             </tr>
+            <tr>
+                <td colspan="2">
+                    <form action="checkout.php" method="post">
+                        <input type=submit>Checkout
+                    </form>
+                </td>
+            </tr>    
         </table>
     </body>
 </html>
