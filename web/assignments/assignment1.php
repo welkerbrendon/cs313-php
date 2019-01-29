@@ -13,7 +13,7 @@
             <div class="dropdown-content" id="cart">
                 <p id="total" value="0";>Total: $0:00</p>
                 <form action="checkout.php" methor="post">
-                    <input type="submit">Checkout</button>
+                    <input type="submit" value="Checkout">
                 </form>
             </div>
         </div>
@@ -73,7 +73,7 @@
             <tr>
                 <td colspan="2">
                     <form action="checkout.php" method="post">
-                        <input type=submit>Checkout
+                        <input type="submit" value="Checkout">
                     </form>
                 </td>
             </tr>    
