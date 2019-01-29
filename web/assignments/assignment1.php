@@ -1,8 +1,8 @@
 <?php
     session_start();
     $_Session["items"] = array();
-    /*$_Session["total"] = 0;
-    if(isset($_POST)){
+    $_Session["total"] = 0;
+    /*if(isset($_POST)){
         foreach($_POST as $item){
             switch($item){
                 case "25000":
