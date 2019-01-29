@@ -55,8 +55,8 @@
             </div>
         </div>
         <h1>Welcome to the greatest selection of classic Fords ever assembled!</h1>
-        <table>
-            <form action="assignment1.php" method="post">
+        <form action="assignment1.php" method="post">
+            <table>
                 <tr class="seperate">
                     <th colspan="2"><h2>Mustangs<h2></th>
                 </tr>
@@ -120,7 +120,7 @@
                 <tr>
                     <td colspan="2"><input type="submit" value="Add to Cart"></td>
                 </tr>
-            </form>
-        </table>
+            </table>
+        </form>
     </body>
 </html>
