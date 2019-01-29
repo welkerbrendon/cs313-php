@@ -129,7 +129,7 @@
                 </tr>
                 <tr class="seperate">
                     <td colspan="2">
-                        $65,000.00
+                        $300,000.00
                         <?php
                             if(!in_array("1969 Boss 429: $300,000", $_SESSION["items"])){
                                 echo("<input type='checkbox' name='items[]' value='1969 Boss 429: $300,000'>Select for Cart");
