@@ -1,9 +1,8 @@
 <?php
     session_start();
-    if(empty($_SESSION)){
-        $_SESSION["items"] = array();
-        $_SESSION["totalsArray"] = array();
-    }
+    
+    $_SESSION["items"] = array();
+    $_SESSION["totalsArray"] = array();
 
     if(!empty($_POST) && !empty($_POST["items"]) && $_POST["items"] != $_SESSION["items"]){
         foreach($_POST["items"] as $item){
