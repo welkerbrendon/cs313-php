@@ -4,23 +4,23 @@
         $_SESSION["items"] = array();
         $_SESSION["total"] = 0;
     }
-    if(!empty($_POST)){
-        foreach($_POST as $item){
+    if(!empty($_POST) && !empty($_POST["items"])){
+        foreach($_POST["items"] as $item){
             switch ($item){
                 case "1964.5 Convertable: $25,000":
                     array_push($_SESSION["items"], $item);
                     $_SESSION["total"] += 25000;
                     break;
-                case "45000":
-                    array_push($_SESSION["items"], "1965 GT350: $45,000");
+                case "1965 GT350: $45,000":
+                    array_push($_SESSION["items"], $item);
+                    $_SESSION["total"] += 45000;
+                    break;
+                case "1967 GT500: $65,000":
+                    array_push($_SESSION["items"], $item);
                     $_SESSION["total"] += (int) $item;
                     break;
-                case "65000":
-                    array_push($_SESSION["items"], "1967 GT500: $65,000");
-                    $_SESSION["total"] += (int) $item;
-                    break;
-                case "300000":
-                    array_push($_SESSION["items"], "1969 Boss 429: $300,000");
+                case "1969 Boss 429: $300,000":
+                    array_push($_SESSION["items"], $item);
                     $_SESSION["total"] += (int) $item;
                     break;
                 default:
@@ -72,11 +72,11 @@
                 </tr>
                 <tr class="seperate">
                     <td colspan="2">
-                        <form action="assignment1.php" method="post" id='item1'>
+                        <form action="assignment1.php" method="post">
                             $25,000.00
                             <?php
                                 if(!in_array("1964.5 Convertable: $25,000", $_SESSION["items"])){
-                                    echo("<input type='checkbox' name='25000' value='1964.5 Convertable: $25,000'>Select for Cart");
+                                    echo("<input type='checkbox' name='items' value='1964.5 Convertable: $25,000'>Select for Cart");
                                 }
                             ?>
                         </form>
@@ -92,7 +92,16 @@
                     </td>
                 </tr>
                 <tr class="seperate">
-                    <td colspan="2">$45,000.00<button class="add" onclick="addToCart(this)" value="45000">Add ToCart</button></td>
+                    <td colspan="2">
+                        <form action="assignment1.php" method="post">
+                                $45,000.00
+                                <?php
+                                    if(!in_array("1965 GT350: $45,000.00", $_SESSION["items"])){
+                                        echo("<input type='checkbox' name='items' value='1965 GT350: $45,000'>Select for Cart");
+                                    }
+                                ?>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td><img src="../pictures/car-shopping/shelby500.jpg" class="item"></td>
@@ -104,7 +113,16 @@
                     </td>
                 </tr>
                 <tr class="seperate">
-                    <td colspan="2">$65,000.00<button class="add" onclick="addToCart(this)" value="1967 GT500: $65,000">Add To Cart</button></td>
+                    <td colspan="2">
+                        <form action="assignment1.php" method="post">
+                                $65,000.00
+                                <?php
+                                    if(!in_array("1967 GT500: $65,000", $_SESSION["items"])){
+                                        echo("<input type='checkbox' name='items' value='1967 GT500: $65,000'>Select for Cart");
+                                    }
+                                ?>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td><img src="../pictures/car-shopping/boss429.png" ></td>
@@ -116,7 +134,16 @@
                     </td>
                 </tr>
                 <tr class="seperate">
-                    <td colspan="2">$300,000.00<button class="add" onclick="addToCart(this)" value="1969 Boss 429: $300,000">Add To Cart</button></td>
+                    <td colspan="2">
+                        <form action="assignment1.php" method="post" id='item1'>
+                                $65,000.00
+                                <?php
+                                    if(!in_array("1969 Boss 429: $300,000", $_SESSION["items"])){
+                                        echo("<input type='checkbox' name='items' value='1969 Boss 429: $300,000'>Select for Cart");
+                                    }
+                                ?>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2"><input type="submit" value="Add to Cart"></td>
