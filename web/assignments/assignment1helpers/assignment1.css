@@ -1,4 +1,4 @@
-div#shopping-cart, img.shopping-cart-icon {
+div#shopping-cart, a.shopping-cart-icon {
     position: relative;
     float: right;
 }
