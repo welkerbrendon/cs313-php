@@ -10,7 +10,7 @@
             $major_response = "Major: " . $_POST["majors"];
             $cont_response = "Continents Visted: <br>";
             foreach($_POST[] as $value) {
-                switch($value) {
+                /*switch($value) {
                     case "NA":
                         $cont_response .= "North America<br>";
                         break;
@@ -33,7 +33,8 @@
                         $cont_response .= "Antartica<br>";
                         break;
                     default:
-                }
+                }*/
+                echo($value);
             }
             $comments_response = "comments: " . $_POST["comments"];
             echo "<p>$name_response</p>
