@@ -2,27 +2,25 @@
     session_start();
     if(empty($_SESSION)){
         $_SESSION["items"] = array();
-        $_SESSION["totalsArray"] = array();
+    }
+    else if(!isset($_SESSION["items"])){
+        $_SESSION["items"] = array();
     }
 
-    if(!empty($_POST) && !empty($_POST["items"]) && $_POST["items"] != $_SESSION["items"]){
+    if(!empty($_POST["items"])){
         foreach($_POST["items"] as $item){
             switch ($item){
                 case "1964.5 Convertable: $25,000":
                     array_push($_SESSION["items"], $item);
-                    array_push($_SESSION["totalsArray"], 25000);
                     break;
                 case "1965 GT350: $45,000":
                     array_push($_SESSION["items"], $item);
-                    array_push($_SESSION["totalsArray"], 45000);
                     break;
                 case "1967 GT500: $65,000":
                     array_push($_SESSION["items"], $item);
-                    array_push($_SESSION["totalsArray"], 65000);
                     break;
                 case "1969 Boss 429: $300,000":
                     array_push($_SESSION["items"], $item);
-                    array_push($_SESSION["totalsArray"], 300000);
                     break;
                 default:
                     break;
@@ -30,11 +28,25 @@
         }
     }
 
+    $_SESSION["total"] = 0;
     $_SESSION["items"] = array_unique($_SESSION["items"]);
-    $_SESSION["totalsArray"] = array_unique($_SESSION["totalsArray"]);
-    $totalDue = 0;
-    foreach($_SESSION["totalsArray"] as $total){
-        $totalDue += $total;
+    foreach($_SESSION["items"] as $itemForTotal){
+        switch ($itemForTotal){
+            case "1964.5 Convertable: $25,000":
+                $_SESSION["total"] += 25000;
+                break;
+            case "1965 GT350: $45,000":
+                $_SESSION["total"] += 45000;
+                break;
+            case "1967 GT500: $65,000":
+                $_SESSION["total"] += 65000;
+                break;
+            case "1969 Boss 429: $300,000":
+                $_SESSION["total"] += 300000;
+                break;
+            default:
+                break;
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -54,7 +66,7 @@
                         foreach($_SESSION["items"] as $selectedItem){
                             echo("<p>$selectedItem</p>");
                         }
-                        echo("<p id='total' value='" . number_format($totalDue, 2) . "' name='cart-total'>Total: $" . number_format($_SESSION["total"], 2) . "</p>");
+                        echo("<p id='total' value='" . number_format($_SESSION["total"], 2) . "' name='cart-total'>Total: $" . number_format($_SESSION["total"], 2) . "</p>");
                     ?>
                     <input type="submit" value="Checkout">
                 </form>
