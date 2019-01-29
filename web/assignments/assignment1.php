@@ -2,8 +2,8 @@
     session_start();
     $_Session["items"] = array();
     $_Session["total"] = 0;
-    /*if(isset($_POST)){
-        foreach($_POST as $item){
+    if(isset($_POST)){
+        /*foreach($_POST as $item){
             switch($item){
                 case "25000":
                     array_push($_SESSION["items"], "1964.5 Convertable: $25,000";
@@ -21,8 +21,8 @@
                     break;
             }
             $_SESSION["total"] += (int) $item;
-        }
-    }*/
+        }*/
+    }
 ?>
 <!DOCTYPE html>
 <html>
