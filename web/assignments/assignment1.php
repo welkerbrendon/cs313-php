@@ -72,7 +72,7 @@
                     <form action="assignment1.php" method="post">
                         $25,000.00
                         <?php
-                            if(!in_array("1964.5 Convertable: $25,000", $_SESSION["items"]){
+                            if(!in_array("1964.5 Convertable: $25,000", $_SESSION["items"])){
                                 echo("<input type='submit' class='add' value='Add To Cart' name='25000'>")
                             }
                         ?>
