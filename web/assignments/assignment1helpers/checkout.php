@@ -4,6 +4,6 @@
     <link rel="stylesheet" href="../home/navbar.css">
 </head>
 <body>
-    <h1>Proceed
+    <?php include '../home/nav.php';?>
 </body>
 </html>
