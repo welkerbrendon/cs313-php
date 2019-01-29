@@ -76,7 +76,7 @@
                             $25,000.00
                             <?php
                                 if(!in_array("1964.5 Convertable: $25,000", $_SESSION["items"])){
-                                    echo("<input type='checkbox' name='items' value='1964.5 Convertable: $25,000'>Select for Cart");
+                                    echo("<input type='checkbox' name='items[]' value='1964.5 Convertable: $25,000'>Select for Cart");
                                 }
                             ?>
                         </form>
@@ -97,7 +97,7 @@
                                 $45,000.00
                                 <?php
                                     if(!in_array("1965 GT350: $45,000.00", $_SESSION["items"])){
-                                        echo("<input type='checkbox' name='items' value='1965 GT350: $45,000'>Select for Cart");
+                                        echo("<input type='checkbox' name='items[]' value='1965 GT350: $45,000'>Select for Cart");
                                     }
                                 ?>
                         </form>
@@ -118,7 +118,7 @@
                                 $65,000.00
                                 <?php
                                     if(!in_array("1967 GT500: $65,000", $_SESSION["items"])){
-                                        echo("<input type='checkbox' name='items' value='1967 GT500: $65,000'>Select for Cart");
+                                        echo("<input type='checkbox' name='items[]' value='1967 GT500: $65,000'>Select for Cart");
                                     }
                                 ?>
                         </form>
@@ -139,7 +139,7 @@
                                 $65,000.00
                                 <?php
                                     if(!in_array("1969 Boss 429: $300,000", $_SESSION["items"])){
-                                        echo("<input type='checkbox' name='items' value='1969 Boss 429: $300,000'>Select for Cart");
+                                        echo("<input type='checkbox' name='items[]' value='1969 Boss 429: $300,000'>Select for Cart");
                                     }
                                 ?>
                         </form>
