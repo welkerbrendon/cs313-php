@@ -33,7 +33,6 @@
                         $cont_response .= "Antartica<br>";
                         break;
                     default:
-                        break;
                 }
             }
             $comments_response = "comments: " . $_POST["comments"];
