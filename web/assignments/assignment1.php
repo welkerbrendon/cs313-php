@@ -61,10 +61,10 @@
         <div id="shopping-cart">
             <a href="review-cart.php"><img src="../pictures/shopping-cart.jpg" class="shopping-cart"></a>
             <div class="dropdown-content" id="cart">
-                <form action="review-cart.php" id="cart-form">
+                <form action="review-cart.php" id="cart-form" method="post">
                     <?php
                         foreach($_SESSION["items"] as $selectedItem){
-                            echo("<p>$selectedItem</p>");
+                            echo("<p name='items[]'>$selectedItem</p>");
                         }
                         echo("<p id='total' value='" . number_format($_SESSION["total"], 2) . "' name='cart-total'>Total: $" . number_format($_SESSION["total"], 2) . "</p>");
                     ?>
