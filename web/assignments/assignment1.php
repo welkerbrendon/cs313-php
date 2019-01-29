@@ -13,7 +13,7 @@
             <div class="dropdown-content" id="cart">
                 <form action="assignment1helpers/checkout.php" methor="post" id="cart-form">
                     <p id="total" value="0" name="cart-total">Total: $0:00</p>
-                    <!--<input type="submit" value="Checkout">-->
+                    <input type="submit" value="Checkout">
                 </form>
             </div>
         </div>
