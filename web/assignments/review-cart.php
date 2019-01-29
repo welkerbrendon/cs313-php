@@ -1,9 +1,8 @@
 <?php
     $form = "";
-    foreach ($_SESSION["items"] as $item_added){
+    foreach ($_POST["items"] as $item_added){
         $form .= "$item_added<input type='checkbox' value=$item_added name='items_to_remove'>'Select for removal from cart";
     }
-    echo($form);
 ?>
 <!DOCTYPE html>
 <head>
