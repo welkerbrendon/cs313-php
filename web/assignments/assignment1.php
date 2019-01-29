@@ -39,9 +39,9 @@
     <body>
         <?php include '../home/nav.php';?>
         <div id="shopping-cart">
-            <a href="./assignment1helpers/checkout.php"><img src="../pictures/shopping-cart.jpg" class="shopping-cart"></a>
+            <a href="checkout.php"><img src="../pictures/shopping-cart.jpg" class="shopping-cart"></a>
             <div class="dropdown-content" id="cart">
-                <form action="assignment1helpers/checkout.php" id="cart-form">
+                <form action="checkout.php" id="cart-form">
                     <?php
                         foreach($_SESSION["items"] as $selectedItem){
                             echo("<p>$selectedItem</p>");
