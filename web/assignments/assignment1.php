@@ -33,9 +33,6 @@
     $_SESSION["items"] = array_unique($_SESSION["items"]);
     $_SESSION["totalsArray"] = array_unique($_SESSION["totalsArray"]);
     $totalDue = array_sum($_SESSION["totalsArray"]);
-    if($totalDue !> 0){
-        $totalDue = 0;
-    }
 ?>
 <!DOCTYPE html>
 <html>
