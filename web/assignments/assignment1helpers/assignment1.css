@@ -43,3 +43,7 @@ tr.seperate{
 #shopping-cart:hover #cart {
     display: block;
 }
+
+#cart {
+    position: relative;
+}
