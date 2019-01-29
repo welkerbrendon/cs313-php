@@ -41,13 +41,13 @@
             <div class="dropdown-content" id="cart">
                 <form action="assignment1helpers/checkout.php" method="post" id="cart-form">
                     <?php
-                        /*foreach($_SESSION["items"] as $selectedItem){
+                        foreach($_SESSION["items"] as $selectedItem){
                             echo("<p>$selectedItem</p>");
                         }
                         if(!empty($_SESSION["total"]))
                             echo("<p id='total' value='" . $_SESSION["total"] . "' name='cart-total'>Total: $" . $_SESSION["total"] . ":00</p>");
                         else
-                            echo("<p id="total" value="0" name="cart-total">Total: $0:00</p>");*/
+                            echo("<p id='total' value='0' name='cart-total'>Total: $0:00</p>");
                     ?>
                     <input type="submit" value="Checkout">
                 </form>
@@ -72,9 +72,9 @@
                     <form action="assignment1.php" method="post">
                         $25,000.00
                         <?php
-                            /*if(!in_array("1964.5 Convertable: $25,000"), $_SESSION["items"]){
+                            if(!in_array("1964.5 Convertable: $25,000"), $_SESSION["items"]){
                                 echo("<input type='submit' class='add' value='Add To Cart' name='25000'>")
-                            }*/
+                            }
                         ?>
                     </form>
                 </td>
