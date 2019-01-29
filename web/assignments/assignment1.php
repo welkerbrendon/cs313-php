@@ -67,7 +67,7 @@
                             $string_length = strlen($selectedItem);
                             echo("<input disabled name='items[]' value='$selectedItem' size='$string_length' maxlength='$string_length'><br><br>");
                         }
-                        echo("<p id='total' value='" . number_format($_SESSION["total"], 2) . "' name='cart-total'>Total: $" . number_format($_SESSION["total"], 2) . "</p>");
+                        echo("<input disabled size='20' maxlength='20' id='total' value='" . number_format($_SESSION["total"], 2) . "' name='cart-total'>";
                     ?>
                     <input type="submit" value="Checkout">
                 </form>
