@@ -11,7 +11,7 @@
         <div id="shopping-cart">
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
             <div class="dropdown-content" id="cart">
-                <p id="total">Total: $0:00</p>
+                <p id="total" value="0";>Total: $0:00</p>
                 <button type="submit">Checkout</button>
             </div>
         </div>
@@ -30,7 +30,7 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$25,000.00<button class="add" onclick="addToCart(this)" value="1964.5 Convertable: $25,000">Add To Cart</button></td>
+                <td colspan="2">$25,000.00<button class="add" onclick="addToCart(this)" value="25000">Add To Cart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/shelby350.jpg" class="item"></td>
@@ -42,7 +42,7 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$45,000.00<button class="add" onclick="addToCart(this)" value="1965 GT350: $45,000">Add ToCart</button></td>
+                <td colspan="2">$45,000.00<button class="add" onclick="addToCart(this)" value="45000">Add ToCart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/shelby500.jpg" class="item"></td>
