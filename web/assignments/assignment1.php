@@ -30,8 +30,8 @@
         }
     }
 
-    $_SESSION["items"] = array_unique($_SESSION["items"]);
-    $_SESSION["total"] = array_unique($_SESSION["total"]);
+    //$_SESSION["items"] = array_unique($_SESSION["items"]);
+    //$_SESSION["total"] = array_unique($_SESSION["total"]);
 ?>
 <!DOCTYPE html>
 <html>
