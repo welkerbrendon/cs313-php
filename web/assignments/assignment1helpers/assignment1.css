@@ -1,7 +1,6 @@
-div#shopping-cart {
+div#shopping-cart, img.shopping-cart-icon {
     position: relative;
     float: right;
-    padding-right: 10%;
 }
 
 img.shopping-cart {

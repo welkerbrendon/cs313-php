@@ -38,8 +38,8 @@
     </head>
     <body>
         <?php include '../home/nav.php';?>
+        <a href="review-cart.php" class="shopping-cart-icon"><img src="../pictures/shopping-cart.jpg" class="shopping-cart"></a>
         <div id="shopping-cart">
-            <a href="review-cart.php"><img src="../pictures/shopping-cart.jpg" class="shopping-cart"></a>
             <div class="dropdown-content" id="cart">
                 <form action="review-cart.php" id="cart-form">
                     <?php
