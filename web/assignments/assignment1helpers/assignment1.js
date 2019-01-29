@@ -21,7 +21,8 @@
     nodeElement.appendChild(textElement);
     cart.insertBefore(nodeElement, cart.firstChild);
 
-    var totalElementValue = parseInt(document.getElementById("total").getAttribute("value"));
-    totalElementValue.setAttribute("value", totalElementValue + parseInt(button.value));
-    document.getElementById("total").innerHTML = "Total: $" + totalElementValue + ".00";
+    var totalElement = document.getElementById("total");
+    var totalElementValue = parseInt(totalElement.getAttribute("value"));
+    totalElement.setAttribute("value", totalElementValue + parseInt(button.value));
+    totalElement.innerHTML = "Total: $" + totalElementValue + ".00";
 }
