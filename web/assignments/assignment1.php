@@ -5,8 +5,7 @@
         $_SESSION["total"] = 0;
     }
     if(!empty($_POST) && !empty($_POST["items"])){
-        $items = $_POST["items"]
-        foreach($items as $item){
+        foreach($_POST["items"] as $item){
             switch ($item){
                 case "1964.5 Convertable: $25,000":
                     array_push($_SESSION["items"], $item);
@@ -44,8 +43,7 @@
             <div class="dropdown-content" id="cart">
                 <form action="assignment1helpers/checkout.php" id="cart-form">
                     <?php
-                        $items = $_SESSION["items"]
-                        foreach($items as $selectedItem){
+                        foreach($_SESSION["items"] as $selectedItem){
                             echo("<p>$selectedItem</p>");
                         }
                         if(!empty($_SESSION["total"]))
