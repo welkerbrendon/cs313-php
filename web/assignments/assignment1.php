@@ -51,10 +51,7 @@
                         foreach($_SESSION["items"] as $selectedItem){
                             echo("<p>$selectedItem</p>");
                         }
-                        if(!empty($_SESSION["total"]))
-                            echo("<p id='total' value='" . number_format($totalDue, 2) . "' name='cart-total'>Total: $" . number_format($_SESSION["total"], 2) . "</p>");
-                        else
-                            echo("<p id='total' value='0' name='cart-total'>Total: $0:00</p>");
+                        echo("<p id='total' value='" . number_format($totalDue, 2) . "' name='cart-total'>Total: $" . number_format($_SESSION["total"], 2) . "</p>");
                     ?>
                     <input type="submit" value="Checkout">
                 </form>
