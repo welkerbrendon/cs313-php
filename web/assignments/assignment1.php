@@ -1,15 +1,15 @@
 <?php
     session_start();
-    //if(empty($_SESSION){}
-        $_Session["items"] = array();
-        $_Session["total"] = 0;
-    //}
+    if(empty($_SESSION){}
+        $_SESSION["items"] = array();
+        $_SESSION["total"] = 0;
+    }
     if(!empty($_POST)){
         foreach($_POST as $item){
             switch ($item){
                 case "1964.5 Convertable: $25,000":
                     array_push($_SESSION["items"], $item);
-                    $_SESSION["total"] += (int) $item;
+                    $_SESSION["total"] += 25000;
                     break;
                 case "45000":
                     array_push($_SESSION["items"], "1965 GT350: $45,000");
