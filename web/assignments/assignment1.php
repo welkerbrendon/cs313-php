@@ -1,9 +1,9 @@
 <?php
     session_start();
-    if(empty($_SESSION){}
+    //if(empty($_SESSION){}
         $_Session["items"] = array();
         $_Session["total"] = 0;
-    }
+    //}
     if(!empty($_POST)){
         foreach($_POST as $item){
             switch ($item){
