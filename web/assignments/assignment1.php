@@ -2,34 +2,36 @@
     session_start();
     if(empty($_SESSION)){
         $_SESSION["items"] = array();
-        $_SESSION["total"] = 0;
+        $_SESSION["total"] = array();
     }
-    if(!empty($_POST) && !empty($_POST["items"])){
+
+    if(!empty($_POST) && !empty($_POST["items"]) && $_POST["items"] != $_SESSION["items"]){
         foreach($_POST["items"] as $item){
-            if(!in_array($item, $_SESSION["item"])){
-                switch ($item){
-                    case "1964.5 Convertable: $25,000":
-                        array_push($_SESSION["items"], $item);
-                        $_SESSION["total"] += 25000;
-                        break;
-                    case "1965 GT350: $45,000":
-                        array_push($_SESSION["items"], $item);
-                        $_SESSION["total"] += 45000;
-                        break;
-                    case "1967 GT500: $65,000":
-                        array_push($_SESSION["items"], $item);
-                        $_SESSION["total"] += 65000;
-                        break;
-                    case "1969 Boss 429: $300,000":
-                        array_push($_SESSION["items"], $item);
-                        $_SESSION["total"] += 300000;
-                        break;
-                    default:
-                        break;
-                }
+            switch ($item){
+                case "1964.5 Convertable: $25,000":
+                    array_push($_SESSION["items"], $item);
+                    array_push($_SESSION["total"] += 25000);
+                    break;
+                case "1965 GT350: $45,000":
+                    array_push($_SESSION["items"], $item);
+                    array_push($_SESSION["total"] += 45000);
+                    break;
+                case "1967 GT500: $65,000":
+                    array_push($_SESSION["items"], $item);
+                    array_push($_SESSION["total"] += 65000);
+                    break;
+                case "1969 Boss 429: $300,000":
+                    array_push($_SESSION["items"], $item);
+                    array_push($_SESSION["total"] += 300000);
+                    break;
+                default:
+                    break;
             }
         }
     }
+
+    $_SESSION["items"] = array_unique($_SESSION["items"]);
+    $_SESSION["total"] = array_unique($_SESSION["total"]);
 ?>
 <!DOCTYPE html>
 <html>
