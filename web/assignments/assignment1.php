@@ -1,12 +1,14 @@
 <?php
     session_start();
-    $_Session["items"] = array();
-    $_Session["total"] = 0;
+    if(empty($_SESSION){}
+        $_Session["items"] = array();
+        $_Session["total"] = 0;
+    }
     if(!empty($_POST)){
         foreach($_POST as $item){
             switch ($item){
-                case "25000":
-                    array_push($_SESSION["items"], "1964.5 Convertable: $25,000");
+                case "1964.5 Convertable: $25,000":
+                    array_push($_SESSION["items"], $item);
                     $_SESSION["total"] += (int) $item;
                     break;
                 case "45000":
@@ -35,12 +37,11 @@
         <link rel="stylesheet" href="./assignment1helpers/assignment1.css">
     </head>
     <body>
-        <?php include '../home/nav.php';
-        echo($POST);?>
+        <?php include '../home/nav.php';?>
         <div id="shopping-cart">
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
             <div class="dropdown-content" id="cart">
-                <form action="assignment1helpers/checkout.php" method="post" id="cart-form">
+                <form action="assignment1helpers/checkout.php" id="cart-form">
                     <?php
                         foreach($_SESSION["items"] as $selectedItem){
                             echo("<p>$selectedItem</p>");
