@@ -2,7 +2,7 @@
     session_start();
     if(empty($_SESSION)){
         $_SESSION["items"] = array();
-        $_SESSION["total"] = array();
+        $_SESSION["totalsArray"] = array();
     }
 
     if(!empty($_POST) && !empty($_POST["items"]) && $_POST["items"] != $_SESSION["items"]){
@@ -10,19 +10,19 @@
             switch ($item){
                 case "1964.5 Convertable: $25,000":
                     array_push($_SESSION["items"], $item);
-                    array_push($_SESSION["total"], 25000);
+                    array_push($_SESSION["totalsArray"], 25000);
                     break;
                 case "1965 GT350: $45,000":
                     array_push($_SESSION["items"], $item);
-                    array_push($_SESSION["total"], 45000);
+                    array_push($_SESSION["totalsArray"], 45000);
                     break;
                 case "1967 GT500: $65,000":
                     array_push($_SESSION["items"], $item);
-                    array_push($_SESSION["total"], 65000);
+                    array_push($_SESSION["totalsArray"], 65000);
                     break;
                 case "1969 Boss 429: $300,000":
                     array_push($_SESSION["items"], $item);
-                    array_push($_SESSION["total"], 300000);
+                    array_push($_SESSION["totalsArray"], 300000);
                     break;
                 default:
                     break;
@@ -31,7 +31,11 @@
     }
 
     $_SESSION["items"] = array_unique($_SESSION["items"]);
-    $_SESSION["total"] = array_unique($_SESSION["total"]);
+    $_SESSION["totalsArray"] = array_unique($_SESSION["totalsArray"]);
+    $totalDue = array_sum($_SESSION["totalsArray"]);
+    if($totalDue !> 0){
+        $totalDue = 0;
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,7 +55,7 @@
                             echo("<p>$selectedItem</p>");
                         }
                         if(!empty($_SESSION["total"]))
-                            echo("<p id='total' value='" . array_sum($_SESSION["total"]) . "' name='cart-total'>Total: $" . number_format($_SESSION["total"], 2) . "</p>");
+                            echo("<p id='total' value='" . number_format($totalDue, 2) . "' name='cart-total'>Total: $" . number_format($_SESSION["total"], 2) . "</p>");
                         else
                             echo("<p id='total' value='0' name='cart-total'>Total: $0:00</p>");
                     ?>
