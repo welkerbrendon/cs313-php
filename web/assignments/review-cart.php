@@ -3,6 +3,7 @@
     foreach ($_SESSION["items"] as $item_added){
         $form .= "$item_added<input type='checkbox' value=$item_added name='items_to_remove'>'Select for removal from cart";
     }
+    echo($form);
 ?>
 <!DOCTYPE html>
 <head>
@@ -11,9 +12,9 @@
 </head>
 <body>
     <?php include '../home/nav.php';
-    echo "<form action='checkout.php' method='post'>";
+    echo("<form action='checkout.php' method='post'>");
     echo($form);
-    echo"<input type='submit' value='checkout'></form>?>";?>
+    echo("<input type='submit' value='checkout'></form>?>");?>
 
 </body>
 </html>
