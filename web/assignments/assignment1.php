@@ -11,10 +11,9 @@
         <div id="shopping-cart">
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
             <div class="dropdown-content" id="cart">
-                <p id="total" value="0";>Total: $0:00</p>
                 <form action="assignment1helpers/checkout.php" methor="post" id="cart-form">
-                    <input class="invisible-form" name="total" id="cart-total" value="0">
-                    <input type="submit" value="Checkout">
+                    <p id="total" value="0" name="cart-total">Total: $0:00</p>
+                    <!--<input type="submit" value="Checkout">-->
                 </form>
             </div>
         </div>
