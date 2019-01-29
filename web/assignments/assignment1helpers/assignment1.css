@@ -45,6 +45,5 @@ tr.seperate{
 }
 
 #cart {
-    position: relative;
-    float: left;
+    position: inherit;
 }
