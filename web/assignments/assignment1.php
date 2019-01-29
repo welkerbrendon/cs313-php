@@ -24,7 +24,7 @@
                 default:
                     break;
             }*/
-            $_SESSION["random"] = $item;
+            array_push($_SESSION["items"], $item);
         }
     }
 ?>
@@ -36,11 +36,14 @@
         <link rel="stylesheet" href="./assignment1helpers/assignment1.css">
     </head>
     <body>
-        <?php include '../home/nav.php';?>
+        <?php include '../home/nav.php';
+        foreach($_SESSION["item"] as $item){
+            echo("<h1>$item</h1>";
+        }?>
         <div id="shopping-cart">
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
             <div class="dropdown-content" id="cart">
-                <form action="assignment1helpers/checkout.php" methor="post" id="cart-form">
+                <form action="assignment1helpers/checkout.php" method="post" id="cart-form">
                     <?php
                         /*foreach($_SESSION["items"] as $selectedItem){
                             echo("<p>$selectedItem</p>");
