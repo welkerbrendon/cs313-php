@@ -32,16 +32,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Brendon Welker: Assignment1</title>
+        <title>Brendon Welker's Store: Pick Your Car(s)</title>
         <link rel="stylesheet" href="../home/navbar.css">
         <link rel="stylesheet" href="./assignment1helpers/assignment1.css">
     </head>
     <body>
         <?php include '../home/nav.php';?>
         <div id="shopping-cart">
-            <a href="checkout.php"><img src="../pictures/shopping-cart.jpg" class="shopping-cart"></a>
+            <a href="review-cart.php"><img src="../pictures/shopping-cart.jpg" class="shopping-cart"></a>
             <div class="dropdown-content" id="cart">
-                <form action="checkout.php" id="cart-form">
+                <form action="review-cart.php" id="cart-form">
                     <?php
                         foreach($_SESSION["items"] as $selectedItem){
                             echo("<p>$selectedItem</p>");
