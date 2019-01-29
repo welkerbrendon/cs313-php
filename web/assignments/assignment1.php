@@ -36,10 +36,7 @@
         <link rel="stylesheet" href="./assignment1helpers/assignment1.css">
     </head>
     <body>
-        <?php include '../home/nav.php';
-        foreach($_SESSION["item"] as $item){
-            echo("<h1>$item</h1>";
-        }?>
+        <?php include '../home/nav.php';?>
         <div id="shopping-cart">
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
             <div class="dropdown-content" id="cart">
