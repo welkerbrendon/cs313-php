@@ -1,10 +1,35 @@
+<?php
+    session_start();
+    $_Session["items"] = array();
+    $_Session["total"] = 0;
+    if(isset($_POST)){
+        foreach($_POST as $item){
+            switch($item){
+                case "25000":
+                    array_push($_SESSION["items"], "1964.5 Convertable: $25,000";
+                    break;
+                case "45000":
+                    array_push($_SESSION["items"], "1965 GT350: $45,000";
+                    break;
+                case "65000":
+                    array_push($_SESSION["items"], "1967 GT500: $65,000";
+                    break;
+                case "300000":
+                    array_push($_SESSION["items"], "1969 Boss 429: $300,000";
+                    break;
+                default:
+                    break;
+            }
+            $_SESSION["total"] += (int) $item;
+        }
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Brendon Welker: Assignment1</title>
         <link rel="stylesheet" href="../home/navbar.css">
         <link rel="stylesheet" href="./assignment1helpers/assignment1.css">
-        <script src="./assignment1helpers/assignment1.js"></script>
     </head>
     <body>
         <?php include '../home/nav.php';?>
@@ -12,7 +37,15 @@
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
             <div class="dropdown-content" id="cart">
                 <form action="assignment1helpers/checkout.php" methor="post" id="cart-form">
-                    <p id="total" value="0" name="cart-total">Total: $0:00</p>
+                    <?php
+                        foreach($_SESSION["items"] as $selectedItem){
+                            echo("<p>$selectedItem</p>");
+                        }
+                        if(!empty($_SESSION["total"]))
+                            echo("<p id='total' value='" . $_SESSION["total"] . "' name='cart-total'>Total: $" . $_SESSION["total"] . ":00</p>");
+                        else
+                            echo("<p id="total" value="0" name="cart-total">Total: $0:00</p>")
+                    ?>
                     <input type="submit" value="Checkout">
                 </form>
             </div>
@@ -32,7 +65,16 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$25,000.00<button class="add" onclick="addToCart(this)" value="25000">Add To Cart</button></td>
+                <td colspan="2">
+                    <form action="assignment1.php" method="post">
+                        $25,000.00
+                        <?php
+                            if(!in_array("1964.5 Convertable: $25,000"), $_SESSION["items"]){
+                                echo("<input type='submit' class='add' value='Add To Cart' name='25000'>")
+                            }
+                        ?>
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/shelby350.jpg" class="item"></td>
