@@ -51,3 +51,8 @@ tr.seperate{
 .invisable-form {
     display: none;
 }
+
+.add-to-cart {
+    width: 100px;
+    height: 100px;
+}

@@ -138,7 +138,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" value="Add to Cart"></td>
+                    <td colspan="2"><input type="submit" value="Add to Cart" class="add-to-cart"></td>
                 </tr>
             </table>
         </form>
