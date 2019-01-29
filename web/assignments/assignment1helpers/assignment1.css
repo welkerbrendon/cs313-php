@@ -40,6 +40,6 @@ tr.seperate{
     height: 100px;
 }
 
-#shopping-cart:hover #cart {
+.shopping-cart:hover #cart {
     display: block;
 }
