@@ -3,5 +3,5 @@
     var nodeElement = document.createElement("P");
     var textElement= document.createTextNode(button.value);
     nodeElement.appendChild(textElement);
-    cart.insertBefore(nodeElement, cart.childNodes[cart.childNodes.length - 3]);
+    cart.insertBefore(nodeElement, cart.firstChild);
 }
