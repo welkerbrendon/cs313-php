@@ -2,13 +2,17 @@
 <html>
     <head>
         <title>Brendon Welker: Assignment1</title>
-        <link rel="stylesheet" href="../../home/navbar.css">
+        <link rel="stylesheet" href="../home/navbar.css">
         <link rel="stylesheet" href="./assignment1helpers/assignment1.css">
     </head>
     <body>
         <?php include '../home/nav.php';?>
         <div id="shopping-cart">
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
+            <div class="dropdown-content" id="cart">
+                <p id="total">Total: $0:00</p>
+                <button type="submit">Checkout</button>
+            </div>
         </div>
         <h1>Welcome to the greatest selection of classic Fords ever assebled!</h1>
         <table>
