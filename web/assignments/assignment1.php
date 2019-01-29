@@ -93,7 +93,7 @@
                     <td colspan="2">
                         $45,000.00
                         <?php
-                            if(!in_array("1965 GT350: $45,000.00", $_SESSION["items"])){
+                            if(!in_array("1965 GT350: $45,000", $_SESSION["items"])){
                                 echo("<input type='checkbox' name='items[]' value='1965 GT350: $45,000'>Select for Cart");
                             }
                         ?>
