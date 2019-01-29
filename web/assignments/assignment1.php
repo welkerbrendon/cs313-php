@@ -30,7 +30,7 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$25,000.00      <button class="add" onclick="addToCart(thi)" value="1964.5 Mustang Convertable: $25,000.00">Add To Cart</button></td>
+                <td colspan="2">$25,000.00<button class="add" onclick="addToCart(thi)" value="1964.5 Mustang Convertable: $25,000.00">Add To Cart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/shelby350.jpg" class="item"></td>
@@ -42,7 +42,7 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$45,000.00      <button class="add" onclick="addToCart(thi)" value="1965 Mustang Shelby GT350: $45,000.00">Add ToCart</button></td>
+                <td colspan="2">$45,000.00<button class="add" onclick="addToCart(thi)" value="1965 Mustang Shelby GT350: $45,000.00">Add ToCart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/shelby500.jpg" class="item"></td>
@@ -54,7 +54,7 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$65,000.00      <button class="add" onclick="addToCart(thi)" value="1967 Mustang Shelby GT500: $65,000.00">Add To Cart</button></td>
+                <td colspan="2">$65,000.00<button class="add" onclick="addToCart(thi)" value="1967 Mustang Shelby GT500: $65,000.00">Add To Cart</button></td>
             </tr>
             <tr>
                 <td><img src="../pictures/car-shopping/boss429.png" ></td>
@@ -66,7 +66,7 @@
                 </td>
             </tr>
             <tr class="seperate">
-                <td colspan="2">$300,000.00      <button class="add" onclick="addToCart(thi)" value="1969 Mustang Boss 429: $300,000.00">Add To Cart</button></td>
+                <td colspan="2">$300,000.00<button class="add" onclick="addToCart(thi)" value="1969 Mustang Boss 429: $300,000.00">Add To Cart</button></td>
             </tr>
         </table>
     </body>
