@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(empty($_SESSION){
+    if(empty($_SESSION)){
         $_SESSION["items"] = array();
         $_SESSION["total"] = 0;
     }
