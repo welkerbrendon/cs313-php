@@ -17,11 +17,11 @@
                     break;
                 case "1967 GT500: $65,000":
                     array_push($_SESSION["items"], $item);
-                    $_SESSION["total"] += (int) $item;
+                    $_SESSION["total"] += 65000;
                     break;
                 case "1969 Boss 429: $300,000":
                     array_push($_SESSION["items"], $item);
-                    $_SESSION["total"] += (int) $item;
+                    $_SESSION["total"] += 300000;
                     break;
                 default:
                     break;
