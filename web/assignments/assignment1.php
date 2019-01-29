@@ -4,26 +4,26 @@
     $_Session["total"] = 0;
     if(!empty($_POST)){
         foreach($_POST as $item){
-            /*switch ($item){
+            switch ($item){
                 case "25000":
-                    array_push($_SESSION["items"], "1964.5 Convertable: $25,000";
+                    array_push($_SESSION["items"], "1964.5 Convertable: $25,000");
                     $_SESSION["total"] += (int) $item;
                     break;
                 case "45000":
-                    array_push($_SESSION["items"], "1965 GT350: $45,000";
+                    array_push($_SESSION["items"], "1965 GT350: $45,000");
                     $_SESSION["total"] += (int) $item;
                     break;
                 case "65000":
-                    array_push($_SESSION["items"], "1967 GT500: $65,000";
+                    array_push($_SESSION["items"], "1967 GT500: $65,000");
                     $_SESSION["total"] += (int) $item;
                     break;
                 case "300000":
-                    array_push($_SESSION["items"], "1969 Boss 429: $300,000";
+                    array_push($_SESSION["items"], "1969 Boss 429: $300,000");
                     $_SESSION["total"] += (int) $item;
                     break;
                 default:
                     break;
-            }*/
+            }
         }
     }
 ?>
@@ -35,8 +35,7 @@
         <link rel="stylesheet" href="./assignment1helpers/assignment1.css">
     </head>
     <body>
-        <?php include '../home/nav.php';
-        echo(phpversion());?>
+        <?php include '../home/nav.php';?>
         <div id="shopping-cart">
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
             <div class="dropdown-content" id="cart">
