@@ -1,8 +1,9 @@
 <?php
     session_start();
-    
-    $_SESSION["items"] = array();
-    $_SESSION["totalsArray"] = array();
+    if(empty($_SESSION)){
+        $_SESSION["items"] = array();
+        $_SESSION["totalsArray"] = array();
+    }
 
     if(!empty($_POST) && !empty($_POST["items"]) && $_POST["items"] != $_SESSION["items"]){
         foreach($_POST["items"] as $item){
@@ -31,7 +32,10 @@
 
     $_SESSION["items"] = array_unique($_SESSION["items"]);
     $_SESSION["totalsArray"] = array_unique($_SESSION["totalsArray"]);
-    $totalDue = array_sum($_SESSION["totalsArray"]);
+    $totalDue = 0;
+    foreach($_SESSION["totalsArray"] as $total){
+        $totalDue += $total;
+    }
 ?>
 <!DOCTYPE html>
 <html>
