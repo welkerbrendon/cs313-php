@@ -1,6 +1,6 @@
 <?php
     session_start();
-    /*$_Session["items"] = array();
+    $_Session["items"] = array();
     $_Session["total"] = 0;
     if(isset($_POST)){
         foreach($_POST as $item){
@@ -22,7 +22,7 @@
             }
             $_SESSION["total"] += (int) $item;
         }
-    }*/
+    }
 ?>
 <!DOCTYPE html>
 <html>
