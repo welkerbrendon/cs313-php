@@ -22,7 +22,7 @@
     cart.insertBefore(nodeElement, cart.firstChild);
 
     var totalElement = document.getElementById("total");
-    var totalElementValue = parseInt(totalElement.getAttribute("value"));
-    totalElement.setAttribute("value", totalElementValue + parseInt(button.value));
+    var totalElementValue = parseInt(totalElement.getAttribute("value")) + parseInt(button.value);
+    totalElement.setAttribute("value", totalElementValue);
     totalElement.innerHTML = "Total: $" + totalElementValue + ".00";
 }
