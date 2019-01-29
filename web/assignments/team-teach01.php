@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php $radio_majors = array("CS", "WDD", "CIT", "CE")?>
-        <form action="team-teach01-result.php" method="post">
+        <form action="./team-teach01-result.php" method="post">
             Name: <input type="text" name="name"><br>
             Email: <input type="text" name="email"><br>
             Major: <?php foreach($radio_majors as $value){
