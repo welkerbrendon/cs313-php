@@ -39,3 +39,7 @@ tr.seperate{
     border-bottom: 2px solid black;
     height: 100px;
 }
+
+#shopping-cart:hover #cart {
+    display: block;
+}

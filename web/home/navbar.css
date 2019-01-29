@@ -62,10 +62,6 @@ img.navbar {
   background-color: #ddd;
 }
 
-#first-dropdwn:hover #first-content {
-  display: block;
-}
-
-#second-dropdwn:hover #second-content {
+#first-dropdwn:hover #first-content, #second-dropdwn:hover #second-content {
   display: block;
 }
