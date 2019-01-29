@@ -25,4 +25,18 @@
     var totalElementValue = parseInt(totalElement.getAttribute("value")) + parseInt(button.value);
     totalElement.setAttribute("value", totalElementValue);
     totalElement.innerHTML = "Total: $" + totalElementValue + ".00";
+
+    addToForms(textElement, totalElementValue);
+}
+
+function addToForms(textElement, valueTotal) {
+    var nodeElement = document.createElement("INPUT");
+    nodeElement.setAttribute("class", "invisable-form");
+    nodeElement.setAttribute("name", "items");
+
+    var cartForm = document.getElementById("cart-form");
+    cartForm.appendChild(nodeElement);
+
+    var totalCartForm = document.getElementById("cart-total");
+    totalCartForm.setAttribute("value", valueTotal);
 }

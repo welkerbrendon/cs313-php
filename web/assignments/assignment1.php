@@ -12,7 +12,8 @@
             <img src="../pictures/shopping-cart.jpg" class="shopping-cart">
             <div class="dropdown-content" id="cart">
                 <p id="total" value="0";>Total: $0:00</p>
-                <form action="checkout.php" methor="post">
+                <form action="assignment1helpers/checkout.php" methor="post" id="cart-form">
+                    <input class="invisible-form" name="total" id="cart-total" value="0">
                     <input type="submit" value="Checkout">
                 </form>
             </div>
@@ -69,14 +70,7 @@
             </tr>
             <tr class="seperate">
                 <td colspan="2">$300,000.00<button class="add" onclick="addToCart(this)" value="1969 Boss 429: $300,000">Add To Cart</button></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <form action="checkout.php" method="post">
-                        <input width="100px" height="75px" type="submit" value="Checkout">
-                    </form>
-                </td>
-            </tr>    
+            </tr>   
         </table>
     </body>
 </html>

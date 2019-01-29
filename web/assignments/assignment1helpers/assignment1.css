@@ -47,3 +47,7 @@ tr.seperate{
 #cart {
     position: relative;
 }
+
+.invisible-form {
+    display: none;
+}
