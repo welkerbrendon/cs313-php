@@ -73,7 +73,7 @@
             <tr>
                 <td colspan="2">
                     <form action="checkout.php" method="post">
-                        <input type="submit" value="Checkout">
+                        <input width="100px" height="75px" type="submit" value="Checkout">
                     </form>
                 </td>
             </tr>    
