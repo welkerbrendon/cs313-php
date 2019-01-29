@@ -64,7 +64,8 @@
                 <form action="review-cart.php" id="cart-form" method="post">
                     <?php
                         foreach($_SESSION["items"] as $selectedItem){
-                            echo("<input disabled name='items[]' value=$selectedItem>");
+                            $string_length = strlen($selectedItem);
+                            echo("<input disabled name='items[]' value=$selectedItem size='$string_length' maxlength='$string_length'>");
                         }
                         echo("<p id='total' value='" . number_format($_SESSION["total"], 2) . "' name='cart-total'>Total: $" . number_format($_SESSION["total"], 2) . "</p>");
                     ?>
