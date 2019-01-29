@@ -75,7 +75,7 @@
                             $25,000.00
                             <?php
                                 if(!in_array("1964.5 Convertable: $25,000", $_SESSION["items"])){
-                                    echo("<button type='checkbox' name='25000' value='1964.5 Convertable: $25,000'>Select for Cart");
+                                    echo("<input type='checkbox' name='25000' value='1964.5 Convertable: $25,000'>Select for Cart");
                                 }
                             ?>
                         </form>
