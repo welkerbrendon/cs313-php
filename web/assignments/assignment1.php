@@ -4,7 +4,7 @@
     $_Session["total"] = 0;
     if(!empty($_POST)){
         foreach($_POST as $item){
-            /*switch($item){
+            /*switch ($item){
                 case "25000":
                     array_push($_SESSION["items"], "1964.5 Convertable: $25,000";
                     $_SESSION["total"] += (int) $item;
@@ -24,6 +24,7 @@
                 default:
                     break;
             }*/
+            $_SESSION["random"] = $item;
         }
     }
 ?>

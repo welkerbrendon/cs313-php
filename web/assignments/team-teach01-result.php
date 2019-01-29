@@ -34,7 +34,6 @@
                         break;
                     default:
                 }*/
-                echo($value);
             }
             $comments_response = "comments: " . $_POST["comments"];
             echo "<p>$name_response</p>
