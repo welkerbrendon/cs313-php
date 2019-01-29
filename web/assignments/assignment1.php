@@ -7,20 +7,23 @@
             switch($item){
                 case "25000":
                     array_push($_SESSION["items"], "1964.5 Convertable: $25,000";
+                    $_SESSION["total"] += (int) $item;
                     break;
                 case "45000":
                     array_push($_SESSION["items"], "1965 GT350: $45,000";
+                    $_SESSION["total"] += (int) $item;
                     break;
                 case "65000":
                     array_push($_SESSION["items"], "1967 GT500: $65,000";
+                    $_SESSION["total"] += (int) $item;
                     break;
                 case "300000":
                     array_push($_SESSION["items"], "1969 Boss 429: $300,000";
+                    $_SESSION["total"] += (int) $item;
                     break;
                 default:
                     break;
             }
-            $_SESSION["total"] += (int) $item;
         }
     }
 ?>
