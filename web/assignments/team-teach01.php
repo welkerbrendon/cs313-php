@@ -23,5 +23,8 @@
             Comments: <textarea name="comments"></textarea><br>
             <input type="submit">
         </form>
+        <form action="team-teach01-result.php" method="post">
+            <input type="submit">
+        </form>
     </body>
 </html>
