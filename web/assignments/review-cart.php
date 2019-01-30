@@ -9,6 +9,7 @@
     }
     else {
         $_SESSION["items"] = array();
+        echo("Neither were arrays.");
     }
 
     $_SESSION["total"] = 0;
