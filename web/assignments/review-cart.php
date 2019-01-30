@@ -11,9 +11,9 @@
 </head>
 <body>
     <?php include '../home/nav.php';
-    echo("<form action='checkout.php' method='post'>");
-    echo($form);
-    echo("<input type='submit' value='checkout'></form>?>");?>
+    //echo("<form action='checkout.php' method='post'>");
+    echo("<p>$form</p>");
+    //echo("<input type='submit' value='checkout'></form>?>");?>
 
 </body>
 </html>
