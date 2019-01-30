@@ -25,7 +25,7 @@
 
     $form;
     foreach($_SESSION["items"] as $item){
-        $form .= "$item<input type=checkbox name=items[] value=$item checked>Deselect to remove from purchase";
+        $form .= "<p>$item<br><input type=checkbox name=items[] value=$item checked>Deselect to remove from purchase</p>";
     }
 ?>
 <!DOCTYPE html>
@@ -37,7 +37,7 @@
     <?php include '../home/nav.php';
     echo("<form action='checkout.php' method='post'>");
     echo($form);
-    echo("<input type='submit' value='checkout'></form>>");?>
+    echo("<input type='submit' value='checkout'></form>");?>
 
 </body>
 </html>
