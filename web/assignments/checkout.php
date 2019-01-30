@@ -1,25 +1,21 @@
 <?php
     session_start();
     
-    $_SESSION["items"] = array();
+    $_SESSION["items"] = $_POST;
 
     $_SESSION["total"] = 0;
     foreach($_POST as $item){
         switch ($item){
             case "1964.5 Convertable: $25,000":
-                array_push($_SESSION["items"], $item);
                 $_SESSION["total"] += 25000;
                 break;
             case "1965 GT350: $45,000":
-                array_push($_SESSION["items"], $item);
                 $_SESSION["total"] += 45000;
                 break;
             case "1967 GT500: $65,000":
-                array_push($_SESSION["items"], $item);
                 $_SESSION["total"] += 65000;
                 break;
             case "1969 Boss 429: $300,000":
-                array_push($_SESSION["items"], $item);
                 $_SESSION["total"] += 300000;
                 break;
             default:
