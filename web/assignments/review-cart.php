@@ -1,9 +1,9 @@
 <?php
     session_start();
-    if(!isset($_SESSION["items"])){
+    if(!empty($_SESSION["items"])){
         $_SESSION["items"] = array();
     }
-    array_merge($_SESSION["items"], $_POST["items"]);
+    $_SESSION["items"] = array_merge($_SESSION["items"], $_POST["items"]);
 
     $_SESSION["total"] = 0;
     $_SESSION["items"] = array_unique($_SESSION["items"]);
