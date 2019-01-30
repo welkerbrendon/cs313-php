@@ -63,7 +63,7 @@
     <?php include '../home/nav.php';
     echo"<form action='checkout.php' method='post'><table>";
     foreach($_SESSION["items"] as $item){
-        echo"<tr><td>$item</td><td><input type='checkbox' name='$item'>Deselect to remove from cart</td></tr>";
+        echo"<tr><td>$item</td><td><input checked type='checkbox' name='$item'>Deselect to remove from cart</td></tr>";
     }
     echo("<tr><td colspan='2'><input type='submit' class='submit' value='checkout'></td></tr></table></form>");?>
 
