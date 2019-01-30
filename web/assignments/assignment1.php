@@ -74,7 +74,7 @@
             </div>
         </div>
         <h1>Welcome to the greatest selection of classic Fords ever assembled!</h1>
-        <form action="/" method="post">
+        <form action="../" method="post">
             <table>
                 <tr class="seperate">
                     <th colspan="2"><h2>Mustangs<h2></th>
