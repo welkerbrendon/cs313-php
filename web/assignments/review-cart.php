@@ -1,8 +1,8 @@
 <?php
     $form;
-    foreach ($_POST as $item_added){
-        $form .= "$item_added<input type='checkbox' value=$item_added name='items_to_remove[]'>'Select for removal from cart";
-    }
+    // foreach ($_POST as $item_added){
+    //     $form .= "$item_added<input type='checkbox' value=$item_added name='items_to_remove[]'>'Select for removal from cart";
+    // }
 ?>
 <!DOCTYPE html>
 <head>
@@ -12,7 +12,7 @@
 <body>
     <?php include '../home/nav.php';
     //echo("<form action='checkout.php' method='post'>");
-    echo("<p>$_POST</p>");
+    echo("<p>" . array_values($_POST) . "</p>");
     //echo("<input type='submit' value='checkout'></form>>");?>
 
 </body>
