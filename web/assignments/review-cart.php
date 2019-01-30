@@ -33,7 +33,7 @@
         }
     }
 
-    $form;
+    $form = array();
     foreach($_SESSION["items"] as $item){
         switch ($item){
             case "1964.5 Convertable: $25,000":
@@ -51,19 +51,21 @@
             default:
                 break;
         }
-        $form .= "$item<br><input type=checkbox name=items[] value=$item checked>Deselect to remove from purchase<br>";
     }
 ?>
 <!DOCTYPE html>
 <head>
     <title>Brendon Welker's Store: Review Purchases</title>
     <link rel="stylesheet" href="../home/navbar.css">
+    <link rel="stylesheet" href="assignment1helpers.css">
 </head>
 <body>
     <?php include '../home/nav.php';
-    echo("<form action='checkout.php' method='post'>");
-    echo($form);
-    echo("<input type='submit' value='checkout'></form>");?>
+    echo"<form action='checkout.php' method='post'><table>";
+    foreach($_SESSION["items"] as $item){
+        echo"<tr><td>$item</td><td><input type='checkbox' name='$item'>Deselect to remove from cart</td></tr>";
+    }
+    echo("<tr><td colspan='2'><input type='submit' value='checkout'></td></tr></table></form>");?>
 
 </body>
 </html>
