@@ -61,7 +61,7 @@
         <div id="shopping-cart">
             <a href="review-cart.php"><img src="../pictures/shopping-cart.jpg" class="shopping-cart"></a>
             <div class="dropdown-content" id="cart">
-                <form action="./review-cart.php" method="post">
+                <form action="review-cart.php" method="post">
                     <?php
                         foreach($_SESSION["items"] as $selectedItem){
                             $string_length = strlen($selectedItem);
@@ -74,7 +74,7 @@
             </div>
         </div>
         <h1>Welcome to the greatest selection of classic Fords ever assembled!</h1>
-        <form action="assignment1.php" method="post">
+        <form action="/" method="post">
             <table>
                 <tr class="seperate">
                     <th colspan="2"><h2>Mustangs<h2></th>
