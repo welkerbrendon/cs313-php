@@ -12,7 +12,7 @@
 <body>
     <?php include '../home/nav.php';
     //echo("<form action='checkout.php' method='post'>");
-    echo("<p>$form</p>");
+    echo("<p>$_POST</p>");
     //echo("<input type='submit' value='checkout'></form>>");?>
 
 </body>
