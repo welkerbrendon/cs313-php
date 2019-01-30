@@ -1,10 +1,10 @@
 <?php
     session_start();
     
-    if(is_array($_SESSION["items"]){}
+    if(is_array($_SESSION["items"])){
     $_SESSION["items"] = array_merge($_SESSION["items"], $_POST["items"]);
     }
-    else if (is_array($_POST["items"]){
+    else if (is_array($_POST["items"])){
         $_SESSION["items"] = array($_POST["items"]);
     }
     else {
