@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    echo($_POST);
+    echo($_POST[0]);
     
     $_SESSION["items"] = array();
 
