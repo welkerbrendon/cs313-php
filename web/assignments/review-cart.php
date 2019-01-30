@@ -1,10 +1,8 @@
 <?php
     session_start();
-    if(!isset($_SESSION["items"])){
-        $_SESSION["items"] = array();
+    foreach($_POST["items"] as $item){
+        array_push($_SESSION["items"], $item);
     }
-    array_push($_SESSION["items"], $_POST["items"]);
-
     $_SESSION["total"] = 0;
     $_SESSION["items"] = array_unique($_SESSION["items"]);
     foreach($_SESSION["items"] as $itemForTotal){
@@ -28,7 +26,7 @@
 
     $form;
     foreach($_SESSION["items"] as $item){
-        $form .= "<p>$item<br><input type=checkbox name=items[] value=$item checked>Deselect to remove from purchase</p>";
+        $form .= "<p>$item<br><input type=checkbox name=items[] value=$item checked>Deselect to remove from purchase";
     }
 ?>
 <!DOCTYPE html>
