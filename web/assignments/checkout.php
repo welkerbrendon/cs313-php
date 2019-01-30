@@ -40,7 +40,7 @@
         } 
         echo"<tr><td colspan='2'>Total: $" . number_format($_SESSION["total"], 2) . "</tr></td>";?>
     </table>
-    <form action="thankyou.html">
+    <form action="thankyou.php">
         <table>
             <tr>
                 <td>Full Name:</td>
