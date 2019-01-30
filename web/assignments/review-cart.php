@@ -64,12 +64,12 @@
     <form action='checkout.php' method='post'>
         <table>
             <?php
-            foreach($_SESSION["items"] as $item){?>
-                <tr><td><?php$item?></td><td><input checked type='checkbox' name='$item'>Deselect to remove from cart</td></tr>"
-            <?php}?>
+            foreach($_SESSION["items"] as $item) { ?>
+                <tr><td><?php echo($item) ?></td><td><input checked type="checkbox" name="<?php echo($item) ?>">Deselect to remove from cart</td></tr>"
+            <?php } ?>
             <tr>
-                <td colspan='2'>
-                    <input type='submit' class='submit' value='checkout'>
+                <td colspan="2">
+                    <input type="submit" class="submit" value="checkout">
                 </td>
             </tr>
         </table>
