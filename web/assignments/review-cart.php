@@ -1,8 +1,7 @@
 <?php
     session_start();
     array_push($_SESSION["items"], $_POST["items"]);
-    array_unique($_SESSION["items"]);
-
+    
     $_SESSION["total"] = 0;
     $_SESSION["items"] = array_unique($_SESSION["items"]);
     foreach($_SESSION["items"] as $itemForTotal){
