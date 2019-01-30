@@ -61,7 +61,7 @@
         <div id="shopping-cart">
             <a href="review-cart.php"><img src="../pictures/shopping-cart.jpg" class="shopping-cart"></a>
             <div class="dropdown-content" id="cart">
-                <form action="review-cart.php" method="post">
+                <form action="/review-cart.php" method="post">
                     <?php
                         foreach($_SESSION["items"] as $selectedItem){
                             $string_length = strlen($selectedItem);
