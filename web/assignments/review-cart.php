@@ -57,7 +57,7 @@
 <body>
     <?php include '../home/nav.php';
     //echo("<form action='checkout.php' method='post'>");
-    echo("<p>" . $_SESSION["items"] . "</p>");
+    echo("<p>" . $_SESSION["items"][0] . "</p>");
     //echo("<input type='submit' value='checkout'></form>>");?>
 
 </body>
