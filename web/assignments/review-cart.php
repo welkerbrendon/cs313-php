@@ -65,7 +65,7 @@
     foreach($_SESSION["items"] as $item){
         echo"<tr><td>$item</td><td><input type='checkbox' name='$item'>Deselect to remove from cart</td></tr>";
     }
-    echo("<tr><td colspan='2'><input type='submit' value='checkout'></td></tr></table></form>");?>
+    echo("<tr><td colspan='2'><input type='submit' class='submit' value='checkout'></td></tr></table></form>");?>
 
 </body>
 </html>
