@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $_SESSION["items"] = $_POST["items"];
+    array_push($_SESSION["items"], $_POST["items"]);
+    array_unique($_SESSION["items"]);
 
     $_SESSION["total"] = 0;
     $_SESSION["items"] = array_unique($_SESSION["items"]);
