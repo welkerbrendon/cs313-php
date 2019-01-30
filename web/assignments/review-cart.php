@@ -1,12 +1,10 @@
 <?php
     session_start();
-    if(!empty($_SESSION["items"])){
-        $_SESSION["items"] = array();
-    }
-    $_SESSION["items"] = array_merge($_SESSION["items"], $_POST["items"]);
+    
+    $_SESSION["items"] = $_POST["items"]
 
     $_SESSION["total"] = 0;
-    $_SESSION["items"] = array_unique($_SESSION["items"]);
+    //$_SESSION["items"] = array_unique($_SESSION["items"]);
     foreach($_SESSION["items"] as $itemForTotal){
         switch ($itemForTotal){
             case "1964.5 Convertable: $25,000":
@@ -27,7 +25,7 @@
     }
 
     $form;
-    foreach($_POST["items"] as $item){
+    foreach($_SESSION["items"] as $item){
         $form .= "$item<br><input type=checkbox name=items[] value=$item checked>Deselect to remove from purchase<br>";
     }
 ?>
