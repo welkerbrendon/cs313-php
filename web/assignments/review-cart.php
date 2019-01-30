@@ -7,7 +7,7 @@
 
     $_SESSION["total"] = 0;
     //$_SESSION["items"] = array_unique($_SESSION["items"]);
-    foreach($_POST["items"] as $item){
+    foreach($_POST as $item){
         switch ($item){
             case "1964.5 Convertable: $25,000":
                 if(!in_array($item, $_SESSION["item"])){
