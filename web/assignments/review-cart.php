@@ -57,7 +57,7 @@
 <head>
     <title>Brendon Welker's Store: Review Purchases</title>
     <link rel="stylesheet" href="../home/navbar.css">
-    <link rel="stylesheet" href="assignment1helpers.css">
+    <link rel="stylesheet" href="assignment1helpers/assignment1.css">
 </head>
 <body>
     <?php include '../home/nav.php';
