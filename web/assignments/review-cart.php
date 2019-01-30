@@ -1,7 +1,10 @@
 <?php
     session_start();
-    foreach($_POST["items"] as $item){
+    if(isset($_SESSION["items"])){}
         array_push($_SESSION["items"], $item);
+    }
+    else {
+        $_SESSION["items"] = $_POST["items"];
     }
     $_SESSION["total"] = 0;
     $_SESSION["items"] = array_unique($_SESSION["items"]);
