@@ -65,7 +65,7 @@
         <table>
             <?php
             foreach($_SESSION["items"] as $item) { ?>
-                <tr><td><?php echo($item) ?></td><td><input checked type="checkbox" name=<?php echo($item) ?>>Deselect to remove from cart</td></tr>"
+                <tr><td><?php echo($item) ?></td><td><input checked type="checkbox" name="item" value=<?php echo($item) ?>>Deselect to remove from cart</td></tr>"
             <?php } ?>
             <tr>
                 <td colspan="2">
