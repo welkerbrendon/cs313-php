@@ -1,7 +1,15 @@
 <?php
     session_start();
     
-    $_SESSION["items"] = $_POST["items"];
+    if(is_array($_SESSION["items"]){}
+    $_SESSION["items"] = array_merge($_SESSION["items"], $_POST["items"]);
+    }
+    else if (is_array($_POST["items"]){
+        $_SESSION["items"] = array($_POST["items"]);
+    }
+    else {
+        $_SESSION["items"] = array();
+    }
 
     $_SESSION["total"] = 0;
     //$_SESSION["items"] = array_unique($_SESSION["items"]);
