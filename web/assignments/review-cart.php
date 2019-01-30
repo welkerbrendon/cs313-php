@@ -27,7 +27,7 @@
     }
 
     $form;
-    foreach($_SESSION["items"] as $item){
+    foreach($_POST["items"] as $item){
         $form .= "$item<br><input type=checkbox name=items[] value=$item checked>Deselect to remove from purchase<br>";
     }
 ?>
