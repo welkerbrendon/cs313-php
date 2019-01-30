@@ -61,14 +61,14 @@
         <div id="shopping-cart">
             <a href="review-cart.php"><img src="../pictures/shopping-cart.jpg" class="shopping-cart"></a>
             <div class="dropdown-content" id="cart">
-                <form action="review-cart.php" id="cart-form" method="post">
+                <form action="review-cart.php" method="post">
                     <?php
                         foreach($_SESSION["items"] as $selectedItem){
                             $string_length = strlen($selectedItem);
                             $total_number_formated = number_format($_SESSION["total"], 2);?>
-                            <input disabled name="items[]" value="<?php echo($selectedItem); ?>" size="<?php echo($string_length); ?>" maxlength="<?php echo($string_length); ?>"><br>;
-                        <?php}?>
-                        <input disabled size='20' id='total' value='Total: $<?php echo($total_number_formated); ?>' name='cart-total'><br>
+                            <input disabled name="items[]" value="<?php echo($selectedItem) ?>" size="<?php echo($string_length) ?>" maxlength="<?php echo($string_length) ?>"><br>;
+                        <?php } ?>
+                        <!--<input disabled size='20' id='total' value='Total: $<?php echo($total_number_formated) ?>' name='cart-total'><br>-->
                     <input type="submit" value="Checkout">
                 </form>
             </div>
