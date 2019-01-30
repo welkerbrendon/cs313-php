@@ -37,7 +37,7 @@
     <?php include '../home/nav.php';?>
     <h2>Please enter you mailing address for shipment of the following items:</h2>
     <table>
-        <?php foreach($_SESSION["item"] as $item){
+        <?php foreach($_POST as $item){
             echo"<tr><td colspan='2'>$item</td></tr>";
         } ?>
     </table>
