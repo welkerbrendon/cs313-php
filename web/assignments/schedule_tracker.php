@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <title>
+    <head>
         <title>Schedule Tracker</title>
         <link rel="stylesheet" href="../home/navbar.css">
-    </title>
+    </head>
     <body>
         <?php include '../home/nav.php';?>
         <h1>Welcome to Your Schedule Tracker!</h1>
