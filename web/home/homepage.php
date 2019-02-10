@@ -31,6 +31,7 @@
                     Now see the great work he does:
                     </p>
                     <a href="../assignments/assignment1.php">Assignment1</a></br>
+                    <a href="../assignments/schedule_tracker.php">Schedule Tracker Project</a></br>
                 </td>
                 <td align="center"><img src="../pictures/stc.jpg"></td>
             </tr>
