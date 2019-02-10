@@ -10,10 +10,10 @@
         <form action="" method="post">
             Username:<input type="text" maxlength="255" size="25" name="username"><br><br>
             Password:<input type="password" maxlength="255" size="25" name="password"><br><br>
-            <input type="radio" name="time_period" id="day">Most Recent Day Entered
-            <input type="radio" name="time_period" id="week">Past Week
-            <input type="radio" name="time_period" id="month">Past Month
-            <input type="radio" name="time_period" id="custom">Custom Time Period
+            <input type="radio" name="time_period" id="day">Most Recent Day Entered<br>
+            <input type="radio" name="time_period" id="week">Past Week<br>
+            <input type="radio" name="time_period" id="month">Past Month<br>
+            <input type="radio" name="time_period" id="custom">Custom Time Period<br>
         </form>
     </body>
 </html>
