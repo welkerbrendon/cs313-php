@@ -8,8 +8,8 @@
         <?php include '../home/nav.php';?>
         <h1>Please fill out form in order to see desired history</h1>
         <form action="" method="post">
-            Username:<input type="text" maxlength="255" size="255" name="username">
-            Password:<input type="password" maxlength="255" size="255" name="password">
+            Username:<input type="text" maxlength="255" size="100" name="username">
+            Password:<input type="password" maxlength="255" size="100" name="password">
             <input type="radio" name="time_period" id="day">Most Recent Day Entered
             <input type="radio" name="time_period" id="week">Past Week
             <input type="radio" name="time_period" id="month">Past Month
