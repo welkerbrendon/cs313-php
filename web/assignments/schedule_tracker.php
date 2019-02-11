@@ -4,8 +4,8 @@
 
     $not_logged_in = "<h2>Please Sign In</h2>
     <form action='schedule_tracker.php' method='POST'>
-    username:<input type='text' name='username' maxlength='255' size='25'><br>
-    email:<input type='text' name='password' maxlength='255' size='25'><br>
+    username:<input type='text' name='username' maxlength='255' size='25'><br><br>
+    email:<input type='text' name='password' maxlength='255' size='25'><br><br>
     <input type='submit' value='Sign In'>
     </form>";
 
