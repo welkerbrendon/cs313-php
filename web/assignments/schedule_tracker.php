@@ -1,9 +1,9 @@
 <?php
-    if(in_array("username", $_COOKIE)){
+    if(in_array("username", $_POST)){
         setcookie("username", $_POST["username"], time() + (60 * 30);
     }
     else {
-        echo "<script> location.href='new_url'; </script>";
+        echo "<script> location.href='sign_in.html'; </script>";
         exit;
     }
 ?>
