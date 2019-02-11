@@ -8,7 +8,7 @@ echo "
     </button>
     <div class='dropdown-content' id='first-content'>
       <a href='../assignments/assignment1.php'>Assignment1</a>
-      <a href='../assignments/team-teach01.php'>TeamActivity1</a>
+      <a href='../assignments/schedule_tracker.php'>Schedule Tracker</a>
     </div>
   </div> 
   <div class='dropdown' id='second-dropdwn'>
