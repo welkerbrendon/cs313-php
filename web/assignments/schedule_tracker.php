@@ -1,3 +1,23 @@
+<?php
+    $logged_in = "<a href='view_schedule_data.php'><button>View History</button></a>
+    <a href='add_day.php'><button>Add New Day</button></a>";
+
+    $not_logged_in = "<form action='schedule_tracker.php' method='POST'>
+    username:<input type='text' name='username' maxlength='255' size='50'>
+    email:<input type='text' name='password' maxlength='255' size='50'>
+    <input type='submit' value='Sign In'>
+    </form>";
+
+    $page_to_show = "";
+
+    if(in_array("username", $_POST) || in_array("username", $_COOKIE)){
+        $page_to_showpage = $logged_in;
+        setcookie("username", $_POST["username"], time() + (30));
+    }
+    else {
+        $page_to_show = $not_logged_in;
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,7 +27,6 @@
     <body>
         <?php include '../home/nav.php';?>
         <h1>Welcome to Your Schedule Tracker!</h1>
-        <a href="view_schedule_data.php"><button>View History</button></a>
-        <a href="add_day.php"><button>Add New Day</button></a>
+        <?php echo $page_to_show; ?>
     </body>
 </html>

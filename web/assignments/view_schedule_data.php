@@ -14,6 +14,7 @@
             <input type="radio" name="time_period" id="week">Past Week<br>
             <input type="radio" name="time_period" id="month">Past Month<br>
             <input type="radio" name="time_period" id="custom">Custom Time Period<br>
+            <input type="submit">
         </form>
     </body>
 </html>
