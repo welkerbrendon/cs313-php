@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST["username"])){
-        setcookie("username", $_POST["username"], time() + (60 * 30);
+        //setcookie("username", $_POST["username"], time() + (60 * 30);
     }
 ?>
 <!DOCTYPE html>
