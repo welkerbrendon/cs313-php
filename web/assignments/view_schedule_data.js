@@ -5,7 +5,7 @@ function day(){
 
     var form = document.getElementById("form");
     var element_to_replace = form.childNodes[form.childNodes.length - 3];
-    form.replaceChile(input_item, element_to_replace);
+    form.replaceChild(input_item, element_to_replace);
     form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
 }
 function week(){
@@ -15,7 +15,7 @@ function week(){
 
     var form = document.getElementById("form");
     var element_to_replace = form.childNodes[form.childNodes.length - 3];
-    form.replaceChile(input_item, element_to_replace);
+    form.replaceChild(input_item, element_to_replace);
     form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
 }
 function month(){
@@ -25,7 +25,7 @@ function month(){
 
     var form = document.getElementById("form");
     var element_to_replace = form.childNodes[form.childNodes.length - 3];
-    form.replaceChile(input_item, element_to_replace);
+    form.replaceChild(input_item, element_to_replace);
     form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
 }
 function custom(){
@@ -39,10 +39,10 @@ function custom(){
 
     var form = document.getElementById("form");
     var element_to_replace = form.childNodes[form.childNodes.length - 3];
-    form.replaceChile(input_item, element_to_replace);
+    form.replaceChild(input_item, element_to_replace);
     form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
 
     element_to_replace = form.childNodes[form.childNodes.length - 3];
-    form.replaceChile(input_item, element_to_replace);
+    form.replaceChild(input_item, element_to_replace);
     form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
 }
