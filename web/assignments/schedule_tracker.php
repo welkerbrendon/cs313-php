@@ -2,9 +2,10 @@
     $logged_in = "<a href='view_schedule_data.php'><button>View History</button></a>
     <a href='add_day.php'><button>Add New Day</button></a>";
 
-    $not_logged_in = "<form action='schedule_tracker.php' method='POST'>
-    username:<input type='text' name='username' maxlength='255' size='50'>
-    email:<input type='text' name='password' maxlength='255' size='50'>
+    $not_logged_in = "<h2>Please Sign In</h2>
+    <form action='schedule_tracker.php' method='POST'>
+    username:<input type='text' name='username' maxlength='255' size='25'><br>
+    email:<input type='text' name='password' maxlength='255' size='25'><br>
     <input type='submit' value='Sign In'>
     </form>";
 
