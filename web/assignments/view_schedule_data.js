@@ -5,7 +5,7 @@ function day(){
     input_item.appendChild(document.createTextNode("Desired Day"));
 
     if(document.getElementById("custom_input")){
-        document.getElementById("custom_input") = input_item;
+        document.getElementById("custom_input").parentNode.replaceChild(input_item);
     }
     else{
         var form = document.getElementById("form");
