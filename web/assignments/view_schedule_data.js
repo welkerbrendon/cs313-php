@@ -5,6 +5,7 @@ function day(){
 
     var form = document.getElementById("form");
     form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
+    form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2])
 }
 function week(){
 
