@@ -5,7 +5,7 @@
     $page_to_show = "";
     if(isset($_POST)){
         setcookie("username", $_POST["username"], time() + (60 * 30);
-        $page_to_show = $signed_in;
+        //$page_to_show = $signed_in;
     }
     else {
         $page_to_show = $not_signed_in;
