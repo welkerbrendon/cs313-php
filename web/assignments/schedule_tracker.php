@@ -1,5 +1,5 @@
 <?php
-    if(isset($_POST["username"])){
+    if(isset($_POST["username"]) || isset($_COOKIE["username"])){
         setcookie("username", $_POST["username"], time() + (60 * 30));
     }
     else {

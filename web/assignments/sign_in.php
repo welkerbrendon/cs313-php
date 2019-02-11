@@ -8,8 +8,8 @@
         <?php include '../home/nav.php';?>
         <h1>Please Sign In</h1>
         <form action="schedule_tracker.php" method="POST">
-            username: <input type="text" maxlength="255" size="25"><br><br>
-            password: <input type="password" maxlength="255" size="25"><br><br>
+            username: <input type="text" name="username" maxlength="255" size="25"><br><br>
+            password: <input type="password" name="password" maxlength="255" size="25"><br><br>
             <input type="submit" value="Sign In">
         </form>
     </body>
