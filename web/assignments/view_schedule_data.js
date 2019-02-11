@@ -1,5 +1,6 @@
 function day(){
-    var input_item = document.createElement("input").setAttribute("type", "date");
+    var input_item = document.createElement("input");
+    input_item.setAttribute("type", "date");
     input_item.appendChild(document.createTextNode("Desired Day"));
 
     var form = document.getElementById("form");
