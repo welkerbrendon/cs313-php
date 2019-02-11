@@ -3,7 +3,8 @@
         setcookie("username", $_POST["username"], time() + (60 * 30));
     }
     else {
-        header("Location: sign_in.php")
+        header("Location: sign_in.php");
+        exit;
     }
 ?>
 <!DOCTYPE html>
