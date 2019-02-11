@@ -23,6 +23,7 @@
             <input type="radio" name="time_period" onclick="week()" value="week">Past Week<br>
             <input type="radio" name="time_period" onclick="month()" value="month">Past Month<br>
             <input type="radio" name="time_period" onclick="custom()" value="custom">Custom Time Period<br>
+            <br>
             <input type="submit">
         </form>
     </body>
