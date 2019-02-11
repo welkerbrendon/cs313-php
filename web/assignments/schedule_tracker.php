@@ -3,7 +3,7 @@
         setcookie("username", $_POST["username"], time() + (60 * 30);
     }
     else {
-        echo "<script> location.href='sign_in.html'; </script>";
+        header("Location: sign_in.php");;
         exit;
     }
 ?>
