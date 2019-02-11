@@ -3,7 +3,7 @@
     <a href='add_day.php'><button>Add New Day</button></a>";
     $not_signed_in = "<a href='sign_in'><button>Sign In</button></a>";
     $page_to_show = "";*/
-    if(in_array("username", $_POST)){
+    if(in_array("username", $_POST[])){
         setcookie("username", $_POST["username"], time() + (60 * 30);
         $page_to_show = $signed_in;
     }
