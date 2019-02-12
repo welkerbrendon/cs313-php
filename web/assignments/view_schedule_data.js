@@ -4,8 +4,9 @@ function day(){
     input_item.setAttribute("id", "custom_input");
     input_item.appendChild(document.createTextNode("Desired Day"));
 
-    if(document.getElementById("custom_input")){
-        document.getElementById("custom_input").parentNode.replaceChild(input_item);
+    var current_element = document.getElementById("custom_input");
+    if(current_element){
+        current_element.parentNode.replaceChild(input_item, current_element);
     }
     else{
         var form = document.getElementById("form");
