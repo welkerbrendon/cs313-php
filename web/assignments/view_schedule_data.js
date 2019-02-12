@@ -4,6 +4,7 @@ function day(){
     input_item.setAttribute("id", "custom_input");
     input_item.appendChild(document.createTextNode("Desired Day"));
 
+    var form = document.getElementById("form");
     var current_element = document.getElementById("custom_input");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
@@ -15,7 +16,6 @@ function day(){
         }
     }
     else{
-        var form = document.getElementById("form");
         form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
         form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
     }
@@ -27,6 +27,7 @@ function week(){
     input_item.appendChild(document.createTextNode("Desired Week"));
 
     var current_element = document.getElementById("custom_input");
+    var form = document.getElementById("form");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
         var check_for_extra = document.getElementById("second_custom_input");
@@ -37,7 +38,6 @@ function week(){
         }
     }
     else{
-        var form = document.getElementById("form");
         form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
         form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
     }
