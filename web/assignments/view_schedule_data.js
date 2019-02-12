@@ -17,12 +17,12 @@ function noInput(){
 function day(){
     var input_item = document.createElement("input");
     input_item.setAttribute("type", "date");
-    input_item.setAttribute("id", "input_br");
+    input_item.setAttribute("id", "custom_input");
     input_item.setAttribute("name", "day");
     input_item.appendChild(document.createTextNode("Desired Day"));
 
     var br = document.createElement("br");
-    br.setAttribute("id", "custom_input");
+    br.setAttribute("id", "input_br");
 
     var form = document.getElementById("form");
     var current_element = document.getElementById("custom_input");
