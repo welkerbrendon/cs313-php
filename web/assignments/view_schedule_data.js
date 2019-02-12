@@ -7,6 +7,10 @@ function day(){
     var current_element = document.getElementById("custom_input");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
+        var check_for_extra = document.getElementById("second_custom_input");
+        if(check_for_extra){
+            check_for_extra.parentNode.removeChild(check_for_extra);
+        }
     }
     else{
         var form = document.getElementById("form");
@@ -23,6 +27,10 @@ function week(){
     var current_element = document.getElementById("custom_input");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
+        var check_for_extra = document.getElementById("second_custom_input");
+        if(check_for_extra){
+            check_for_extra.parentNode.removeChild(check_for_extra);
+        }
     }
     else{
         var form = document.getElementById("form");
@@ -39,6 +47,10 @@ function month(){
     var current_element = document.getElementById("custom_input");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
+        var check_for_extra = document.getElementById("second_custom_input");
+        if(check_for_extra){
+            check_for_extra.parentNode.removeChild(check_for_extra);
+        }
     }
     else{
         var form = document.getElementById("form");
@@ -54,11 +66,17 @@ function custom(){
 
     var input_item1 = document.createElement("input");
     input_item1.setAttribute("type", "date");
+    input_item1.setAttribute("id", "second_custom_input")
     input_item1.appendChild(document.createTextNode("End Date"));
 
     var current_element = document.getElementById("custom_input");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
+        form.insertBefore(input_item1, form.childNodes[form.childNodes.length - 2]);
+        var check_for_extra = document.getElementById("second_custom_input");
+        if(!check_for_extra){
+            form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
+        }
     }
     else{
         var form = document.getElementById("form");
