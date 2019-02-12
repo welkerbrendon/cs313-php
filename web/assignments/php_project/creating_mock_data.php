@@ -1,4 +1,4 @@
 <?php
-    $uuid = UUID::v4();
+    $uuid = uuid();
     echo $uuid;
 ?>

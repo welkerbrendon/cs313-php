@@ -2,8 +2,6 @@
     if(!isset($_POST[""])
     require('connect_to_db.php');
     $db = connect();
-
-
 ?>
 <!DOCTYPE html>
 <html>
