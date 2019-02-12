@@ -73,9 +73,9 @@ function custom(){
     var form = document.getElementById("form");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
-        form.insertBefore(input_item1, form.childNodes[form.childNodes.length - 2]);
         var check_for_extra = document.getElementById("second_custom_input");
         if(!check_for_extra){
+            form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
             form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
         }
     }
