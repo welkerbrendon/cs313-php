@@ -8,8 +8,8 @@
 
     $given_day = NULL;
     $string_insert_statement = "INSERT INTO day VALUES";
-    // for($i = 0; $i < 12; $i++){
-    //     $given_day = date('d.m.y', strtotime("-$i days"));
-    //     echo "$given_day<br>";
-    // } 
+    for($i = 0; $i < 12; $i++){
+        $given_day = date('d.m.y', strtotime("-$i days"));
+        echo "$given_day<br>";
+    } 
 ?>
