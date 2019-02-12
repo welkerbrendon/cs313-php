@@ -6,6 +6,10 @@
     $select_statement->execute();
     $uuid = $select_statement->fetch(PDO::FETCH_ASSOC);
 
-    echo $uuid["user_id"];
-    //$insert_statement = $db->prepare("INSERT INTO 
+    $given_day = NULL;
+    $string_insert_statement = "INSERT INTO day VALUES ($given_day, $uuid['user_id'], now(), now())";
+    for($i = 0; $i < 12; $i++){
+        $given_day = date('d.m.y', strtotime("-$i days"));
+        echo "$given_day<br>";
+    } 
 ?>
