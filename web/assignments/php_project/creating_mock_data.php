@@ -4,7 +4,7 @@
 
     $select_statement = $db->prepare("SELECT user_id FROM user_info WHERE username='welkerbrendon'");
     $select_statement->execute();
-    $uuid = $select_statement->fetch(PDO::FETCH_ASSOC);
+    $uuid = $select_statement->fetch(PDO::FETCH_STRING);
 
     echo $uuid;
     //$insert_statement = $db->prepare("INSERT INTO 
