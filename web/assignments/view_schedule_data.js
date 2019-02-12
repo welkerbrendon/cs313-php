@@ -1,8 +1,9 @@
 function noInput(){
     var element_to_remove = document.getElementById("custom_input");
-    while(element_to_remove){
+    if(element_to_remove){
         element_to_remove.parentNode.removeChild(element_to_remove);
-        element_to_remove = document.getElementById("custom_input");
+        var input_br = document.getElementById("input_br");
+        input_br.parentNode.removeChild(input_br);
     }
     var check_for_extra = document.getElementById("second_custom_input");
     if(check_for_extra){
@@ -16,7 +17,7 @@ function noInput(){
 function day(){
     var input_item = document.createElement("input");
     input_item.setAttribute("type", "date");
-    input_item.setAttribute("id", "custom_input");
+    input_item.setAttribute("id", "input_br");
     input_item.setAttribute("name", "day");
     input_item.appendChild(document.createTextNode("Desired Day"));
 
@@ -48,7 +49,7 @@ function week(){
     input_item.appendChild(document.createTextNode("Desired Week"));
 
     var br = document.createElement("br");
-    br.setAttribute("id", "custom_input");
+    br.setAttribute("id", "input_br");
 
     var current_element = document.getElementById("custom_input");
     var form = document.getElementById("form");
@@ -75,7 +76,7 @@ function month(){
     input_item.appendChild(document.createTextNode("Desired Month"));
 
     var br = document.createElement("br");
-    br.setAttribute("id", "custom_input");
+    br.setAttribute("id", "input_br");
 
     var current_element = document.getElementById("custom_input");
     var form = document.getElementById("form");
@@ -111,7 +112,7 @@ function custom(){
     deletable_br.setAttribute("id", "deletable");
 
     var br = document.createElement("br");
-    br.setAttribute("id", "custom_input");
+    br.setAttribute("id", "input_br");
 
     var current_element = document.getElementById("custom_input");
     var form = document.getElementById("form");
