@@ -12,7 +12,8 @@ function day(){
         if(check_for_extra){
             check_for_extra.parentNode.removeChild(check_for_extra);
             var br_list = form.getElementsByTagName("br");
-            br_list = br_list.slice(0, br_list.length - 1);
+            var deletable_br = document.getElementById("deletable");
+            deletable_br.parentNode.removeChild(deletable_br);
         }
     }
     else{
@@ -34,7 +35,8 @@ function week(){
         if(check_for_extra){
             check_for_extra.parentNode.removeChild(check_for_extra);
             var br_list = form.getElementsByTagName("br");
-            br_list = br_list.slice(0, br_list.length - 1);
+            var deletable_br = document.getElementById("deletable");
+            deletable_br.parentNode.removeChild(deletable_br);
         }
     }
     else{
@@ -56,7 +58,8 @@ function month(){
         if(check_for_extra){
             check_for_extra.parentNode.removeChild(check_for_extra);
             var br_list = form.getElementsByTagName("br");
-            br_list = br_list.slice(0, br_list.length - 1);
+            var deletable_br = document.getElementById("deletable");
+            deletable_br.parentNode.removeChild(deletable_br);
         }
     }
     else{
@@ -75,6 +78,9 @@ function custom(){
     input_item1.setAttribute("id", "second_custom_input")
     input_item1.appendChild(document.createTextNode("End Date"));
 
+    var deletable_br = document.createElement("br");
+    deletable_br.setAttribute("id", "deletable");
+
     var current_element = document.getElementById("custom_input");
     var form = document.getElementById("form");
     if(current_element){
@@ -82,7 +88,7 @@ function custom(){
         var check_for_extra = document.getElementById("second_custom_input");
         if(!check_for_extra){
             form.insertBefore(input_item1, form.childNodes[form.childNodes.length - 2]);
-            form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
+            form.insertBefore(deletable_br, form.childNodes[form.childNodes.length - 2]);
         }
     }
     else{
@@ -90,6 +96,6 @@ function custom(){
         form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
 
         form.insertBefore(input_item1, form.childNodes[form.childNodes.length - 2]);
-        form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
+        form.insertBefore(deletable_br, form.childNodes[form.childNodes.length - 2]);
     }
 }
