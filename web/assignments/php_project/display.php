@@ -9,9 +9,9 @@
 <html>
     <head>
         <title>View History</title>
-        <link rel="stylesheet" href="/web/home/navbar.css">
+        <link rel="stylesheet" href="/home/navbar.css">
     </head>
     <body>
-        <?php include '/web/home/nav.php';?>
+        <?php include '../../home/nav.php';?>
     </body>
 </html>
