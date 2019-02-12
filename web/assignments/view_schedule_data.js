@@ -20,9 +20,15 @@ function week(){
     input_item.setAttribute("id", "custom_input");
     input_item.appendChild(document.createTextNode("Desired Week"));
 
-    var form = document.getElementById("form");
-    form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
-    form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
+    var current_element = document.getElementById("custom_input");
+    if(current_element){
+        current_element.parentNode.replaceChild(input_item, current_element);
+    }
+    else{
+        var form = document.getElementById("form");
+        form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
+        form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
+    }
 }
 function month(){
     var input_item = document.createElement("input");
@@ -30,9 +36,15 @@ function month(){
     input_item.setAttribute("id", "custom_input");
     input_item.appendChild(document.createTextNode("Desired Month"));
 
-    var form = document.getElementById("form");
-    form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
-    form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
+    var current_element = document.getElementById("custom_input");
+    if(current_element){
+        current_element.parentNode.replaceChild(input_item, current_element);
+    }
+    else{
+        var form = document.getElementById("form");
+        form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
+        form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
+    }
 }
 function custom(){
     var input_item = document.createElement("input");
@@ -44,10 +56,16 @@ function custom(){
     input_item1.setAttribute("type", "date");
     input_item1.appendChild(document.createTextNode("End Date"));
 
-    var form = document.getElementById("form");
-    form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
-    form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
+    var current_element = document.getElementById("custom_input");
+    if(current_element){
+        current_element.parentNode.replaceChild(input_item, current_element);
+    }
+    else{
+        var form = document.getElementById("form");
+        form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
+        form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
 
-    form.insertBefore(input_item1, form.childNodes[form.childNodes.length - 2]);
-    form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
+        form.insertBefore(input_item1, form.childNodes[form.childNodes.length - 2]);
+        form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
+    }
 }
