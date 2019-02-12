@@ -10,6 +10,8 @@ function day(){
         var check_for_extra = document.getElementById("second_custom_input");
         if(check_for_extra){
             check_for_extra.parentNode.removeChild(check_for_extra);
+            var br_list = form.getElementsByTagName("br");
+            br_list.childNodes[br_list.childNodes.length - 2].removeChild;
         }
     }
     else{
@@ -30,6 +32,8 @@ function week(){
         var check_for_extra = document.getElementById("second_custom_input");
         if(check_for_extra){
             check_for_extra.parentNode.removeChild(check_for_extra);
+            var br_list = form.getElementsByTagName("br");
+            br_list.childNodes[br_list.childNodes.length - 2].removeChild;
         }
     }
     else{
@@ -45,15 +49,17 @@ function month(){
     input_item.appendChild(document.createTextNode("Desired Month"));
 
     var current_element = document.getElementById("custom_input");
+    var form = document.getElementById("form");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
         var check_for_extra = document.getElementById("second_custom_input");
         if(check_for_extra){
             check_for_extra.parentNode.removeChild(check_for_extra);
+            var br_list = form.getElementsByTagName("br");
+            br_list.childNodes[br_list.childNodes.length - 2].removeChild;
         }
     }
     else{
-        var form = document.getElementById("form");
         form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
         form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
     }
