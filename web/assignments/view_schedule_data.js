@@ -8,6 +8,9 @@ function noInput(){
     if(check_for_extra){
         var deletable_br = document.getElementById("deletable");
         deletable_br.parentNode.removeChild(deletable_br);
+
+        var second_input = document.getElementById("second_custom_input");
+        second_input.parentNode.removeChild(second_input);
     }
 }
 function day(){
@@ -94,7 +97,7 @@ function month(){
 function custom(){
     var input_item = document.createElement("input");
     input_item.setAttribute("type", "date");
-    input_item.setAttribute("id", "custom_input");
+    input_item.setAttribute("id", "second_custom_input");
     input_item.setAttribute("name", "start_date");
     input_item.appendChild(document.createTextNode("Start Date"));
 
