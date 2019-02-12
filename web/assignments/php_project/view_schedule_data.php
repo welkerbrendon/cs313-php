@@ -11,11 +11,11 @@
 <html>
     <head>
         <title>Schedule Tracker</title>
-        <link rel="stylesheet" href="../home/navbar.css">
+        <link rel="stylesheet" href="/home/navbar.css">
         <script src="view_schedule_data.js"></script>
     </head>
     <body>
-        <?php include '../home/nav.php';?>
+        <?php include '/home/nav.php';?>
         <h1>Please fill out form in order to see desired history</h1>
         <form action="display.php" method="post" id="form">
             <input type="radio" name="time_period" onclick="noInput()" value="MostRecentDay">Most Recent Day<br>
