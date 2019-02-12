@@ -21,6 +21,6 @@
             die();
         }
 
-        return $db
+        return $db;
     }
 ?>
