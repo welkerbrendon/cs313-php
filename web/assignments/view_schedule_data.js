@@ -70,6 +70,7 @@ function custom(){
     input_item1.appendChild(document.createTextNode("End Date"));
 
     var current_element = document.getElementById("custom_input");
+    var form = document.getElementById("form");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
         form.insertBefore(input_item1, form.childNodes[form.childNodes.length - 2]);
@@ -79,7 +80,6 @@ function custom(){
         }
     }
     else{
-        var form = document.getElementById("form");
         form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
         form.insertBefore(document.createElement("br"), form.childNodes[form.childNodes.length - 2]);
 
