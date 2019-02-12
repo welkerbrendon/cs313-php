@@ -12,7 +12,7 @@ function day(){
         if(check_for_extra){
             check_for_extra.parentNode.removeChild(check_for_extra);
             var br_list = form.getElementsByTagName("br");
-            br_list.childNodes[br_list.childNodes.length - 2].removeChild;
+            br_list[br_list.length - 1].parentNode.removeChild;
         }
     }
     else{
@@ -34,7 +34,7 @@ function week(){
         if(check_for_extra){
             check_for_extra.parentNode.removeChild(check_for_extra);
             var br_list = form.getElementsByTagName("br");
-            br_list.childNodes[br_list.childNodes.length - 2].removeChild;
+            br_list[br_list.length - 1].parentNode.removeChild;
         }
     }
     else{
@@ -56,7 +56,7 @@ function month(){
         if(check_for_extra){
             check_for_extra.parentNode.removeChild(check_for_extra);
             var br_list = form.getElementsByTagName("br");
-            br_list.childNodes[br_list.childNodes.length - 2].removeChild;
+            br_list[br_list.length - 1].parentNode.removeChild;
         }
     }
     else{
