@@ -7,48 +7,11 @@
         header("Location: sign_in.php");
         exit;
     }
-    require('connect_to_db.php');
-    $db = connect();
-    $username = $_COOKIE["username"];
-    $password = $_COOKIE["password"];
-    
-    $uuid_query = $db->prepare("SELECT user_id 
-                                FROM user_info 
-                                WHERE username='$username' 
-                                AND account_password='$password'");
-    $uuid_query->execute();
-    $user_id_array = $uuid_query->fetch(PDO::FETCH_ASSOC);
-    $user_id = $user_id_array["user_id"];
+    require('obtaining_data_functions.php')
 
-    $data = NULL;
     if($_POST["time_period"] == "MostRecentDay"){
-        $most_recent_given_day = NULL;
-        $i = -1;
-        while($most_recent_given_day == NULL){
-            $i++;
-            $comparable_date = date('Y-m-d', strtotime("-$i days"));
-            $find_day = $db->prepare("SELECT given_day 
-                                      FROM activity 
-                                      WHERE given_day='$comparable_date'");
-            $find_day->execute();
-            $most_recent_given_day = $find_day->fetch(PDO::FETCH_ASSOC);
-            $most_recent_given_day = $most_recent_given_day["given_day"];
-        }
-        try{
-        $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes 
-                               FROM activity 
-                               WHERE user_id=Cast('$user_id' as UUID) 
-                               AND given_day=Cast('$most_recent_given_day' as Date)
-                               ORDER BY start_time ASC");
-
-        $query->execute();
-        $data = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        echo print_r($data);
-        }
-        catch (Exception $e){
-            echo($e);
-        }
+        $data = get_most_recent_day($_COOKIE["username"], $_COOKIE["password"]);
+        echo $data;
     }
 ?>
 <!DOCTYPE html>
