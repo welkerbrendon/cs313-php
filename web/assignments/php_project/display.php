@@ -9,6 +9,9 @@
     }
     require('obtaining_data_functions.php');
 
+    echo $_POST["time_period"];
+    echo "<br>";
+
     $data = NULL;
     if($_POST["time_period"] == "MostRecentDay"){
         $data = get_most_recent_day($_COOKIE["username"], $_COOKIE["password"]);
