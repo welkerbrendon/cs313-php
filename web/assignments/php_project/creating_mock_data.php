@@ -10,6 +10,9 @@
     $select_statement->execute();
     $days = $select_statement->fetchAll(PDO::FETCH_ASSOC);
 
+    echo print_r($days);
+    /*echo print_r($days["given_day"]);
+
     $starting_statement = "INSERT INTO activity (activity_id, user_id, given_day, start_time, end_time, productive) VALUES ";
     foreach($days["given_day"] as $given_day){
         echo "$given_day<br>";
@@ -38,7 +41,7 @@
             }
         }
 
-    }
+    }*/
 
     // $given_day = NULL;
     // $starting_statement = "INSERT INTO day (given_day, user_id, last_updated, creation_time) VALUES ";
