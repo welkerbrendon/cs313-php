@@ -12,7 +12,7 @@
         $given_day = date('d.m.y', strtotime("-$i days"));
         $full_statement = $starting_statement . " (date('d.m.y', strtotime('-$i days')), " . $uuid['user_id'] . ", now(), now())";
         echo($full_statement);
-        // $insert_statement = $db->prepare($full_statement);
+        $insert_statement = $db->prepare($full_statement);
         // try {
         // $insert_statement->execute();
         // }
