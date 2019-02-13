@@ -31,7 +31,9 @@
         $start_of_month = "$month-01";
         $end_of_month = "$month-31";
 
-        echo "$start_of_month <br> $end_of_month";
+        echo "$start_of_month"
+        echo "<br>";
+        echo "$end_of_month";
     }
 ?>
 <!DOCTYPE html>
