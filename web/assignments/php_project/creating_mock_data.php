@@ -24,7 +24,7 @@
             $end_hour = $hour - $i;
             $end_time =  "$end_hour:00";
             $start_time = "$start_hour:00";
-            $final_statement = $starting_statement . "(uuid_generate_v4(), Cast('" . $uuid["user_id"] . "' as UUID), Cast('$given_day' as Date), Cast('$start_time' as Time), Cast('$end_time' as Time), $productive)";
+            $final_statement = $starting_statement . "(uuid_generate_v4(), Cast('" . $uuid["user_id"] . "' as UUID), Cast('$given_day' as Date), Cast('$start_time' as Time), Cast('$end_time' as Time), Cast('$productive' as Boolean))";
             
             echo $final_statement;
 
