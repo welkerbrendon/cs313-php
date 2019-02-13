@@ -43,7 +43,7 @@
         $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes
                               From activity
                               WHERE user_id=Cast('$user_id' as UUID)
-                              AND given_day=Cast('$dat' as Date)
+                              AND given_day=Cast('$day' as Date)
                               ORDER BY start_time ASC");
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
