@@ -1,7 +1,7 @@
 <?php
     require('connect_to_db.php');
     
-    function get_user_id($username, $password){
+    function get_user_id($username, $password, $db){
         $uuid_query = $db->prepare("SELECT user_id 
                                     FROM user_info 
                                     WHERE username='$username' 
@@ -12,8 +12,8 @@
     }
 
     function get_most_recent_day($username, $password){
-        $user_id = get_user_id($username, $password);
         $db = connect();
+        $user_id = get_user_id($username, $password, $db);
         $data = NULL;
         $most_recent_given_day = NULL;
         $i = -1;
