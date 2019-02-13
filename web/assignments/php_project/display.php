@@ -27,8 +27,7 @@
             $find_day = $db->prepare("SELECT given_day FROM activity WHERE given_day=$comparable_date,");
         }
         try{
-        $query = $db->prepare("SELECT start_time end_time productive FROM activity 
-        INNER JOIN user_info ON user_info.user_id='$user_id', activity.user_id = user_info.user_id, activity.given_day = '$given_day'");
+        $query = $db->prepare("SELECT start_time end_time productive FROM activity WHERE user_id='$user_id' AND given_day='$most_recent_given_day'");
 
         $query->execute();
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
