@@ -32,7 +32,12 @@
             echo $final_statement;
 
             $insert_statement = $db->prepare($final_statement);
+            try{
             $insert_statement->execute();
+            }
+            catch (Exception $e){
+                echo "$e<br>";
+            }
         }
 
     }
