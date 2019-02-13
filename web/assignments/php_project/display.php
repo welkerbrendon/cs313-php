@@ -30,7 +30,7 @@
             $most_recent_given_day = $most_recent_given_day["given_day"];
         }
         try{
-        $query = $db->prepare("SELECT start_time end_time productive FROM activity WHERE user_id='$user_id' AND given_day='$most_recent_given_day'");
+        $query = $db->prepare("SELECT start_time, end_time, productive FROM activity WHERE user_id='$user_id' AND given_day='$most_recent_given_day'");
 
         $query->execute();
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
