@@ -37,7 +37,7 @@
         try{
         $query = $db->prepare("SELECT start_time, end_time, productive 
                                FROM activity 
-                               WHERE user_id=Cast(\'" . $user_id . "\' as UUID) 
+                               WHERE user_id=Cast('" . $user_id . "' as UUID) 
                                AND given_day=Cast('$most_recent_given_day' as Date)");
 
         $query->execute();
