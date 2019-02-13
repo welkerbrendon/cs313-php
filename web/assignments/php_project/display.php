@@ -43,7 +43,10 @@
     <body>
         <?php 
             include '../../home/nav.php';
-            echo print_r($data[0]);
+            $date = $data[0]["given_day"];
+            echo sizeof($data);
+            echo "<br>";
+            echo print_r($data);
         ?>
     </body>
 </html>

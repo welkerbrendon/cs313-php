@@ -26,7 +26,7 @@
             $most_recent_given_day = $find_day->fetch(PDO::FETCH_ASSOC);
             $most_recent_given_day = $most_recent_given_day["given_day"];
         }
-        $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes 
+        $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes, given_day 
                                FROM activity 
                                WHERE user_id=Cast('$user_id' as UUID) 
                                AND given_day=Cast('$most_recent_given_day' as Date)
@@ -40,7 +40,7 @@
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
 
-        $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes
+        $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes, given_day
                               FROM activity
                               WHERE user_id=Cast('$user_id' as UUID)
                               AND given_day=Cast('$day' as Date)
