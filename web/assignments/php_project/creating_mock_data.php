@@ -20,6 +20,7 @@
             if(rand(0, 1) == 1){
                 $productive = true;
             }
+            echo "$productive<br>";
             $start_hour = $hour - $i - 1;
             $end_hour = $hour - $i;
             $end_time =  "$end_hour:00";
