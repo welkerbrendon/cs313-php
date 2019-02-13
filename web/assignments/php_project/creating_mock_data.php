@@ -10,16 +10,18 @@
     $select_statement->execute();
     $days = $select_statement->fetch(PDO::FETCH_ASSOC);
 
-    echo print_r($days);
-    echo print_r($days["given_day"]);
-
     $starting_statement = "INSERT INTO activity (activity_id, user_id, given_day, start_time, end_time, productive) VALUES ";
     foreach($days["given_day"] as $given_day){
+        echo "in foreach<br>";
         $hour = 20;
         for($i = 0; $i < 12; $i++){
+            echo "$i<br>";
             $productive = rand(0, 1);
             if($productive == 1){
                 $productive = true;
+            }
+            else {
+                $productive = false;
             }
             $start_hour = $hour - $i - 1;
             $end_hour = $hour - $i;
