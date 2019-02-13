@@ -10,6 +10,8 @@
     $starting_statement = "INSERT INTO day (given_day, user_id, last_updated, creation_time) VALUES ";
     for($i = 0; $i < 43; $i++){
         $given_day = date('y-m-d', strtotime("-$i days"));
+        echo $given_day;
+        echo "<br>";
         // $formatted_day = date_format($given_day, "YYYY-MM-DD");
         // $full_statement = $starting_statement . " (Cast('" . $given_day . "' as Date), Cast('" . $uuid['user_id'] . "' as UUID), now(), now())";
         // $insert_statement = $db->prepare($full_statement);
