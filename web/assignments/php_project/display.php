@@ -38,7 +38,8 @@
         $query = $db->prepare("SELECT start_time, end_time, productive 
                                FROM activity 
                                WHERE user_id=Cast('$user_id' as UUID) 
-                               AND given_day=Cast('$most_recent_given_day' as Date)");
+                               AND given_day=Cast('$most_recent_given_day' as Date)
+                               ORDER BY start_time ASC");
 
         $query->execute();
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
