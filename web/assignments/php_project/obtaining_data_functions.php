@@ -41,7 +41,7 @@
         $user_id = get_user_id($username, $password, $db);
 
         $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes
-                              From activity
+                              FROM activity
                               WHERE user_id=Cast('$user_id' as UUID)
                               AND given_day=Cast('$day' as Date)
                               ORDER BY start_time ASC");
@@ -50,6 +50,17 @@
     }
 
     function get_days_in_window($username, $password, $start_day, $end_day){
+        $db = connect();
+        $user_id = get_user_id($username, $password, $db);
+
+        $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes, given_day
+                               FROM activity
+                               WHERE user_id=Cast('user_id' as UUID)
+                               AND given_day < $end_day
+                               AND given_day > $start_day
+                               ORDER BY given_day, start_time ASC");
         
+        $query->execute();
+        return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 ?>
