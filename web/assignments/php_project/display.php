@@ -33,7 +33,7 @@
         echo print_r(get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $start_of_month, $end_of_month));
     }
     else {
-        echo print_r(get_dats_in_window($_COOKIE["username"], $_COOKIE["password"], $_POST["start_date"], $_POST["end_date"]));
+        echo print_r(get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $_POST["start_date"], $_POST["end_date"]));
     }
 ?>
 <!DOCTYPE html>
