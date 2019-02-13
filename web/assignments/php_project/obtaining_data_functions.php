@@ -48,4 +48,8 @@
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    function get_days_in_window($username, $password, $start_day, $end_day){
+        
+    }
 ?>
