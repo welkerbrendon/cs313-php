@@ -9,24 +9,24 @@
     $given_day = NULL;
     $starting_statement = "INSERT INTO day (given_day, user_id, last_updated, creation_time) VALUES ";
     for($i = 0; $i < 43; $i++){
-        $given_day = date('d.m.y', strtotime("-$i days"));
-        $formatted_day = date_format($given_day, "YYYY-MM-DD");
-        $full_statement = $starting_statement . " (Cast('" . $given_day . "' as Date), Cast('" . $uuid['user_id'] . "' as UUID), now(), now())";
-        $insert_statement = $db->prepare($full_statement);
-        try {
-        $insert_statement->execute();
-        }
-        catch (Exception $e) {
-            echo($e);
-            echo("<br>");
-        }
+        $given_day = date('y-m-d', strtotime("-$i days"));
+        // $formatted_day = date_format($given_day, "YYYY-MM-DD");
+        // $full_statement = $starting_statement . " (Cast('" . $given_day . "' as Date), Cast('" . $uuid['user_id'] . "' as UUID), now(), now())";
+        // $insert_statement = $db->prepare($full_statement);
+        // try {
+        // $insert_statement->execute();
+        // }
+        // catch (Exception $e) {
+        //     echo($e);
+        //     echo("<br>");
+        // }
 
-        $select_statement = $db->prepare("SELECT * FROM day");
-        $select_statement->execute();
-        $days = $select_statement->fetchAll(PDO::FETCH_ASSOC);
-        echo print_r($days["given_day"]);
-        echo "->";
-        echo print_r($days["user_id"]);
-        echo "<br>";
+        // $select_statement = $db->prepare("SELECT * FROM day");
+        // $select_statement->execute();
+        // $days = $select_statement->fetchAll(PDO::FETCH_ASSOC);
+        // echo print_r($days["given_day"]);
+        // echo "->";
+        // echo print_r($days["user_id"]);
+        // echo "<br>";
     } 
 ?>
