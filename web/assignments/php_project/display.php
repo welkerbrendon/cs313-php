@@ -7,7 +7,7 @@
         header("Location: sign_in.php");
         exit;
     }
-    require('obtaining_data_functions.php')
+    require('obtaining_data_functions.php');
 
     if($_POST["time_period"] == "MostRecentDay"){
         $data = get_most_recent_day($_COOKIE["username"], $_COOKIE["password"]);
