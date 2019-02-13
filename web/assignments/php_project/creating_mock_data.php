@@ -10,6 +10,9 @@
     $select_statement->execute();
     $days = $select_statement->fetch(PDO::FETCH_ASSOC);
 
+    echo print_r($days);
+    echo print_r($days["given_day"]);
+
     $starting_statement = "INSERT INTO activity (activity_id, user_id, given_day, start_time, end_time, productive) VALUES ";
     foreach($days["given_day"] as $given_day){
         $hour = 20;
@@ -24,10 +27,10 @@
             $start_time = "$start_hour:00";
             $final_statement = $starting_statement . "(uuid_generate_v4(), Cast('" . $uuid["user_id"] . "' as UUID), Cast('$given_day' as Date), Cast('$start_time' as Time), Cast('$end_time' as Time), $productive)";
             
+            echo $final_statement;
+
             $insert_statement = $db->prepare($final_statement);
             $insert_statement->execute();
-
-            echo $insert_statement->lastInsertId("avtivity_activity_id");
         }
 
     }
