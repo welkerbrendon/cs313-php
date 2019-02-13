@@ -11,15 +11,15 @@
     for($i = 0; $i < 43; $i++){
         $given_day = date('d.m.y', strtotime("-$i days"));
         $full_statement = $starting_statement . " (date('d.m.y', strtotime('-$i days')), " . $uuid['user_id'] . ", now(), now())";
-        echo($full_statement);
+        //echo($full_statement);
         $insert_statement = $db->prepare($full_statement);
-        // try {
-        // $insert_statement->execute();
-        // }
-        // catch (Exception $e) {
-        //     echo($e);
-        //     echo("<br>");
-        // }
+        try {
+        $insert_statement->execute();
+        }
+        catch (Exception $e) {
+            echo($e);
+            echo("<br>");
+        }
 
         $select_statement = $db->prepare("SELECT * FROM day");
         $select_statement->execute();
