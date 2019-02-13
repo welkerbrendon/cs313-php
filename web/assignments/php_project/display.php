@@ -10,11 +10,16 @@
     require('connect_to_db.php');
     $db = connect();
 
+    try{
     $uuid_query = $db->prepare("SELECT user_id FROM user_info WHERE username=" . $_COOKIE['username'] . ", account_password=" . $_COOKIE['password']);
     $uuid_query->execute();
     $user_id = $uuid_query->fetch(PDO::FETCH_ASSOC);
 
     echo($user_id["user_id"]);
+    }
+    catch (Exception $e){
+        echo $e;
+    }
 
     // $data = NULL;
     // if($_POST["time_period"] == "MostRecentDay"){
