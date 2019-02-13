@@ -21,10 +21,13 @@
     else if ($_POST["time_period"] == "week"){
         $start_of_week = $_POST["start_of_week"];
         $end_of_week = new DateTime($start_of_week);
-        $end_of_week->add(new DateInterval('P7D'));
+        $end_of_week->add(new DateInterval('P6D'));
         $end_of_week = date_format($end_of_week, "Y-m-d");
 
         echo print_r(get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $start_of_week, $end_of_week));
+    }
+    else if ($_POST["time_period"] == "month"){
+        echo $_POST["month"];
     }
 ?>
 <!DOCTYPE html>
