@@ -40,7 +40,7 @@
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
 
-        $query = $db->prepare("SELECT start_time, end_time, productive, activity_typ, notes
+        $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes
                               From activity
                               WHERE user_id=Cast('$user_id' as UUID)
                               AND given_day=Cast('$dat' as Date)
