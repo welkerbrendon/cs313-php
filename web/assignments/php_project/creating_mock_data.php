@@ -10,11 +10,11 @@
     for($i = 0; $i < 43; $i++){
         $given_day = date('d.m.y', strtotime("-$i days"));
         $insert_statement = $db->prepare("INSERT INTO day (given_day, user_id, updated_time, creation_time) VALUES ($given_day, " . $uuid['user_id'] . ", now(), now())");
-        // $insert_statement->execute();
+        $insert_statement->execute();
 
-        // $select_statement = $db->prepare("SELECT * FROM day");
-        // $select_statement->execute();
-        // echo print_r($select_statement->fetchAll(PDO::FETCH_ASSOC)) ;
-        // echo "<br>";
+        $select_statement = $db->prepare("SELECT * FROM day");
+        $select_statement->execute();
+        echo print_r($select_statement->fetchAll(PDO::FETCH_ASSOC)) ;
+        echo "<br>";
     } 
 ?>
