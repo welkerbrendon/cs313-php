@@ -9,7 +9,7 @@
     }
     require('obtaining_data_functions.php');
 
-    echo $_POST["time_period"];
+    echo print_r($_POST);
     echo "<br>";
 
     $data = NULL;
