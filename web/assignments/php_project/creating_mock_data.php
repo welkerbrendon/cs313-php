@@ -6,13 +6,13 @@
     $select_statement->execute();
     $uuid = $select_statement->fetch(PDO::FETCH_ASSOC);
 
-    $select_statement = $db->prepare("SELECT * FROM day");
+    $select_statement = $db->prepare("SELECT given_day FROM day");
     $select_statement->execute();
     $days = $select_statement->fetch(PDO::FETCH_ASSOC);
 
     $starting_statement = "INSERT INTO activity (activity_id, user_id, given_day, start_time, end_time, productive) VALUES ";
-    foreach($days["given_day"] as $given_day){
-        echo "in foreach<br>";
+    foreach($days as $given_day){
+        echo "$given_day<br>";
         $hour = 20;
         for($i = 0; $i < 12; $i++){
             echo "$i<br>";
