@@ -11,9 +11,10 @@
     $days = $select_statement->fetchAll(PDO::FETCH_ASSOC);
 
     echo print_r($days);
-    /*echo print_r($days["given_day"]);
+    echo "<br><br>";
+    echo print_r($days["given_day"]);
 
-    $starting_statement = "INSERT INTO activity (activity_id, user_id, given_day, start_time, end_time, productive) VALUES ";
+    /*$starting_statement = "INSERT INTO activity (activity_id, user_id, given_day, start_time, end_time, productive) VALUES ";
     foreach($days["given_day"] as $given_day){
         echo "$given_day<br>";
         $hour = 20;
