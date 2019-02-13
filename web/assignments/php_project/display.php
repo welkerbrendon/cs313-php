@@ -25,7 +25,7 @@
 
         echo($start_of_week);
         echo "<br>";
-        echo date_format("Y-m-d", $end_of_week);
+        echo date_format($end_of_week, "Y-m-d");
     }
 ?>
 <!DOCTYPE html>
