@@ -20,7 +20,7 @@
     $user_id_array = $uuid_query->fetch(PDO::FETCH_ASSOC);
     $user_id = $user_id["user_id"];
 
-    echo(print_r($user_id_array);
+    echo(print_r($user_id_array));
     //echo($user_id);
 
     // $data = NULL;
