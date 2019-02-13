@@ -20,7 +20,8 @@
     $user_id_array = $uuid_query->fetch(PDO::FETCH_ASSOC);
     $user_id = $user_id["user_id"];
 
-    echo($user_id);
+    echo($user_id_array);
+    //echo($user_id);
 
     // $data = NULL;
     // if($_POST["time_period"] == "MostRecentDay"){
