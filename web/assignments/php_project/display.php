@@ -26,6 +26,7 @@
             $comparable_date = date('Y-m-d', strtotime("-$i days"))
             $find_day = $db->prepare("SELECT given_day FROM activity WHERE given_day=$comparable_date,")
         }
+        try{
         $query = $db->prepare("SELECT start_time end_time productive FROM activity 
         INNER JOIN user_info ON user_info.user_id='$user_id', activity.user_id = user_info.user_id, activity.given_day = '$given_day'");
 
@@ -33,6 +34,10 @@
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
 
         echo print_r($data);
+        }
+        catch (Exception $e){
+            echo($e);
+        }
     }
 ?>
 <!DOCTYPE html>
