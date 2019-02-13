@@ -9,9 +9,6 @@
     }
     require('obtaining_data_functions.php');
 
-    echo print_r($_POST);
-    echo "<br>";
-
     $data = NULL;
     if($_POST["time_period"] == "MostRecentDay"){
         $data = get_most_recent_day($_COOKIE["username"], $_COOKIE["password"]);
@@ -36,10 +33,7 @@
         echo print_r(get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $start_of_month, $end_of_month));
     }
     else {
-        echo $_POST["start_date"];
-        echo "<br>";
-        echo $_POST["end_date"];
-        //echo print_r(get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $_POST["start_date"], $_POST["end_date"]));
+        echo print_r(get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $_POST["start_date"], $_POST["end_date"]));
     }
 ?>
 <!DOCTYPE html>

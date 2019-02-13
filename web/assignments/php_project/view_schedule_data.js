@@ -100,13 +100,11 @@ function custom(){
     input_item.setAttribute("type", "date");
     input_item.setAttribute("id", "custom_input");
     input_item.setAttribute("name", "start_date");
-    input_item.appendChild(document.createTextNode("Start Date"));
 
     var input_item1 = document.createElement("input");
     input_item1.setAttribute("type", "date");
     input_item1.setAttribute("id", "second_custom_input");
     input_item1.setAttribute("name", "end_date");
-    input_item1.appendChild(document.createTextNode("End Date"));
 
     var deletable_br = document.createElement("br");
     deletable_br.setAttribute("id", "deletable");
