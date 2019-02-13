@@ -21,12 +21,12 @@
     if($_POST["time_period"] == "MostRecentDay"){
         $most_recent_given_day = NULL;
         $i = -1;
-        while(!$most_recent_given_day){
+        while($most_recent_given_day == NULL){
             $i++;
             $comparable_date = date('Y-m-d', strtotime("-$i days"));
             $find_day = $db->prepare("SELECT given_day FROM activity WHERE given_day='$comparable_date'");
             $find_day->execute();
-            $most_recent_given_day = $find_day->fetch("PDO::FETCH_ASSOC");
+            $most_recent_given_day = $find_day->fetch(PDO::FETCH_ASSOC);
             $most_recent_given_day = $most_recent_given_day["given_day"];
         }
         try{
