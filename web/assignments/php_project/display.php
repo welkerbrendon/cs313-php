@@ -7,7 +7,7 @@
 
     $data = NULL;
     if($_POST["time_period"] == "MostRecentDay"){
-        $given_day = $db->lastInsertId("day_id");
+        $given_day = $db->lastInsertId("day_id_seq");
         $query = $db->prepare("SELECT start_time end_time productive FROM activity 
         INNER JOIN user_info ON user_info.user_name = '" . $_COOKIE["username"] . "', activity.user_id = user_info.user_id, activity.given_day = $given_day");
 
