@@ -19,7 +19,7 @@
         echo print_r($data);
     }
     else if ($_POST["time_period"] == "week"){
-        echo $_POST["week"];
+        echo $_POST["start_of_week"];
     }
 ?>
 <!DOCTYPE html>
