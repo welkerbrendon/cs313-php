@@ -1,6 +1,7 @@
 <?php
-    if(isset($_COOKIE["username"])){
+    if(isset($_COOKIE["username"]) && isset($_COOKIE["password"])){
         setcookie("username", $_COOKIE["username"], time() + (60 * 30));
+        setcookie("password", $_COOKIE["password"], time() + (60 * 30));
     }
     else {
         header("Location: sign_in.php");

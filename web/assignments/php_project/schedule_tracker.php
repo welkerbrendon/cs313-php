@@ -1,6 +1,11 @@
 <?php
-    if(isset($_POST["username"]) || isset($_COOKIE["username"])){
+    if(isset($_POST["username"]) && isset($_POST["password"])){
         setcookie("username", $_POST["username"], time() + (60 * 30));
+        setcookie("password", $_POST["password"], time() + (60 * 30));
+    }
+    else if(isset($_COOKIE["username"]) && isset($_COOKIE["password"])){
+        setcookie("username", $_COOKIE["username"], time() + (60 * 30));
+        setcookie("password", $_COOKIE["password"], time() + (60 * 30));
     }
     else {
         header("Location: sign_in.php");
