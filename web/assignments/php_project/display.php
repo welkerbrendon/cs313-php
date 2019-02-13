@@ -28,7 +28,7 @@
     }
     else if ($_POST["time_period"] == "month"){
         $month = $_POST["month"];
-        $start_of_month = "$month-01";
+        $start_of_month = $_POST["month"] . "-01";
         $end_of_month = "$month-31";
 
         echo "$start_of_month"
