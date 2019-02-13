@@ -10,7 +10,7 @@
     $starting_statement = "INSERT INTO day (given_day, user_id, update_time, creation_time) VALUES ";
     for($i = 0; $i < 43; $i++){
         $given_day = date('d.m.y', strtotime("-$i days"));
-        $full_statement = $starting_statement . " ('" . $given_day "', '" . $uuid['user_id'] . "', '" . now() . "', '" . now() . "')";
+        $full_statement = $starting_statement . " ($given_day, " . $uuid['user_id'] . ", now(), now())";
         echo $full_statement;
         //$insert_statement = $db->prepare($full_statement);
         //$insert_statement->execute();
