@@ -12,7 +12,13 @@
         $given_day = date('d.m.y', strtotime("-$i days"));
         $full_statement = $starting_statement . " ($given_day, " . $uuid['user_id'] . ", now(), now())";
         $insert_statement = $db->prepare($full_statement);
+        try {
         $insert_statement->execute();
+        }
+        catch (Exception $e) {
+            echo($e);
+            echo("<br>");
+        }
 
         $select_statement = $db->prepare("SELECT * FROM day");
         $select_statement->execute();
