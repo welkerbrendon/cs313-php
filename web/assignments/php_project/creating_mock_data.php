@@ -8,8 +8,8 @@
 
     $given_day = NULL;
     $starting_statement = "INSERT INTO day (given_day, user_id, last_updated, creation_time) VALUES ";
-    for($i = 0; $i < 43; $i++){
-        $given_day = date('yyyy-m-d', strtotime("-$i days"));
+    for($i = 1; $i < 44; $i++){
+        $given_day = date('Y-m-d', strtotime("-$i days"));
         echo $given_day;
         echo "<br>";
         // $formatted_day = date_format($given_day, "YYYY-MM-DD");
