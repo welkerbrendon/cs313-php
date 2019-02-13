@@ -27,7 +27,10 @@
         echo print_r(get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $start_of_week, $end_of_week));
     }
     else if ($_POST["time_period"] == "month"){
-        echo $_POST["month"];
+        $start_of_month = $_POST["month"] . "-01";
+        $end_of_month = $_POST["month"] . "-31";
+
+        echo "$start_of_month <br> $end_of_month";
     }
 ?>
 <!DOCTYPE html>
