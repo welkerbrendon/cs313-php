@@ -10,16 +10,16 @@
     $starting_statement = "INSERT INTO day (given_day, user_id, update_time, creation_time) VALUES ";
     for($i = 0; $i < 43; $i++){
         $given_day = date('d.m.y', strtotime("-$i days"));
-        $now = date('Y-m-d G:i:s');
-        $full_statement = $starting_statement . " ($given_day, " . $uuid['user_id'] . ", $now, $now";
-        $insert_statement = $db->prepare($full_statement);
-        try {
-        $insert_statement->execute();
-        }
-        catch (Exception $e) {
-            echo($e);
-            echo("<br>");
-        }
+        $full_statement = $starting_statement . " (date('d.m.y', strtotime('-$i days')), " . $uuid['user_id'] . ", now(), now())";
+        echo($full_statement);
+        // $insert_statement = $db->prepare($full_statement);
+        // try {
+        // $insert_statement->execute();
+        // }
+        // catch (Exception $e) {
+        //     echo($e);
+        //     echo("<br>");
+        // }
 
         $select_statement = $db->prepare("SELECT * FROM day");
         $select_statement->execute();
