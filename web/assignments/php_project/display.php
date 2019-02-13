@@ -10,7 +10,7 @@
     require('connect_to_db.php');
     $db = connect();
 
-    $uuid_query = $db->prepare("SELECT user_id FROM user_info WHERE username=$_COOKIE['username'], account_password=$_COOKIE['password']");
+    $uuid_query = $db->prepare("SELECT user_id FROM user_info WHERE username=" . $_COOKIE['username'] . ", account_password=" . $_COOKIE['password']);
     $uuid_query->execute();
     $user_id = $uuid_query->fetch(PDO::FETCH_ASSOC);
 
