@@ -7,10 +7,10 @@
     $uuid = $select_statement->fetch(PDO::FETCH_ASSOC);
 
     $given_day = NULL;
-    $starting_statement = "INSERT INTO day (given_day, user_id, update_time, creation_time) VALUES ";
+    $starting_statement = "INSERT INTO day (given_day, user_id, ;last_updated, creation_time) VALUES ";
     for($i = 0; $i < 43; $i++){
         $given_day = date('d.m.y', strtotime("-$i days"));
-        $full_statement = $starting_statement . " (date('d.m.y', strtotime('-$i days')), " . $uuid['user_id'] . ", now(), now())";
+        $full_statement = $starting_statement . " (date('d.m.y', strtotime('-$i days')), Cast('" . $uuid['user_id'] . "' as UUID), now(), now())";
         echo($full_statement);
         $insert_statement = $db->prepare($full_statement);
         // try {
