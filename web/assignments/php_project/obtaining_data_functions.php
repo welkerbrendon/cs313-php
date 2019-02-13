@@ -14,7 +14,6 @@
     function get_most_recent_day($username, $password){
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
-        $data = NULL;
         $most_recent_given_day = NULL;
         $i = -1;
         while($most_recent_given_day == NULL){
@@ -34,12 +33,19 @@
                                ORDER BY start_time ASC");
 
         $query->execute();
-        $data = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        return $data;
+        return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    function get_given_day($day){
-        echo($day);
+    function get_given_day($username, $password, $day){
+        $db = connect();
+        $user_id = get_user_id($username, $password, $day);
+
+        $query("SELECT start_time, end_time, productive, activity_typ, notes
+                              From activity
+                              WHERE user_id=Cast('$user_id' as UUID)
+                              AND given_day=Cast('$dat' as Date)
+                              ORDER BY start_time ASC");
+        $query->execute();
+        return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 ?>
