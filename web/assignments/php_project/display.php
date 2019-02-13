@@ -11,7 +11,7 @@
 
     if($_POST["time_period"] == "MostRecentDay"){
         $data = get_most_recent_day($_COOKIE["username"], $_COOKIE["password"]);
-        echo $data;
+        echo print_r($data);
     }
 ?>
 <!DOCTYPE html>
