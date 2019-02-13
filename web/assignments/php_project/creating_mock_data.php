@@ -26,6 +26,8 @@
             
             $insert_statement = $db->prepare($final_statement);
             $insert_statement->execute();
+
+            echo $insert_statement->lastInsertId("avtivity_activity_id");
         }
 
     }
