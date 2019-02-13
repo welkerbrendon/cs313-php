@@ -11,10 +11,10 @@
         $query = $db->prepare("SELECT start_time end_time productive FROM activity 
         INNER JOIN user_info ON user_info.user_name = $_COOKIE['username'], activity.user_id = user_info.user_id, activity.given_day = $given_day");
 
-        $query->execute();
-        $data = $query->fetchAll(PDO::FETCH_ASSOC);
+        // $query->execute();
+        // $data = $query->fetchAll(PDO::FETCH_ASSOC);
 
-        echo print_r($data);
+        // echo print_r($data);
     }
 ?>
 <!DOCTYPE html>
