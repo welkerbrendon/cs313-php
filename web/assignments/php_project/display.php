@@ -19,7 +19,13 @@
         echo print_r($data);
     }
     else if ($_POST["time_period"] == "week"){
-        echo $_POST["start_of_week"];
+        $start_of_week = $_POST["start_of_week"];
+        $end_of_week = new DateTime($start_of_week);
+        $end_of_week->add(new DateInterval('P7D'));
+
+        echo($start_of_week);
+        echo "<br>";
+        echo $end_of_week;
     }
 ?>
 <!DOCTYPE html>
