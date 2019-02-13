@@ -43,9 +43,9 @@ function day(){
 }
 function week(){
     var input_item = document.createElement("input");
-    input_item.setAttribute("type", "week");
+    input_item.setAttribute("type", "date");
     input_item.setAttribute("id", "custom_input");
-    input_item.setAttribute("name", "week");
+    input_item.setAttribute("name", "start_of_week");
     input_item.appendChild(document.createTextNode("Desired Week"));
 
     var br = document.createElement("br");
