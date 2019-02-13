@@ -15,8 +15,6 @@
     }
     else if($_POST["time_period"] == "day") {
         $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_POST["day"]);
-
-        echo print_r($data);
     }
     else if ($_POST["time_period"] == "week"){
         $start_of_week = $_POST["start_of_week"];
@@ -24,16 +22,16 @@
         $end_of_week->add(new DateInterval('P6D'));
         $end_of_week = date_format($end_of_week, "Y-m-d");
 
-        echo print_r(get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $start_of_week, $end_of_week));
+        $data = get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $start_of_week, $end_of_week);
     }
     else if ($_POST["time_period"] == "month"){
         $start_of_month = $_POST["month"] . "-01";
         $end_of_month = $_POST["month"] . "-31";
 
-        echo print_r(get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $start_of_month, $end_of_month));
+        $data = get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $start_of_month, $end_of_month);
     }
     else {
-        echo print_r(get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $_POST["start_date"], $_POST["end_date"]));
+        $data = get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $_POST["start_date"], $_POST["end_date"]);
     }
 ?>
 <!DOCTYPE html>
@@ -43,6 +41,10 @@
         <link rel="stylesheet" href="/home/navbar.css">
     </head>
     <body>
-        <?php include '../../home/nav.php';?>
+        <?php 
+            include '../../home/nav.php';
+            $date = $data[0]["given_day"];
+            echo $date;
+        ?>
     </body>
 </html>
