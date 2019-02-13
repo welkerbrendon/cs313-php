@@ -23,8 +23,8 @@
         $i = -1;
         while(!$most_recent_given_day){
             $i++;
-            $comparable_date = date('Y-m-d', strtotime("-$i days"))
-            $find_day = $db->prepare("SELECT given_day FROM activity WHERE given_day=$comparable_date,")
+            $comparable_date = date('Y-m-d', strtotime("-$i days"));
+            $find_day = $db->prepare("SELECT given_day FROM activity WHERE given_day=$comparable_date,");
         }
         try{
         $query = $db->prepare("SELECT start_time end_time productive FROM activity 
