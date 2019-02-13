@@ -8,7 +8,7 @@
 
     $select_statement = $db->prepare("SELECT given_day FROM day");
     $select_statement->execute();
-    $days = $select_statement->fetch(PDO::FETCH_ASSOC);
+    $days = $select_statement->fetchAll(PDO::FETCH_ASSOC);
 
     $starting_statement = "INSERT INTO activity (activity_id, user_id, given_day, start_time, end_time, productive) VALUES ";
     foreach($days as $given_day){
@@ -16,9 +16,9 @@
         $hour = 20;
         for($i = 0; $i < 12; $i++){
             echo "$i<br>";
-            $productive = false;
+            $productive = "false";
             if(rand(0, 1) == 1){
-                $productive = true;
+                $productive = "true";
             }
             echo "$productive<br>";
             $start_hour = $hour - $i - 1;
