@@ -1,7 +1,7 @@
 <?php
     require('connect_to_db.php');
     
-    function get_user_id($username, $password){}
+    function get_user_id($username, $password){
         $uuid_query = $db->prepare("SELECT user_id 
                                     FROM user_info 
                                     WHERE username='$username' 
