@@ -7,7 +7,7 @@
     $uuid = $select_statement->fetch(PDO::FETCH_ASSOC);
 
     $given_day = NULL;
-    $string_insert_statement = "INSERT INTO day VALUES";
+    $string_insert_statement = "INSERT INTO day VALUES ";
     for($i = 0; $i < 43; $i++){
         $given_day = date('d.m.y', strtotime("-$i days"));
         $insert_statement = $db->prepare("$string_insert_statement ($given_day, $uuid['user_id'], now(), now())");
