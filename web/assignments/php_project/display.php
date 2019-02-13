@@ -35,7 +35,7 @@
             $most_recent_given_day = $most_recent_given_day["given_day"];
         }
         try{
-        $query = $db->prepare("SELECT start_time, end_time, productive 
+        $query = $db->prepare("SELECT start_time, end_time, productive, activity_type 
                                FROM activity 
                                WHERE user_id=Cast('$user_id' as UUID) 
                                AND given_day=Cast('$most_recent_given_day' as Date)
