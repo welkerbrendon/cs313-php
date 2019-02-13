@@ -43,8 +43,7 @@
     <body>
         <?php 
             include '../../home/nav.php';
-            $date = $data[0]["given_day"];
-            echo $date;
+            echo $data;
         ?>
     </body>
 </html>
