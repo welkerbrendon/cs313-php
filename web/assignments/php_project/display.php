@@ -11,34 +11,29 @@
     $db = connect();
     $username = $_COOKIE["username"];
     $password = $_COOKIE["password"];
-    try{
+    
     $uuid_query = $db->prepare("SELECT user_id FROM user_info WHERE username='$username' AND account_password='$password'");
     $uuid_query->execute();
-    $user_id = $uuid_query->fetch(PDO::FETCH_ASSOC);
+    $user_id_array = $uuid_query->fetch(PDO::FETCH_ASSOC);
+    $user_id = $user_id["user_id"];
 
-    echo($user_id["user_id"]);
+    $data = NULL;
+    if($_POST["time_period"] == "MostRecentDay"){
+        $most_recent_given_day = NULL;
+        $i = -1;
+        while(!$most_recent_given_day){
+            $i++;
+            $comparable_date = date('Y-m-d', strtotime("-$i days"))
+            $find_day = $db->prepare("SELECT given_day FROM activity WHERE given_day=$comparable_date,")
+        }
+        $query = $db->prepare("SELECT start_time end_time productive FROM activity 
+        INNER JOIN user_info ON user_info.user_id='$user_id', activity.user_id = user_info.user_id, activity.given_day = '$given_day'");
+
+        $query->execute();
+        $data = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        echo print_r($data);
     }
-    catch (Exception $e){
-        echo $e;
-    }
-
-    // $data = NULL;
-    // if($_POST["time_period"] == "MostRecentDay"){
-    //     $most_recent_given_day = NULL;
-    //     $i = -1;
-    //     while(!$most_recent_given_day){
-    //         $i++;
-    //         $comparable_date = date('Y-m-d', strtotime("-$i days"))
-    //         $find_day = $db->prepare("SELECT given_day FROM activity WHERE given_day=$comparable_date,")
-    //     }
-    //     $query = $db->prepare("SELECT start_time end_time productive FROM activity 
-    //     INNER JOIN user_info ON user_info.user_name = '" . $_COOKIE["username"] . "', activity.user_id = user_info.user_id, activity.given_day = $given_day");
-
-    //     $query->execute();
-    //     $data = $query->fetchAll(PDO::FETCH_ASSOC);
-
-    //     echo print_r($data);
-    // }
 ?>
 <!DOCTYPE html>
 <html>
