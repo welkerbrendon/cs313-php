@@ -43,7 +43,7 @@
     <body>
         <?php 
             include '../../home/nav.php';
-            echo $data;
+            echo print_r($data);
         ?>
     </body>
 </html>
