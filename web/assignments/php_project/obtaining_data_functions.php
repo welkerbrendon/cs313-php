@@ -56,8 +56,8 @@
         $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes, given_day
                                FROM activity
                                WHERE user_id=Cast('user_id' as UUID)
-                               AND Cast(given_day as DateTime) < $end_day
-                               AND Cast(given_day as DateTime) > $start_day
+                               AND new DateTime(given_day) < $end_day
+                               AND new DateTime(given_day) > $start_day
                                ORDER BY given_day, start_time ASC");
         
         $query->execute();
