@@ -25,7 +25,7 @@
             $final_statement = $starting_statement . "(uuid_generate_v4(), Cast('" . $uuid["user_id"] . "' as UUID), Cast('$given_day' as Date), Cast('$start_time' as Time), Cast('$end_time' as Time), $productive)";
             
             $insert_statement = $db->prepare($final_statement);
-            //$insert_statement->execute();
+            $insert_statement->execute();
         }
 
     }
