@@ -12,7 +12,6 @@
         $given_day = date('d.m.y', strtotime("-$i days"));
         $formatted_day = date_format($given_day, "YYYY-MM-DD");
         $full_statement = $starting_statement . " (Cast('" . $given_day . "' as Date), Cast('" . $uuid['user_id'] . "' as UUID), now(), now())";
-        echo($full_statement);
         $insert_statement = $db->prepare($full_statement);
         try {
         $insert_statement->execute();
