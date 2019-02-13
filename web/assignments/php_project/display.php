@@ -14,9 +14,9 @@
         $data = get_most_recent_day($_COOKIE["username"], $_COOKIE["password"]);
     }
     else if($_POST["time_period"] == "day") {
-        //$data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_POST["day"]);
-        echo $_POST["day"];
-        //echo print_r($data);
+        $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_POST["day"]);
+        
+        echo print_r($data);
     }
 ?>
 <!DOCTYPE html>
