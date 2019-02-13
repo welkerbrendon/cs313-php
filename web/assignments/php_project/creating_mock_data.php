@@ -6,7 +6,7 @@
     $select_statement->execute();
     $uuid = $select_statement->fetch(PDO::FETCH_ASSOC);
 
-    $select_statement = $db->prepare("SELECT given_day FROM day");
+    $select_statement = $db->prepare("SELECT * FROM day");
     $select_statement->execute();
     $days = $select_statement->fetch(PDO::FETCH_ASSOC);
 
