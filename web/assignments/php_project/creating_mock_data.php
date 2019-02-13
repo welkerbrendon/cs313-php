@@ -9,10 +9,14 @@
     $select_statement = $db->prepare("SELECT given_day FROM day");
     $select_statement->execute();
     $days = $select_statement->fetchAll(PDO::FETCH_ASSOC);
+    $list_of_days = array();
+    foreach($days as $index){
+        $given_day = $index["given_day"];
+        echo "$given_day<br>";
+        array_push($list_of_days, $given_day);
+    }
 
-    echo print_r($days);
-    echo "<br><br>";
-    echo print_r($days["given_day"]);
+    echo print_r($list_of_days);
 
     /*$starting_statement = "INSERT INTO activity (activity_id, user_id, given_day, start_time, end_time, productive) VALUES ";
     foreach($days["given_day"] as $given_day){
