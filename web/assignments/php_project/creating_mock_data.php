@@ -16,12 +16,9 @@
         $hour = 20;
         for($i = 0; $i < 12; $i++){
             echo "$i<br>";
-            $productive = rand(0, 1);
-            if($productive == 1){
+            $productive = false;
+            if(rand(0, 1) == 1){
                 $productive = true;
-            }
-            else {
-                $productive = false;
             }
             $start_hour = $hour - $i - 1;
             $end_hour = $hour - $i;
