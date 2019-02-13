@@ -14,7 +14,10 @@
 
         $select_statement = $db->prepare("SELECT * FROM day");
         $select_statement->execute();
-        echo print_r($select_statement->fetchAll(PDO::FETCH_ASSOC)) ;
+        $days = $select_statement->fetchAll(PDO::FETCH_ASSOC);
+        echo print_r($days["given_day"]);
+        echo "->";
+        echo print_r($days["user_id"]);
         echo "<br>";
     } 
 ?>
