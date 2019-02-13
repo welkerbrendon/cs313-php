@@ -38,4 +38,8 @@
 
         return $data;
     }
+
+    function get_given_day($day){
+        echo($day);
+    }
 ?>
