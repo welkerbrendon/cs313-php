@@ -52,7 +52,7 @@
                     <th>End Time</th>
                     <th>Productive</th>
                     <th>Activity Type</th>
-                    <th>Notes</th></tr>"
+                    <th>Notes</th></tr>";
                 }
             }
         ?>
