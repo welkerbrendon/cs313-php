@@ -15,6 +15,7 @@
     }
     else if($_POST["time_period"] == "day") {
         $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_POST["day"]);
+        echo print_r($data);
     }
     else if ($_POST["time_period"] == "week"){
         $start_of_week = $_POST["start_of_week"];
