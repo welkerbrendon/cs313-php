@@ -10,7 +10,7 @@
             setcookie("valid_user", "True", time() + (60 * 30));
         }
         else {
-            setcookie("valid_user", "False", time() (60 * 30));
+            setcookie("valid_user", "False", time() + (60 * 30));
             header("Location: sign_in.php");
         }
     }
@@ -22,7 +22,7 @@
             setcookie("valid_user", "True", time() + (60 * 30));
         }
         else {
-            setcookie("valid_user", "False", time() (60 * 30));
+            setcookie("valid_user", "False", time() + (60 * 30));
             header("Location: sign_in.php");
         }
     }
