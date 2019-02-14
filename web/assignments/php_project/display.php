@@ -47,7 +47,7 @@
             foreach($data as $row){
                 if($row["given_day"] != $date){
                     $date = $row["given_day"];
-                    echo "<h1>$date<h1><table>
+                    echo "<h1>$date<h1><table border='1'>
                     <tr><th>Start Time</th>
                     <th>End Time</th>
                     <th>Productive</th>
