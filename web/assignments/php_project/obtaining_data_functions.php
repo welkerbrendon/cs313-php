@@ -42,10 +42,12 @@
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
 
-        $query = $db->prepare("SELECT start_time, end_time, productive, activity_type, notes, given_day
+        $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity.activity_type, activity.notes, day.given_day
                               FROM activity
-                              WHERE user_id=Cast('$user_id' as UUID)
-                              AND given_day=Cast('$day' as Date)
+                              INNER JOIN day
+                              ON activity.user_id=Cast('$user_id' as UUID)
+                              AND day.given_day=Cast('$day' as Date)
+                              AND day.id=activity.day_id
                               ORDER BY start_time ASC");
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
