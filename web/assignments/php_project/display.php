@@ -48,10 +48,10 @@
             foreach($data as $row){
                 if($row["given_day"] != $date){
                     if($date != NULL){
-                        echo "</table>";
+                        echo "</table></div>";
                     }
                     $date = $row["given_day"];
-                    echo "<h1>$date</h1><table border='solid black 1px'>
+                    echo "<h1>$date</h1><div id='table'><table border='solid black 1px'>
                     <tr><th>Start Time</th>
                     <th>End Time</th>
                     <th>Productive</th>
