@@ -1,5 +1,4 @@
 <?php
-    require('connect_to_db.php');
     require('obtaining_data_functions.php');
     $db = connect();
 
