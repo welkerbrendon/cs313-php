@@ -40,7 +40,7 @@
                                                        Cast('$start_time' as Time), 
                                                        Cast('$end_time' as Time), 
                                                        Cast('$productive' as Boolean),
-                                                       $type_selected, $note, now(), now())";
+                                                       '$type_selected', '$note', now(), now())";
             
             $insert_statement = $db->prepare($final_statement);
             try{
