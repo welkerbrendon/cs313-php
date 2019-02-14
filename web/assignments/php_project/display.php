@@ -43,10 +43,18 @@
     <body>
         <?php 
             include '../../home/nav.php';
-            $date = $data[0]["given_day"];
-            echo sizeof($data);
-            echo "<br>";
-            echo print_r($data);
+            $date = NULL;
+            for($i = 0; $i < 12; $i++){
+                if($data[$i]["given_day"] != $date){
+                    $date = $data[$i]["given_day"];
+                    echo "<h1>$date<h1><table>
+                    <tr><th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Productive</th>
+                    <th>Activity Type</th>
+                    <th>Notes</th></tr>"
+                }
+            }
         ?>
     </body>
 </html>
