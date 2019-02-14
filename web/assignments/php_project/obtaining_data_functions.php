@@ -4,8 +4,10 @@
     function get_user_id($username, $password, $db){
         $uuid_query = $db->prepare("SELECT user_id 
                                     FROM user_info 
-                                    WHERE username='$username' 
-                                    AND account_password='$password'");
+                                    WHERE username=:username 
+                                    AND account_password=:password");
+        $uuid_query->bindValue(":username", $username, PDO::PARAM_STR);
+        $uuid_query->bindValue(":password", $password, PDO::PARAM_STR);
         $uuid_query->execute();
         $user_id_array = $uuid_query->fetch(PDO::FETCH_ASSOC);
         return $user_id_array["user_id"];
