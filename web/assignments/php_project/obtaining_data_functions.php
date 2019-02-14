@@ -31,11 +31,12 @@
         $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity.activity_type, activity.notes, day.given_day 
                                FROM activity
                                INNER JOIN day
-                               ON activity.user_id=Cast('$user_id' as UUID) 
-                               AND day.id=$most_recent_day_id
+                               ON activity.user_id=:user_id 
+                               AND day.id=:most_recent_day_id
                                AND day.id=activity.day_id
                                ORDER BY start_time ASC");
-
+        $query->bindValue(":user_id", $user_id, PDO::PARAM_STR);
+        $query->bindValue(":most_recent_day_id", $most_recent_day_id, PDO::PARAM_STR);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
