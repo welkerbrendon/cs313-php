@@ -44,9 +44,9 @@
         <?php 
             include '../../home/nav.php';
             $date = NULL;
-            for($i = 0; $i < 12; $i++){
-                if($data[$i]["given_day"] != $date){
-                    $date = $data[$i]["given_day"];
+            foreach($data as $row){
+                if($row["given_day"] != $date){
+                    $date = $row["given_day"];
                     echo "<h1>$date<h1><table>
                     <tr><th>Start Time</th>
                     <th>End Time</th>
