@@ -14,7 +14,7 @@
         }
     }
     else if ($_POST["time_period"] == "week"){
-        if($_POST["start_of_week"]){}
+        if($_POST["start_of_week"]){
             $start_of_week = $_POST["start_of_week"];
             $end_of_week = new DateTime($start_of_week);
             $end_of_week->add(new DateInterval('P6D'));
