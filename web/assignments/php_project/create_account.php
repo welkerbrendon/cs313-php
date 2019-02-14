@@ -1,6 +1,4 @@
 <?php
-    //setcookie("username", "", time() -1);
-    //setcookie("password", "", time() -1);
     setcookie("valid_user", "", time() -1);
 
 ?>
