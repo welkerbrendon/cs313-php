@@ -6,7 +6,7 @@
         $data = get_most_recent_day($_COOKIE["username"], $_COOKIE["password"]);
     }
     else if($_POST["time_period"] == "day") {
-        if($_POST["dat"]){
+        if($_POST["day"]){
             $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_POST["day"]);
         }
         else {
