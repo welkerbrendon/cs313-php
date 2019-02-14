@@ -16,10 +16,12 @@ CREATE TABLE day (
 CREATE TABLE activity (
     activity_id UUID NOT NULL PRIMARY KEY,
     user_id UUID NOT NULL REFERENCES user_info(user_id),
-    given_day DATE NOT NULL REFERENCES day(given_day),
+    day_id INT NOT NULL REFERENCES day(id),
     start_time TIME NOT NULL,
     end_time TIME NOT NULL,
     productive BOOLEAN NOT NULL,
     activity_type VARCHAR(36),
-    notes TEXT
+    notes TEXT,
+    last_updated TIME NOT NULL,
+    created_at TIME NOT NULL
 );
