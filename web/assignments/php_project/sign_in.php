@@ -17,5 +17,7 @@
             password: <input type="password" name="password" maxlength="255" size="25"><br><br>
             <input type="submit" value="Sign In">
         </form>
+        <br>
+        <a href="create_account.php"><button>Create Account</button></a>
     </body>
 </html>
