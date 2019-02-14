@@ -52,11 +52,6 @@
                     }
                     $date = $row["given_day"];
                     echo "<h1>$date</h1><table border='1'>
-                    <col width=100>
-                    <col width=100>
-                    <col width=80>
-                    <col width=120>
-                    <col width=25%>
                     <tr><th>Start Time</th>
                     <th>End Time</th>
                     <th>Productive</th>
@@ -74,7 +69,7 @@
                 <td>$end_time</td>
                 <td>$productive</td>
                 <td>$activity_type</td>
-                <td id='note'>$note</td>
+                <td width='30%'>$note</td>
                 </tr>";
             }
         ?>
