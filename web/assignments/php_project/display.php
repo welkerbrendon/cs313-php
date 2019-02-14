@@ -51,6 +51,7 @@
                         echo "</table></div>";
                     }
                     $date = $row["given_day"];
+                    $printable_date = date_format($date, "F d, Y");
                     echo "<h1>$date</h1><div id='table'><table border='solid black 1px'>
                     <tr><th>Start Time</th>
                     <th>End Time</th>
