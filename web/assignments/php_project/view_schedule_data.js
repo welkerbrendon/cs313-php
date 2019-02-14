@@ -37,8 +37,8 @@ function day(){
     var form = document.getElementById("form");
 
     form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
-    form.insertBefore(br, form.childNodes[form.childNodes.length - 2]);
     form.insertBefore(label, form.childNodes[form.childNodes.length - 2]);
+    form.insertBefore(br, form.childNodes[form.childNodes.length - 2]);
 }
 function week(){
     noInput();
@@ -62,8 +62,8 @@ function week(){
     var current_month_element = document.getElementById("custom_input_month");
 
     form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
-    form.insertBefore(br, form.childNodes[form.childNodes.length - 2]);
     form.insertBefore(label, form.childNodes[form.childNodes.length] - 2);
+    form.insertBefore(br, form.childNodes[form.childNodes.length - 2]);
 }
 function month(){
     noInput();
@@ -83,12 +83,12 @@ function month(){
     br.setAttribute("id", "br");
 
     form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
-    form.insertBefore(br, form.childNodes[form.childNodes.length - 2]);
     form.insertBefore(label, form.childNodes[form.childNodes.length - 2]);
+    form.insertBefore(br, form.childNodes[form.childNodes.length - 2]);
 }
 function custom(){
     noInput();
-    
+
     var input_item = document.createElement("input");
     input_item.setAttribute("type", "date");
     input_item.setAttribute("id", "custom_input");
@@ -116,11 +116,10 @@ function custom(){
     br.setAttribute("id", "br");
     
     form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
+    form.insertBefore(label, form.childNodes[form.childNodes.length - 2]);
     form.insertBefore(br, form.childNodes[form.childNodes.length - 2]);
 
     form.insertBefore(input_item1, form.childNodes[form.childNodes.length - 2]);
-    form.insertBefore(deletable_br, form.childNodes[form.childNodes.length - 2]);
-
-    form.insertBefore(label, form.childNodes[form.childNodes.length - 2]);
     form.insertBefore(second_label, form.childNodes[form.childNodes.length - 2]);
+    form.insertBefore(deletable_br, form.childNodes[form.childNodes.length - 2]);
 }
