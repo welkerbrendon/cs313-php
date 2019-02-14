@@ -51,7 +51,7 @@
                         echo "</table></div>";
                     }
                     $date = $row["given_day"];
-                    $date_time = DateTime::createFromFormat("Y-d-m", $date);
+                    $date_time = DateTime::createFromFormat("Y-m-d", $date);
                     echo "<h1>" . $date_time->format("F d, Y") . "</h1><div id='table'><table border='solid black 1px'>
                     <tr><th>Start Time</th>
                     <th>End Time</th>
