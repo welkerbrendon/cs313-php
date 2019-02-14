@@ -69,7 +69,7 @@
                 <td>$end_time</td>
                 <td>$productive</td>
                 <td>$activity_type</td>
-                <td width='30%'>$note</td>
+                <td>$note</td>
                 </tr>";
             }
         ?>
