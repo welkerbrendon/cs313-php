@@ -36,7 +36,7 @@
             $start_time = "$start_hour:00";
             $final_statement = $starting_statement . "(uuid_generate_v4(), 
                                                        Cast('" . $uuid["user_id"] . "' as UUID), 
-                                                       $day_id, Cast('$start_time' as Time), 
+                                                       Cast('$day_id' as int), Cast('$start_time' as Time), 
                                                        Cast('$end_time' as Time), 
                                                        Cast('$productive' as Boolean),
                                                        '$type_selected', '$note', now(), now())";
