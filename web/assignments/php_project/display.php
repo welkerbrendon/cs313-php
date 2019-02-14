@@ -39,6 +39,7 @@
     <head>
         <title>View History</title>
         <link rel="stylesheet" href="/home/navbar.css">
+        <link rel="stylesheet" href="display_data.css">
     </head>
     <body>
         <?php 
@@ -51,6 +52,11 @@
                     }
                     $date = $row["given_day"];
                     echo "<h1>$date</h1><table border='1'>
+                    <col width=10%>
+                    <col width=10%>
+                    <col width=5%>
+                    <col width=15%>
+                    <col width=30%>
                     <tr><th>Start Time</th>
                     <th>End Time</th>
                     <th>Productive</th>
@@ -68,7 +74,7 @@
                 <td>$end_time</td>
                 <td>$productive</td>
                 <td>$activity_type</td>
-                <td>$note</td>
+                <td id='note'>$note</td>
                 </tr>";
             }
         ?>
