@@ -42,15 +42,14 @@
                                                        Cast('$productive' as Boolean),
                                                        '$type_selected', '$note', now(), now())";
             
-            $insert_statement = $db->prepare($final_statement);
             try{
-            $insert_statement->execute();
+                $insert_statement = $db->prepare($final_statement);
+                $insert_statement->execute();
+                echo "Successfully add row.<br>";
             }
             catch (Exception $e){
                 echo "$e<br>";
             }
-
-            echo "Successfully add row.<br>";
         }
 
     }
