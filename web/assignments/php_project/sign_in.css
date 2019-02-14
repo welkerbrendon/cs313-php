@@ -1,7 +1,7 @@
-h3, h1, form, a {
+#not_nav {
     padding-left: 30px;
 }
 
-h3 {
+.error {
     color: red;
 }
