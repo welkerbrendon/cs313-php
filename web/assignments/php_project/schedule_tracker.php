@@ -3,8 +3,8 @@
     $db = connect();
 
     if(isset($_POST["username"]) && isset($_POST["password"])){
-        setcookie("username", $_POST["username"], time() + (60 * 30));
-        setcookie("password", $_POST["password"], time() + (60 * 30));
+        setcookie("username", htmlspecialchars($_POST["username"]), time() + (60 * 30));
+        setcookie("password", htmlspecialchars($_POST["password"]), time() + (60 * 30));
         $user_id = get_user_id($_POST["username"], $_POST["password"], $db);
         if($user_id["user_id"]){
             setcookie("valid_user", "True", time() + (60 * 30));
