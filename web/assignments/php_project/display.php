@@ -15,7 +15,6 @@
     }
     else if($_POST["time_period"] == "day") {
         $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_POST["day"]);
-        echo print_r($data);
     }
     else if ($_POST["time_period"] == "week"){
         $start_of_week = $_POST["start_of_week"];
@@ -62,7 +61,7 @@
                 $end_time = $row["end_time"];
                 $productive = $row["productive"] == 1 ? "True" : "False";
                 $activity_type = $row["activity_type"];
-                $note = $notes["notes"];
+                $note = $row["notes"];
 
                 echo "<tr>
                 <td>$start_time</td>
