@@ -59,7 +59,7 @@
                 }
                 $start_time = $row["start_time"];
                 $end_time = $row["end_time"];
-                $productive = $row["productive"] == 1 ? true : false;
+                $productive = $row["productive"] == 1 ? "True" : "False";
                 $activity_type = $row["activity_type"];
                 $note = $notes["notes"];
 
