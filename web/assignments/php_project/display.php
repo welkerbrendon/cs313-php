@@ -45,13 +45,31 @@
             include '../../home/nav.php';
             $date = NULL;
             foreach($data as $row){
-                $date = $row["given_day"];
-                echo "<h1>$date</h1><table border='1'>
+                if($row["given_day"] != $date){
+                    if($date != NULL){
+                        echo "</table>";
+                    }
+                    $date = $row["given_day"];
+                    echo "<h1>$date</h1><table border='1'>
                     <tr><th>Start Time</th>
                     <th>End Time</th>
                     <th>Productive</th>
                     <th>Activity Type</th>
-                    <th>Notes</th></tr></table>";
+                    <th>Notes</th></tr>";
+                }
+                $start_time = $row["start_time"];
+                $end_time = $row["end_time"];
+                $productive = $row["productive"] == 1 ? true : false;
+                $activity_type = $row["activity_type"];
+                $note = $notes["notes"];
+
+                echo "<tr>
+                <td>$start_time</td>
+                <td>$end_time</td>
+                <td>$productive</td>
+                <td>$activity_type</td>
+                <td>$note</td>
+                </tr>";
             }
         ?>
     </body>
