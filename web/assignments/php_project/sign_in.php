@@ -3,7 +3,7 @@
     <head>
         <title>Schedule Tracker</title>
         <link rel="stylesheet" href="/home/navbar.css">
-        <link rel="stylesheet" href="sign.in.css">
+        <link rel="stylesheet" href="sign_in.css">
     </head>
     <body>
         <?php include '../../home/nav.php';?>
