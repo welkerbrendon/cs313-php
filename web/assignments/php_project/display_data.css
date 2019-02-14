@@ -3,5 +3,5 @@ table, h1 {
 }
 
 table {
-    border-collapse: unset;
+    border-collapse: initial;
 }
