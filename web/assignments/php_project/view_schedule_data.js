@@ -62,7 +62,7 @@ function week(){
     var current_month_element = document.getElementById("custom_input_month");
 
     form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
-    form.insertBefore(label, form.childNodes[form.childNodes.length] - 2);
+    form.insertBefore(label, form.childNodes[form.childNodes.length - 2]);
     form.insertBefore(br, form.childNodes[form.childNodes.length - 2]);
 }
 function month(){
