@@ -51,7 +51,7 @@
                         echo "</table>";
                     }
                     $date = $row["given_day"];
-                    echo "<h1>$date</h1><table border='1'>
+                    echo "<h1>$date</h1><table border='solid black 1px'>
                     <tr><th>Start Time</th>
                     <th>End Time</th>
                     <th>Productive</th>
