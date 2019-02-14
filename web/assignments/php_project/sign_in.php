@@ -1,6 +1,6 @@
 <?php
     if($_COOKIE["valid_user"] == "False"){
-        header("Location: create_account.html");
+        header("Location: create_account.php");
     }
 ?>
 <!DOCTYPE html>
