@@ -1,7 +1,24 @@
 <?php
+    require('connect_to_db.php');
+    require('obtaining_data_functions.php');
+    $db = connect();
+
     if(isset($_COOKIE["username"]) && isset($_COOKIE["password"])){
         setcookie("username", $_COOKIE["username"], time() + (60 * 30));
         setcookie("password", $_COOKIE["password"], time() + (60 * 30));
+        if(!isset($_COOKIE["valid_user"])){
+            $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
+            if($user_id["user_id"]){
+                setcookie("valid_user", "True", time() + (60 * 30));
+            }
+            else {
+                setcookie("valid_user", "False", time() (60 * 30));
+                header("Location: sign_in.php");
+            }
+        }
+        else {
+            setcookie("valid_user", "True", time() + (60 * 30));
+        }
     }
     else {
         header("Location: sign_in.php");

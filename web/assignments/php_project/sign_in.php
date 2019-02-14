@@ -1,3 +1,8 @@
+<?php
+    if($_COOKIE["valid_user"] == "False"){
+        header("Location: create_account.html");
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
