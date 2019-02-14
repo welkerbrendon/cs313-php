@@ -13,6 +13,7 @@
     <head>
         <title>Schedule Tracker</title>
         <link rel="stylesheet" href="/home/navbar.css">
+        <link rel="stylesheet" href="view_schedule_data.css">
         <script src="view_schedule_data.js"></script>
     </head>
     <body>
