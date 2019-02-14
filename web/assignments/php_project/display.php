@@ -45,15 +45,13 @@
             include '../../home/nav.php';
             $date = NULL;
             foreach($data as $row){
-                if($row["given_day"] != $date){
-                    $date = $row["given_day"];
-                    echo "<h1>$date</h1><table border='1'>
+                $date = $row["given_day"];
+                echo "<h1>$date</h1><table border='1'>
                     <tr><th>Start Time</th>
                     <th>End Time</th>
                     <th>Productive</th>
                     <th>Activity Type</th>
-                    <th>Notes</th></tr>";
-                }
+                    <th>Notes</th></tr></table>";
             }
         ?>
     </body>
