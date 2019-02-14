@@ -48,10 +48,12 @@
         $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity.activity_type, activity.notes, day.given_day
                               FROM activity
                               INNER JOIN day
-                              ON activity.user_id=Cast('$user_id' as UUID)
-                              AND day.given_day=Cast('$day' as Date)
+                              ON activity.user_id=:user_id
+                              AND day.given_day=:day
                               AND day.id=activity.day_id
                               ORDER BY start_time ASC");
+        $query->bindValue(":user_id", $user_id, PDO::PARAM_STR);
+        $query->bindValue(":day", $day, PDO::PARAM_STR);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -63,12 +65,14 @@
         $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity.activity_type, activity.notes, day.given_day
                                FROM activity
                                INNER JOIN day
-                               ON activity.user_id=Cast('$user_id' as UUID)
-                               AND day.given_day <= Cast('$end_day' as Date)
-                               AND day.given_day >= Cast('$start_day' as Date)
+                               ON activity.user_id=:user_id
+                               AND day.given_day <= :end_day
+                               AND day.given_day >= :start_day
                                AND day.id=activity.day_id
                                ORDER BY given_day, start_time ASC");
-        
+        $query->bindValue(":user_id", $user_id, PDO::PARAM_STR);
+        $query->bindValue(":end_day", $end_day, PDO::PARAM_STR);
+        $query->bindValue(":start_day", $start_day, PDO::PARAM_STR);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
