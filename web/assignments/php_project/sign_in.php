@@ -10,7 +10,7 @@
         <?php
             if($_COOKIE["valid_user"] == "False"){
                 echo "<h3 id='invalid_message'>The given username and/or password does not match any account we currently have.
-                Feel free to use the link below to create a new account.</h3>"
+                Feel free to use the link below to create a new account.</h3>";
             }
         ?>
         <form action="schedule_tracker.php" method="POST">
