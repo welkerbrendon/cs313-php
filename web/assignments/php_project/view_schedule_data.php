@@ -24,6 +24,9 @@
             <input type="radio" name="time_period" onclick="week()" value="week">Past Week<br>
             <input type="radio" name="time_period" onclick="month()" value="month">Past Month<br>
             <input type="radio" name="time_period" onclick="custom()" value="custom">Custom Time Period<br>
+            <label for="custom_input">Start Date</label>
+            <label for="custom_input_month">Desired Month</label>
+            <label for="second_custom_input">End Date</label>
             <input type="submit">
         </form>
     </body>

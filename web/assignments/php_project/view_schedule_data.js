@@ -1,18 +1,25 @@
 function noInput(){
     var element_to_remove = document.getElementById("custom_input");
+    var month_element_to_remove = document.getElementById("custom_input_month");
     if(element_to_remove){
+        var check_for_extra = document.getElementById("second_custom_input");
+        if(check_for_extra){
+            var deletable_br = document.getElementById("deletable");
+            deletable_br.parentNode.removeChild(deletable_br);
+
+            var second_input = document.getElementById("second_custom_input");
+            second_input.parentNode.removeChild(second_input);
+        }
         element_to_remove.parentNode.removeChild(element_to_remove);
         var input_br = document.getElementById("input_br");
         input_br.parentNode.removeChild(input_br);
     }
-    var check_for_extra = document.getElementById("second_custom_input");
-    if(check_for_extra){
-        var deletable_br = document.getElementById("deletable");
-        deletable_br.parentNode.removeChild(deletable_br);
-
-        var second_input = document.getElementById("second_custom_input");
-        second_input.parentNode.removeChild(second_input);
+    else if(month_element_to_remove){
+        month_element_to_remove.parentNode.removeChild(month_element_to_remove);
+        var input_br = document.getElementById("input_br");
+        input_br.parentNode.removeChild(input_br);
     }
+    
 }
 function day(){
     var input_item = document.createElement("input");
@@ -26,6 +33,7 @@ function day(){
 
     var form = document.getElementById("form");
     var current_element = document.getElementById("custom_input");
+    var current_month_element = document.getElementById("custom_input_month");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
         var check_for_extra = document.getElementById("second_custom_input");
@@ -35,6 +43,9 @@ function day(){
             var deletable_br = document.getElementById("deletable");
             deletable_br.parentNode.removeChild(deletable_br);
         }
+    }
+    else if(current_month_element){
+        current_month_element.parentNode.replaceChild(input_item, current_element);
     }
     else{
         form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
@@ -53,6 +64,7 @@ function week(){
 
     var current_element = document.getElementById("custom_input");
     var form = document.getElementById("form");
+    var current_month_element = document.getElementById("custom_input_month");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
         var check_for_extra = document.getElementById("second_custom_input");
@@ -62,6 +74,9 @@ function week(){
             var deletable_br = document.getElementById("deletable");
             deletable_br.parentNode.removeChild(deletable_br);
         }
+    }
+    else if(current_month_element){
+        current_month_element.parentNode.replaceChild(input_item, current_element);
     }
     else{
         form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
@@ -71,7 +86,7 @@ function week(){
 function month(){
     var input_item = document.createElement("input");
     input_item.setAttribute("type", "month");
-    input_item.setAttribute("id", "custom_input");
+    input_item.setAttribute("id", "custom_input_month");
     input_item.setAttribute("name", "month");
     input_item.appendChild(document.createTextNode("Desired Month"));
 
@@ -80,6 +95,7 @@ function month(){
 
     var current_element = document.getElementById("custom_input");
     var form = document.getElementById("form");
+    var current_month_element = document.getElementById("custom_input_month");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
         var check_for_extra = document.getElementById("second_custom_input");
@@ -89,6 +105,9 @@ function month(){
             var deletable_br = document.getElementById("deletable");
             deletable_br.parentNode.removeChild(deletable_br);
         }
+    }
+    else if(current_month_element){
+        return;
     }
     else{
         form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
@@ -114,6 +133,7 @@ function custom(){
 
     var current_element = document.getElementById("custom_input");
     var form = document.getElementById("form");
+    var current_month_element = document.getElementById("custom_input_month");
     if(current_element){
         current_element.parentNode.replaceChild(input_item, current_element);
         var check_for_extra = document.getElementById("second_custom_input");
@@ -121,6 +141,11 @@ function custom(){
             form.insertBefore(input_item1, form.childNodes[form.childNodes.length - 2]);
             form.insertBefore(deletable_br, form.childNodes[form.childNodes.length - 2]);
         }
+    }
+    else if(current_month_element){
+        current_month_element.parentNode.replaceChild(input_item, current_element);
+        form.insertBefore(input_item1, form.childNodes[form.childNodes.length - 2]);
+        form.insertBefore(deletable_br, form.childNodes[form.childNodes.length - 2]);
     }
     else{
         form.insertBefore(input_item, form.childNodes[form.childNodes.length - 2]);
