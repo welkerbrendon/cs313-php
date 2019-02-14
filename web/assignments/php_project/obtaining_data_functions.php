@@ -30,7 +30,7 @@
                                FROM activity
                                INNER JOIN day
                                ON activity.user_id=Cast('$user_id' as UUID) 
-                               AND day.id=Cast('$most_recent_day_id' as Date)
+                               AND day.id=$most_recent_day_id
                                AND day.id=activity.day_id
                                ORDER BY start_time ASC");
 
