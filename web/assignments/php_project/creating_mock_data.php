@@ -11,7 +11,7 @@
     $days = $select_statement->fetchAll(PDO::FETCH_ASSOC);
     $list_of_days = array();
     foreach($days as $index){
-        array_push($list_of_days, $index["day_id"]);
+        array_push($list_of_days, $index["id"]);
     }
 
     $activity_types = array("work", "class", "homework", "exercise", "eat", "play", "church", "relax", "sleep", "dates", "errands", "chores", "family");
@@ -36,7 +36,7 @@
             $start_time = "$start_hour:00";
             $final_statement = $starting_statement . "(uuid_generate_v4(), 
                                                        Cast('" . $uuid["user_id"] . "' as UUID), 
-                                                       Cast('$day_id' as int), Cast('$start_time' as Time), 
+                                                       $day_id, Cast('$start_time' as Time), 
                                                        Cast('$end_time' as Time), 
                                                        Cast('$productive' as Boolean),
                                                        '$type_selected', '$note', now(), now())";
