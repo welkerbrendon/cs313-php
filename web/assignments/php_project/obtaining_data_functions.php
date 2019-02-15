@@ -47,12 +47,14 @@
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
 
-        $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity.activity_type, activity.notes, day.given_day
+        $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity_type.type_name, activity.notes, day.given_day
                               FROM activity
                               INNER JOIN day
                               ON activity.user_id=:user_id
                               AND day.given_day=:day
                               AND day.id=activity.day_id
+                              INNER JOIN activity_type
+                              ON activity_type.id=activity.activity_type_id
                               ORDER BY start_time ASC");
         $query->bindValue(":user_id", $user_id, PDO::PARAM_STR);
         $query->bindValue(":day", $day, PDO::PARAM_STR);
@@ -64,13 +66,15 @@
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
 
-        $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity.activity_type, activity.notes, day.given_day
+        $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity_type.type_name, activity.notes, day.given_day
                                FROM activity
                                INNER JOIN day
                                ON activity.user_id=:user_id
                                AND day.given_day <= :end_day
                                AND day.given_day >= :start_day
                                AND day.id=activity.day_id
+                               INNER JOIN activity_type
+                               ON activity_type.id=activity.activity_type_id
                                ORDER BY given_day, start_time ASC");
         $query->bindValue(":user_id", $user_id, PDO::PARAM_STR);
         $query->bindValue(":end_day", $end_day, PDO::PARAM_STR);
