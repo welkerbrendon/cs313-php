@@ -3,25 +3,11 @@
         setcookie("failed", $value, time() + 2);
     }
 
-    echo print_r($_POST);
-    echo "<br>";
-
     $username = $_POST["new_username"];
     $password = $_POST["new_password"];
     $verify_password = $_POST["verify_password"];
-
-    echo "$username<br>";
-    echo "$password<br>";
-    echo "$verify_password<br>";
-
-    if($username && $password && $verify_password){
-        echo "True";
-    }
-    else {
-        echo "False";
-    }
     
-    /*if($username && $password && $verify_password){
+    if($username && $password && $verify_password){
         if($_POST["password"] == $_POST["verify_password"]){
             require_once("connect_to_db.php");
 
@@ -63,5 +49,5 @@
         set_failed_cookie("no_data");
         header("Location: create_account.php");
         exit;
-    }*/
+    }
 ?>
