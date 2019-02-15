@@ -23,6 +23,7 @@
             $check_statement->execute();
             if($check_statement->fetch(PDO::FETCH_STR)){
                 set_failed_cookie("exists");
+                header("Location: create_acount.php");
                 exit;
             }
             else {
@@ -40,6 +41,7 @@
         }
         else {
             set_failed_cookie("unable_to_verify");
+            header("Lcation: create_account.php");
             exit;
         }
     }
