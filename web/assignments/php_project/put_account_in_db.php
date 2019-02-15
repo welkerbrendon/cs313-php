@@ -21,7 +21,7 @@
             $check_statement->bindValue(":password", $password, PDO::PARAM_STR);
 
             $check_statement->execute();
-            if($check_statement->fetch(PDO::FETCH_STR)){
+            if($check_statement->fetch(PDO::FETCH_ASSOC)){
                 set_failed_cookie("exists");
                 header("Location: create_acount.php");
                 exit;
