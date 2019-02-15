@@ -28,7 +28,7 @@
     $insert_statement = $db->prepare("INSERT INTO activity (id, user_id, day_id, activity_type_id, start_time, end_time, productive, notes, last_updated, created_at) 
                                       VALUES (uuid_generate_v4(), :user_id, :day_id, :activity_type_id, :start_time, :end_time, :productive, :note, now(), now())");
     $insert_statement->bindValue(":user_id", $uuid, PDO::PARAM_STR);
-    $insert_statement->bingParam(":day_id", $day_id, PDO::PARAM_NUM);
+    $insert_statement->bindParam(":day_id", $day_id, PDO::PARAM_NUM);
     $insert_statement->bindParam(":activity_type_id", $activity_type_id, PDO::PARAM_NUM);
     $insert_statement->bindParam(":start_time", $start_time, PDO::PARAM_STR);
     $insert_statement->bindParam(":end_time", $end_time, PDO::PARAM_STR);
