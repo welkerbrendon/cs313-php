@@ -7,10 +7,11 @@
     $password = $_POST["new_password"];
     $verify_password = $_POST["verify_password"];
 
-    echo print_r($_POST);
-    // echo "$username<br>";
-    // echo "$password<br>";
-    // echo "$verify_password<br>";
+    echo "$username<br>";
+    echo "$password<br>";
+    echo "$verify_password<br>";
+
+    echo ($username && $password && $verify_password);
     
     /*if($username && $password && $verify_password){
         if($_POST["password"] == $_POST["verify_password"]){
