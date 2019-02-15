@@ -7,7 +7,7 @@
     $activity_type_html = "";
     foreach($statement->fetchAll(PDO::FETCH_ASSOC) as $row){
         $type_name = $row["type_name"];
-        $activity_type_html .= "<div><input type='radio' name='type' value='$type_name'>$type_name  </div>";
+        $activity_type_html .= "<input type='radio' name='type' value='$type_name'>$type_name  ";
     }
 
     $productive_html = "<input type='radio' name='productive' value='true'>True<br>
@@ -19,7 +19,7 @@
         $hour = intval($i / 60);
         $am_pm = ($hour < 12) ? "am" : "pm";
         $hour = ($hour < 1) ? 12 : $hour;
-        $minutes = $i % 60;
+        $minutes = ($i % 60 == 0) ? "00" : "30";
         $start_time = "$hour:$minutes $am_pm";
         $hour = intval($end_time_in_minutes / 60);
         $am_pm = ($hour < 12) ? "am" : "pm";
