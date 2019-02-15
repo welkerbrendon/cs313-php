@@ -57,8 +57,8 @@
                                 <td><label for='notes'>Notes about activity</label><br><textarea name='notes' id='notes'></td>
                             </tr>";
                         }
+                        echo "</table>";
                     ?>
-                </table>
             </form>
         </div>
     </body>
