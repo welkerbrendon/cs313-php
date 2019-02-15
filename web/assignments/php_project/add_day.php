@@ -54,7 +54,7 @@
                                 <td>$productive_html</td>
                                 <td>$activity_type_html</td>
                                 <td><label for='notes'>Notes about activity:</label><textarea name='notes' id='notes'></td>
-                            </tr>"
+                            </tr>";
                         }
                     ?>
                 </table>
