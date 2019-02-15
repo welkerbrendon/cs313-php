@@ -2,8 +2,8 @@
     require("connect_to_db.php");
     $db = connect();
 
-    $names = $db->query("SELECT type_name FROM activity_type");
-    echo print_r($names);
+    $statement = $db->query("SELECT type_name FROM activity_type");
+    echo print_r($statement->fetchAll(PDO::FETCH_ASSOC));
 ?>
 <!DOCTYPE html>
 <html>
