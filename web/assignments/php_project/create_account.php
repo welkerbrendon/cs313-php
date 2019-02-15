@@ -21,7 +21,7 @@
                         $message = "That account alread exists";
                     }
                     else if($_COOKIE["failed"] == "no_data"){
-                        $message = "Please provide a username and password and please verify the password."
+                        $message = "Please provide a username and password and please verify the password.";
                     }
                     else {
                         $message = "Unable to verify password.";
