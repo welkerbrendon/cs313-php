@@ -30,7 +30,7 @@
                 $post_statement = $db->prepare("INSERT INTO user_info (user_id, username, account_password, created_at, last_active_at)
                                                 VALUES (:new_id, :username, :password, now(), now()");
                 $post_statement->bindValue(":username", $username, PDO::PARAM_STR);
-                $post_statement->bindValue(":new_id", uuid_generate_v4(), PDO::PARAM_STR);
+                $post_statement->bindValue(":new_id", "uuid_generate_v4()", PDO::PARAM_STR);
                 $post_statement->bindValue(":password", $password, PDO::PARAM_STR);
 
                 $post_statement->execute();
