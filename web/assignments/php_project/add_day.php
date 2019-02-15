@@ -18,13 +18,13 @@
         $end_time_in_minutes = $i + 30;
         $hour = intval($i / 60);
         $am_pm = ($hour < 12) ? "am" : "pm";
-        $hour = ($hour < 1) ? 12 : $hour;
+        $hour = ($hour < 1) ? 12 : ($hour > 12) ? $hour - 12 : $hour;
         $minutes = ($i % 60 == 0) ? "00" : "30";
         $start_time = "$hour:$minutes $am_pm";
         $hour = intval($end_time_in_minutes / 60);
         $am_pm = ($hour < 12) ? "am" : "pm";
-        $hour = ($hour < 1) ? 12 : $hour;
-        $minutes = $end_time_in_minutes % 60;
+        $hour = ($hour < 1) ? 12 : ($hour > 12) ? $hour - 12 : $hour;
+        $minutes = ($end_time_in_minutes % 60 == 0) ? "00" : "30";
         $end_time = "$hour:$minutes $am_pm";
         $table .= 
         "<tr>
