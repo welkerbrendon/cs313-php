@@ -33,7 +33,7 @@
             <form action="put_account_in_db.php" method="post">
                 <p>Username:</p><input type="text" name="new_username"><br><br>
                 <p><p>Password:</p><input type="password" name="new_password"></p>
-                <p>Verify Password: </p><input type="password" name="varify_password"><br><br>
+                <p>Verify Password: </p><input type="password" name="verify_password"><br><br>
                 <input type="submit">
             </form>
         </div>
