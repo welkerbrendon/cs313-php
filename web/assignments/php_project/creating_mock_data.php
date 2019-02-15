@@ -18,7 +18,7 @@
     $activity_type = NULL;
     $start_time = NULL;
     $end_time = NULL;
-    $day_id = NULL
+    $day_id = NULL;
     $activity_type_id = NULL;
     $note = NULL;
     $productive = NULL;
