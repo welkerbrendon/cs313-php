@@ -2,7 +2,7 @@
     require('connect_to_db.php');
     
     function get_user_id($username, $password, $db){
-        $uuid_query = $db->prepare("SELECT user_id 
+        $uuid_query = $db->prepare("SELECT id 
                                     FROM user_info 
                                     WHERE username=:username 
                                     AND account_password=:password");
@@ -10,7 +10,7 @@
         $uuid_query->bindValue(":password", $password, PDO::PARAM_STR);
         $uuid_query->execute();
         $user_id_array = $uuid_query->fetch(PDO::FETCH_ASSOC);
-        return $user_id_array["user_id"];
+        return $user_id_array["id"];
     }
 
     function get_most_recent_day($username, $password){
