@@ -48,7 +48,7 @@
             
             try{
                 $insert_statement->execute();
-                echo "Successfully add row.<br>";
+                echo "Successfully add row!<br>";
             }
             catch (Exception $e){
                 echo "$e<br>";
