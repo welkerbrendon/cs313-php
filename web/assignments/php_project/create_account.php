@@ -36,7 +36,7 @@
                 <p>Verify Password: </p><input type="password" name="verify_password"><br><br>
                 <input type="submit">
             </form>
-            <br><a href="Sign In"><button>Sign In</button></a>
+            <br><a href="sign_in.php"><button>Sign In</button></a>
         </div>
     </body>
 </html>
