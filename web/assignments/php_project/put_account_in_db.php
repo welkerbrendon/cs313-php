@@ -8,7 +8,7 @@
     $verify_password = $_POST["verify_password"];
     
     if($username && $password && $verify_password){
-        if($_POST["password"] == $_POST["verify_password"]){
+        if($password == $verify_password){
             require_once("connect_to_db.php");
 
             $db = connect();
