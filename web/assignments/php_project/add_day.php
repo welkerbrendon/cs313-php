@@ -36,7 +36,7 @@
                         <th>Notes</th>
                     </tr>
                     <?php
-                        for($i = 0; $i < 1440; $i += 30){
+                        for($i = 0; $i < 1440; $i = $end_time_in_minutes){
                             $end_time_in_minutes = $i + 30;
                             $hour = intval($i / 60);
                             $am_pm = ($hour < 12) ? "am" : "pm";
