@@ -16,7 +16,7 @@
 
     $random_note = "This is a random note. It would take way too much work to create a bunch of different notes to be matched up randomly so here is one blanket, fake note.";
 
-    $starting_statement = "INSERT INTO activity (activity_id, user_id, day_id, activity_type_id, start_time, end_time, productive, notes, last_updated, created_at) VALUES ";
+    $starting_statement = "INSERT INTO activity (id, user_id, day_id, activity_type_id, start_time, end_time, productive, notes, last_updated, created_at) VALUES ";
     foreach($list_of_days as $day_id){
         $hour = 20;
         for($i = 0; $i < 12; $i++){
