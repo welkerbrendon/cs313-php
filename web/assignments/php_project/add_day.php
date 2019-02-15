@@ -3,7 +3,15 @@
     $db = connect();
 
     $statement = $db->query("SELECT type_name FROM activity_type");
-    echo print_r($statement->fetchAll(PDO::FETCH_ASSOC));
+
+    $activity_type_html = "";
+    foreach($statement->fetchAll(PDO::FETCH_ASSOC) as $row){
+        $type_name = $row["type_name"];
+        $activity_type_html .= "<input type='radio' name='type' value='$type_name'>$type_name  ";
+    }
+
+    $productive_html = "<input type='radio' name='productive' value='true'>True<br>
+                        <input type='radio' name='productive' value='false'>False";
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,12 +35,27 @@
                         <th>Notes</th>
                     </tr>
                     <?php
-                        // for($i = 0; $i < 1440 ; $i += 30){
-                        //     $hour = intval($i / 60);
-                        //     $hour = ($hour < 1) ? 12 : $hour;
-                        //     $minutes = $i % 60;
-
-                        // }
+                        for($i = 0; $i < 1440 ; $i += 30){
+                            $end_time_in_minutes = $i + 30;
+                            $hour = intval($i / 60);
+                            $am_pm = ($hour < 12) ? "am" : "pm";
+                            $hour = ($hour < 1) ? 12 : $hour;
+                            $minutes = $i % 60;
+                            $start_time = "$hour:$minutes $am_pm";
+                            $hour = intval($end_time_in_minutes / 60);
+                            $am_pm = ($hour < 12) ? "am" : "pm";
+                            $hour = ($hour < 1) ? 12 : $hour;
+                            $minutes = $end_time_in_minutes % 60;
+                            $end_time = "$hour:$minutes $am_pm";
+                            echo 
+                            "<tr>
+                                <td>$start_time</td>
+                                <td>$end_time</td>
+                                <td>$productive_html</td>
+                                <td>$activity_type_html</td>
+                                <td><label for='notes'>Notes about activity:</label><textarea name='notes' id='notes'></td>
+                            </tr>"
+                        }
                     ?>
                 </table>
             </form>
