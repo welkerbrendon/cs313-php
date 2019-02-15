@@ -6,7 +6,10 @@
     </head>
     <body>
         <div>
-            <?php include '../../home/nav.php';?>
+            <?php include '../../home/nav.php';
+                $time = DateTime::createFromFormat("i", 30);
+                echo $time;
+            ?>
             <h1>Fill in the following information and click submit when done.</h1>
             <form>
                 <label for="date">Date of Activities</label>
@@ -20,7 +23,6 @@
                         <th>Notes</th>
                     </tr>
                     <?php
-                        echo DateTime::createFromFormat("i", 30)
                         // for($i = 0; $i < 48; $i++){
                         //     echo 
                         //     "<tr>
