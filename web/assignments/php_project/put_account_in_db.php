@@ -11,7 +11,12 @@
     echo "$password<br>";
     echo "$verify_password<br>";
 
-    echo ($username && $password && $verify_password);
+    if($username && $password && $verify_password){
+        echo "True";
+    }
+    else {
+        echo "False";
+    }
     
     /*if($username && $password && $verify_password){
         if($_POST["password"] == $_POST["verify_password"]){
