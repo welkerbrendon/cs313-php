@@ -12,6 +12,30 @@
 
     $productive_html = "<input type='radio' name='productive' value='true'>True<br>
                         <input type='radio' name='productive' value='false'>False";
+
+    $table = "";
+    for($i = 0; $i < 1440; $i = $end_time_in_minutes){
+        $end_time_in_minutes = $i + 30;
+        $hour = intval($i / 60);
+        $am_pm = ($hour < 12) ? "am" : "pm";
+        $hour = ($hour < 1) ? 12 : $hour;
+        $minutes = $i % 60;
+        $start_time = "$hour:$minutes $am_pm";
+        $hour = intval($end_time_in_minutes / 60);
+        $am_pm = ($hour < 12) ? "am" : "pm";
+        $hour = ($hour < 1) ? 12 : $hour;
+        $minutes = $end_time_in_minutes % 60;
+        $end_time = "$hour:$minutes $am_pm";
+        $table .= 
+        "<tr>
+            <td>$start_time</td>
+            <td>$end_time</td>
+            <td>$productive_html</td>
+            <td>$activity_type_html</td>
+            <td><label for='notes'>Notes about activity</label><br><textarea name='notes' id='notes'></td>
+        </tr>";
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,29 +60,9 @@
                         <th>Notes</th>
                     </tr>
                     <?php
-                        for($i = 0; $i < 1440; $i = $end_time_in_minutes){
-                            $end_time_in_minutes = $i + 30;
-                            $hour = intval($i / 60);
-                            $am_pm = ($hour < 12) ? "am" : "pm";
-                            $hour = ($hour < 1) ? 12 : $hour;
-                            $minutes = $i % 60;
-                            $start_time = "$hour:$minutes $am_pm";
-                            $hour = intval($end_time_in_minutes / 60);
-                            $am_pm = ($hour < 12) ? "am" : "pm";
-                            $hour = ($hour < 1) ? 12 : $hour;
-                            $minutes = $end_time_in_minutes % 60;
-                            $end_time = "$hour:$minutes $am_pm";
-                            echo 
-                            "<tr>
-                                <td>$start_time</td>
-                                <td>$end_time</td>
-                                <td>$productive_html</td>
-                                <td>$activity_type_html</td>
-                                <td><label for='notes'>Notes about activity</label><br><textarea name='notes' id='notes'></td>
-                            </tr>";
-                        }
-                        echo "</table>";
+                        echo $table;
                     ?>
+                </table>
             </form>
         </div>
     </body>
