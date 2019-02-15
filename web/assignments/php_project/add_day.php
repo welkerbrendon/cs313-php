@@ -18,7 +18,7 @@
         $end_time_in_minutes = $i + 30;
         $hour = intval($i / 60);
         $am_pm = ($hour < 12) ? "am" : "pm";
-        $hour = ($hour == 0 ? 12 : ($hour > 12 ? $hour - 12 : $hour));
+        $hour = $hour == 0 ? 12 : $hour > 12 ? $hour - 12 : $hour;
         echo "$hour<br>";
         $minutes = ($i % 60 == 0) ? "00" : "30";
         $start_time = "$hour:$minutes $am_pm";
