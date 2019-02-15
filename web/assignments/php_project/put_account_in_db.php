@@ -23,7 +23,7 @@
             $check_statement->execute();
             if($check_statement->fetch(PDO::FETCH_ASSOC)){
                 set_failed_cookie("exists");
-                header("Location: create_acount.php");
+                header("Location: create_account.php");
                 exit;
             }
             else {
