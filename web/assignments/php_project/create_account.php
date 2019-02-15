@@ -27,7 +27,7 @@
                         $message = "Unable to verify password.";
                     }
 
-                    echo "<h3 id='error'>$message</h3>";
+                    echo "<h3 id='error'>*$message*</h3>";
                 }
             ?>
             <form action="put_account_in_db.php" method="post">
