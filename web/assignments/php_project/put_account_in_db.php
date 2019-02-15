@@ -6,6 +6,10 @@
     $username = $_POST["new_username"];
     $password = $_POST["new_password"];
     $verify_password = $_POST["verify_password"];
+
+    echo "$username<br>";
+    echo "$password<br>";
+    echo "$verify_password<br>";
     
     if($username && $password && $verify_password){
         if($_POST["password"] == $_POST["verify_password"]){
@@ -41,13 +45,13 @@
         }
         else {
             set_failed_cookie("unable_to_verify");
-            header("Lcation: create_account.php");
+            header("Location: create_account.php");
             exit;
         }
     }
     else {
         set_failed_cookie("no_data");
-        header("Lcation: create_account.php");
+        header("Location: create_account.php");
         exit;
     }
 ?>
