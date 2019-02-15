@@ -3,6 +3,9 @@
         setcookie("failed", $value, time() + 2);
     }
 
+    echo print_r($_POST);
+    echo "<br>";
+
     $username = $_POST["new_username"];
     $password = $_POST["new_password"];
     $verify_password = $_POST["verify_password"];
