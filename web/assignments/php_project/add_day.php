@@ -35,7 +35,7 @@
                         <th>Notes</th>
                     </tr>
                     <?php
-                        for($i = 0; $i < 1440 ; $i += 30){
+                        for($i = 0; $i < 1440; $i += 30){
                             $end_time_in_minutes = $i + 30;
                             $hour = intval($i / 60);
                             $am_pm = ($hour < 12) ? "am" : "pm";
@@ -53,7 +53,7 @@
                                 <td>$end_time</td>
                                 <td>$productive_html</td>
                                 <td>$activity_type_html</td>
-                                <td><label for='notes'>Notes about activity:</label><textarea name='notes' id='notes'></td>
+                                <td><label for='notes'>Notes about activity</label><br><textarea name='notes' id='notes'></td>
                             </tr>";
                         }
                     ?>
