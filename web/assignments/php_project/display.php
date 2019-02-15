@@ -74,7 +74,7 @@
                 $start_time = $row["start_time"];
                 $end_time = $row["end_time"];
                 $productive = $row["productive"] == 1 ? "True" : "False";
-                $activity_type = $row["activity_type"];
+                $activity_type = $row["type_name"];
                 $note = $row["notes"];
 
                 echo "<tr>

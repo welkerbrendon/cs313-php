@@ -14,10 +14,9 @@
         array_push($list_of_days, $index["id"]);
     }
 
-    $activity_types = array("work", "class", "homework", "exercise", "eat", "play", "church", "relax", "sleep", "dates", "errands", "chores", "family");
     $random_note = "This is a random note. It would take way too much work to create a bunch of different notes to be matched up randomly so here is one blanket, fake note.";
 
-    $starting_statement = "INSERT INTO activity (activity_id, user_id, day_id, start_time, end_time, productive, activity_type, notes, last_updated, created_at) VALUES ";
+    $starting_statement = "INSERT INTO activity (activity_id, user_id, day_id, activity_type_id, start_time, end_time, productive, notes, last_updated, created_at) VALUES ";
     foreach($list_of_days as $day_id){
         $hour = 20;
         for($i = 0; $i < 12; $i++){
@@ -29,7 +28,7 @@
             if(rand(0, 1) == 1){
                 $note = $random_note;
             }
-            $type_selected = $activity_types[rand(0, 12)];
+            $activity_type = rand(4, 15);
             $start_hour = $hour - $i - 1;
             $end_hour = $hour - $i;
             $end_time =  "$end_hour:00";
