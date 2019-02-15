@@ -32,12 +32,8 @@
             <td>$end_time</td>
             <td>$productive_html</td>
             <td>$activity_type_html</td>
-            <td><label for='notes'>Notes about activity</label><br><textarea name='notes' id='notes'></td>
+            <td><label for='notes'>Notes about activity</label><br><textarea name='notes' id='notes'></textarea></td>
         </tr>";
-        echo $i;
-        echo "<br>";
-        echo $end_time_in_minutes;
-        echo "<br>";
     }
 
 ?>
