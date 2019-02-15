@@ -12,11 +12,30 @@
     <body>
         <?php include '../../home/nav.php';?>
         <div class="not_nav">
-            <h1>Coming Soon!</h1>
-            <a href="sign_in.php"><h3>Please use me to get back to sign in page. 
-                Use username: welkerbrendon and password: 1234abcd for now.
-                Thank you!</h3>
-            </a>
+            <h1>Welcome to the Activity Tracker</h1>
+            <h2>Please create a username and password below</h2>
+            <?php
+                if($_COOKIE["failed"]){
+                    $message = "";
+                    if($_COOKIE["failed"] == "exists"){
+                        $message = "That account alread exists";
+                    }
+                    else if($_COOKIE["failed"] == "no_data"){
+                        $message = "Please provide a username and password and please verify the password."
+                    }
+                    else {
+                        $message = "Unable to verify password.";
+                    }
+
+                    echo "<h3 id='error'>$message</h3>"
+                }
+            ?>
+            <form action="put_account_in_db.php" method="post">
+                Username:<input type="text" name="new_username"><br><br>
+                Password:<input type="password" name="new_password"><br>
+                Verify Password:<input type="password" name="varify_password"><br>
+                <input type="submit">
+            </form>
         </div>
     </body>
 </html>
