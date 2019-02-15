@@ -14,34 +14,39 @@
         array_push($list_of_days, $index["id"]);
     }
 
+    $uuid = $uuid["id"];
+    $activity_type = NULL;
+    $start_time = NULL;
+    $end_time = NULL;
+    $day_id = NULL
+    $activity_type_id = NULL;
+    $note = NULL;
+    $productive = NULL;
+
     $random_note = "This is a random note. It would take way too much work to create a bunch of different notes to be matched up randomly so here is one blanket, fake note.";
 
-    $starting_statement = "INSERT INTO activity (id, user_id, day_id, activity_type_id, start_time, end_time, productive, notes, last_updated, created_at) VALUES ";
-    foreach($list_of_days as $day_id){
+    $insert_statement = $db->prepare("INSERT INTO activity (id, user_id, day_id, activity_type_id, start_time, end_time, productive, notes, last_updated, created_at) 
+                                      VALUES (uuid_generate_v4(), :user_id, :day_id, :activity_type_id, :start_time, :end_time, :productive, :note, now(), now())");
+    $insert_statement->bindValue(":user_id", $uuid, PDO::PARAM_STR);
+    $insert_statement->bingParam(":day_id", $day_id, PDO::PARAM_NUM);
+    $insert_statement->bindParam(":activity_type_id", $activity_type_id, PDO::PARAM_NUM);
+    $insert_statement->bindParam(":start_time", $start_time, PDO::PARAM_STR);
+    $insert_statement->bindParam(":end_time", $end_time, PDO::PARAM_STR);
+    $insert_statement->bindParam(":productive", $productive, PDO::PARAM_STR);
+    $insert_statement->bindParam(":note", $note, PDO::PARAM_STR);
+    foreach($list_of_days as $id){
+        $day_id = $id;
         $hour = 20;
         for($i = 0; $i < 12; $i++){
-            $productive = "false";
-            if(rand(0, 1) == 1){
-                $productive = "true";
-            }
-            $note = NULL;
-            if(rand(0, 1) == 1){
-                $note = $random_note;
-            }
-            $activity_type = rand(4, 15);
+            $productive = (rand(0, 1) == 1);
+            $note = (rand(0, 1) == 1) ? $random_note : NULL;
+            $activity_type_id = rand(4, 15);
             $start_hour = $hour - $i - 1;
             $end_hour = $hour - $i;
             $end_time =  "$end_hour:00";
             $start_time = "$start_hour:00";
-            $final_statement = $starting_statement . "(uuid_generate_v4(), 
-                                                       Cast('" . $uuid["id"] . "' as UUID), 
-                                                       $day_id, Cast('$start_time' as Time), 
-                                                       Cast('$end_time' as Time), 
-                                                       Cast('$productive' as Boolean),
-                                                       '$type_selected', '$note', now(), now())";
             
             try{
-                $insert_statement = $db->prepare($final_statement);
                 $insert_statement->execute();
                 echo "Successfully add row.<br>";
             }
