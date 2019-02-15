@@ -7,7 +7,7 @@
     $activity_type_html = "";
     foreach($statement->fetchAll(PDO::FETCH_ASSOC) as $row){
         $type_name = $row["type_name"];
-        $activity_type_html .= "<input type='radio' name='type' value='$type_name'>$type_name  ";
+        $activity_type_html .= "<div><input type='radio' name='type' value='$type_name'>$type_name  </div>";
     }
 
     $productive_html = "<input type='radio' name='productive' value='true'>True<br>
