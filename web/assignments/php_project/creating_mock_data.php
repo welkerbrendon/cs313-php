@@ -2,7 +2,7 @@
     require("connect_to_db.php");
     $db = connect();
 
-    $select_statement = $db->prepare("SELECT user_id FROM user_info WHERE username='welkerbrendon'");
+    $select_statement = $db->prepare("SELECT id FROM user_info WHERE username='welkerbrendon'");
     $select_statement->execute();
     $uuid = $select_statement->fetch(PDO::FETCH_ASSOC);
 
@@ -34,7 +34,7 @@
             $end_time =  "$end_hour:00";
             $start_time = "$start_hour:00";
             $final_statement = $starting_statement . "(uuid_generate_v4(), 
-                                                       Cast('" . $uuid["user_id"] . "' as UUID), 
+                                                       Cast('" . $uuid["id"] . "' as UUID), 
                                                        $day_id, Cast('$start_time' as Time), 
                                                        Cast('$end_time' as Time), 
                                                        Cast('$productive' as Boolean),
