@@ -31,9 +31,9 @@
                 }
             ?>
             <form action="put_account_in_db.php" method="post">
-                <pre>Username:        <input type="text" name="new_username"></pre><br><br>
-                <p><pre>Password:        <input type="password" name="new_password"></pre></p>
-                <pre>Verify Password: <input type="password" name="varify_password"></pre><br><br>
+                <p>Username:</p><input type="text" name="new_username"><br><br>
+                <p><p>Password:</p><input type="password" name="new_password"></p>
+                <p>Verify Password: </p><input type="password" name="varify_password"><br><br>
                 <input type="submit">
             </form>
         </div>
