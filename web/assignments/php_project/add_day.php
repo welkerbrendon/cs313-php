@@ -18,10 +18,11 @@
     <head>
         <title>Schedule Tracker</title>
         <link rel="stylesheet" href="/home/navbar.css">
+        <link rel="stylesheet" href="add_day.css">
     </head>
     <body>
+        <?php include '../../home/nav.php'; ?>
         <div>
-            <?php include '../../home/nav.php'; ?>
             <h1>Fill in the following information and click submit when done.</h1>
             <form>
                 <label for="date"><h3>Date of Activities</label>
