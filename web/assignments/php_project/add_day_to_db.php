@@ -26,10 +26,10 @@
         $activity_statement->bindValue(":day_id", $day_id, PDO::PARAM_INT);
 
         $activity_statement->bindParam(":type_id", $type_id, PDO::PARAM_INT);
-        $activity_statement->bingParam(":start_time", $start, PDO::PARAM_STR);
-        $activity_statement->bingParam(":end_time", $end, PDO::PARAM_STR);
-        $activity_statement->bingParam(":productive", $productive, PDO::PARAM_STR);
-        $activity_statement->bingParam(":note", $note, PDO::PARAM_STR);
+        $activity_statement->bindParam(":start_time", $start, PDO::PARAM_STR);
+        $activity_statement->bindParam(":end_time", $end, PDO::PARAM_STR);
+        $activity_statement->bindParam(":productive", $productive, PDO::PARAM_STR);
+        $activity_statement->bindParam(":note", $note, PDO::PARAM_STR);
 
         for($i = 0; $i < sizeOf($start_times); $i++){
             $type_id = get_type_id($activity_type[$i], $db);
