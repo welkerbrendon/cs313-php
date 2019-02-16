@@ -20,7 +20,7 @@
         $note = NULL;
 
         $activity_statement = $db->prepare("INSERT INTO activity (id, user_id, day_id, activity_type_id, start_time, end_time, productive, notes, last_updated, created_at)
-                                            VALUES ('uuid_generate_v4()', :user_id, :day_id, :type_id, :start_time, :end_time, :productive, :note, now(), now())");
+                                            VALUES (uuid_generate_v4(), :user_id, :day_id, :type_id, :start_time, :end_time, :productive, :note, now(), now())");
 
         $activity_statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
         $activity_statement->bindValue(":day_id", $day_id, PDO::PARAM_INT);
