@@ -13,8 +13,8 @@
         $activity_type_html .= "<option value='$type_name'>$type_name</option>";
     }
 
-    $productive_html = "<input type='radio' name='productive[]' value='true'>True<br>
-                        <input type='radio' name='productive[]' value='false'>False";
+    $productive_html = "<input type='checkbox' name='productive[]' value='true'>True<br>
+                        <input type='checkbox' name='productive[]' value='false'>False";
 
     $start_time_options = "<select name='start_time[]'><option value='' selected disabled hidden>--Start Time--</option>";
     $end_time_options = "<select name='end_time[]'><option value='' selected disabled hidden>--End Time--</option>";
