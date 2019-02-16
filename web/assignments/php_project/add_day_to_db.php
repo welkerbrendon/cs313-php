@@ -74,6 +74,6 @@
                                         WHERE type_name='$type_name'
                                         AND universal='true'");
         $type_statement->execute();
-        echo $type_statement->fetch(PDO::FETCH_NUM);
+        echo print_r($type_statement->fetch(PDO::FETCH_NUM));
     }
 ?>
