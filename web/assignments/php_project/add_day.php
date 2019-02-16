@@ -7,17 +7,17 @@
 
     $statement = $db->query("SELECT type_name FROM activity_type");
 
-    $activity_type_html = "<select name='activity_type'><option value='' selected disabled hidden>--Choose Activity Type--</option>";
+    $activity_type_html = "<select name='activity_type[]'><option value='' selected disabled hidden>--Choose Activity Type--</option>";
     foreach($statement->fetchAll(PDO::FETCH_ASSOC) as $row){
         $type_name = $row["type_name"];
         $activity_type_html .= "<option value='$type_name'>$type_name</option>";
     }
 
-    $productive_html = "<input type='radio' name='productive' value='true'>True<br>
-                        <input type='radio' name='productive' value='false'>False";
+    $productive_html = "<input type='radio' name='productive[]' value='true'>True<br>
+                        <input type='radio' name='productive[]' value='false'>False";
 
-    $start_time_options = "<select name='start_time'><option value='' selected disabled hidden>--Start Time--</option>";
-    $end_time_options = "<select name='end_time'><option value='' selected disabled hidden>--End Time--</option>";
+    $start_time_options = "<select name='start_time[]'><option value='' selected disabled hidden>--Start Time--</option>";
+    $end_time_options = "<select name='end_time[]'><option value='' selected disabled hidden>--End Time--</option>";
     for($i = 0; $i <= 1440; $i += 30){
         $hour = intval($i / 60);
         $am_pm = $hour < 12 || $hour == 24 ? "am" : "pm";
@@ -70,7 +70,7 @@
                                 <td>$activity_type_html</td>
                                 <td>
                                     <label for='note'>Notes: <br></label>
-                                    <textarea name='note' id='note' rows='4' cols='75'></textarea>
+                                    <textarea name='notes[]' id='note' rows='4' cols='75'></textarea>
                                 </td>
                             </tr>";
                         }
