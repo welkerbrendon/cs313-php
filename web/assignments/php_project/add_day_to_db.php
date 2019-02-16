@@ -55,7 +55,7 @@
         $day_statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
 
         $day_statement->execute();
-        return $db->lastInsertId("reported_days_pkey");
+        return $db->lastInsertId("reported_days_pkey_seq");
     }
 
     function get_type_id($type_name, $db){
