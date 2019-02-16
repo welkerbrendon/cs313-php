@@ -49,8 +49,8 @@
         <div>
             <h1>Fill in the following information and click submit when done.</h1>
             <form method="post">
-                <label for="date"><h3>Date of Activities</label>
-                <input type="date" id="date" name="date"></h3><br>
+                <label for="date"><h2>Date of Activities</label>
+                <input type="date" id="date" name="date"></h2><br>
                 <table border=1 id="table">
                     <tr>
                         <th>Start Time</th>
