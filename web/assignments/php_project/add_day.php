@@ -76,7 +76,7 @@
                     ?>
                 </table>
                 <p><button onclick="return add_row()">Add Row</button><button onclick="return delete_row()">Delete Row</button></p>
-                <h3><input id="submit" type="submit" value="Save"></h3>
+                <h1><input id="submit" type="submit" value="Save"></h1>
             </form>
         </div>
     </body>
