@@ -5,7 +5,7 @@
     $day = $_POST["date"];
     $start_times = $_POST["start_time"];
     $end_times = $_POST["end_time"];
-    $productive = $_POST["productive"];
+    $productive_array = $_POST["productive"];
     $activity_type = $_POST["activity_type"];
     $notes = $_POST["notes"];
 
@@ -35,7 +35,7 @@
             $type_id = get_type_id($activity_type[$i], $db);
             $start = $start_times[$i];
             $end = $end_times[$i];
-            $productive = $productive[$i];
+            $productive = $productive_array[$i];
             $note = $notes[$i];
 
             $activity_statement->execute();
