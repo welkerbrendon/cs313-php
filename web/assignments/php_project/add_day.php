@@ -42,6 +42,7 @@
         <title>Schedule Tracker</title>
         <link rel="stylesheet" href="/home/navbar.css">
         <link rel="stylesheet" href="add_day.css">
+        <script src="add_day.js"></script>
     </head>
     <body>
         <?php include '../../home/nav.php'; ?>
