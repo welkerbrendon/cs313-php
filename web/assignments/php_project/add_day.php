@@ -50,7 +50,7 @@
             <form>
                 <label for="date"><h3>Date of Activities</label>
                 <input type="date" id="date" name="date"></h3><br>
-                <table border=1>
+                <table border=1 id="table">
                     <tr>
                         <th>Start Time</th>
                         <th>End Time</th>
@@ -61,7 +61,7 @@
                     <?php
                         for($i = 0; $i < 6; $i++){
                             echo 
-                            "<tr>
+                            "<tr id='tr'>
                                 <td>$start_time_options</td>
                                 <td>$end_time_options</td>
                                 <td>$productive_html</td>
@@ -74,6 +74,8 @@
                         }
                     ?>
                 </table>
+                <p><button onclick="add_row()">Add Row</button></p>
+                <input id="submit" type="submit" value="Save">
             </form>
         </div>
     </body>
