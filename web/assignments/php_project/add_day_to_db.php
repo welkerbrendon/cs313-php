@@ -9,7 +9,14 @@
     $activity_type = $_POST["activity_type"];
     $notes = $_POST["notes"];
 
-    if(sizeOf($start_times) == sizeof($end_times) && sizeof($productive) == sizeof($activity_type) && sizeOf($end_times) == sizeof($productive)){
+    echo "$day<br>";
+    echo "$start_times<br>";
+    echo "$end_times<br>";
+    echo "$productive<br>";
+    echo "$activity_type<br>";
+    echo "$notes<br>";
+
+    /*if(sizeOf($start_times) == sizeof($end_times) && sizeof($productive) == sizeof($activity_type) && sizeOf($end_times) == sizeof($productive)){
         $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
 
         $day_id = insert_new_day($user_id, $db);
@@ -65,5 +72,5 @@
                                         AND universal='true'");
         $type_statement->execute();
         return $type_statement->fetch(PDO::FETCH_INT);
-    }
+    }*/
 ?>
