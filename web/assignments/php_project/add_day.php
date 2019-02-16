@@ -75,7 +75,7 @@
                         }
                     ?>
                 </table>
-                <button id="add_row" onclick="return add_row()">Add Row</button>
+                <div><button id="add_row" onclick="return add_row()">Add Row</button><div>
                 <!-- <button id="delete_row" onclick="return delete_row()">Delete Row</button><br><br> -->
                 <input id="submit" type="submit" value="Save">
             </form>
