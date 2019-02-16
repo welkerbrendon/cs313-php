@@ -38,11 +38,11 @@
             $productive = $productive[$i];
             $note = $notes[$i];
 
-            $activity_statement->execute();
+            //$activity_statement->execute();
         }
 
-        header("Location: add_day.php");
-        exit;
+        // header("Location: add_day.php");
+        // exit;
     }
     else {
         echo "Way to go! You done messed up!";
@@ -74,6 +74,6 @@
                                         WHERE type_name='$type_name'
                                         AND universal='true'");
         $type_statement->execute();
-        return $type_statement->fetch(PDO::FETCH_NUM);
+        echo $type_statement->fetch(PDO::FETCH_NUM);
     }
 ?>
