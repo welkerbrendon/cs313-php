@@ -55,7 +55,17 @@
         $day_statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
 
         $day_statement->execute();
-        return $db->lastInsertId("reported_days_pkey_seq");
+
+        $day_statement = $db->prepare("SELECT id 
+                                       FROM day 
+                                       WHERE given_day=:day
+                                       AND user_id=:user_id");
+        $day_statement->bindValue(":day", $day, PDO::PARAM_STR);
+        $day_statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
+
+        $day_statement->execute();
+
+        return $day_statement->fetch(PDO::FETCH_INT);
     }
 
     function get_type_id($type_name, $db){
