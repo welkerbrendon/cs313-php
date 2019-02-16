@@ -20,13 +20,14 @@
     $end_time_options = "<select name='end_time'><option value='' selected disabled hidden>--End Time--</option>";
     for($i = 0; $i <= 1440; $i += 30){
         $hour = intval($i / 60);
-        $am_pm = $hour < 12 ? "am" : "pm";
-        $hour = $hour == 0 ? 12 : ($hour > 12 ? $hour - 12 : $hour);
+        $am_pm = $hour < 12 || $hour == 24 ? "am" : "pm";
+        $adapted_hour = $hour == 0 ? 12 : ($hour > 12 ? $hour - 12 : $hour);
 
         $minutes = ($i % 60 == 0) ? "00" : "30";
 
-        $time = "$hour:$minutes $am_pm";
-        $time_as_option = "<option value='$time'>$time</option>";
+        $readable_time = "$adapted_hour:$minutes $am_pm";
+        $time = "$hour:$minutes";
+        $time_as_option = "<option value='$time'>$readable_time</option>";
 
         $start_time_options .= $time_as_option;
         $end_time_options .= $time_as_option;
