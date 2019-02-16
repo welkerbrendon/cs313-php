@@ -1,6 +1,6 @@
 <?php
     require_once("connect_to_db.php");
-    require_once("obtaining_data_functions.php")
+    require_once("obtaining_data_functions.php");
     $db = connect();
 
     $day = $_POST["date"]
