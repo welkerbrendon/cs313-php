@@ -9,9 +9,7 @@
     $activity_type = $_POST["activity_type"];
     $notes = $_POST["notes"];
 
-    echo print_r($productive_array);
-
-    if(sizeOf($start_times) == sizeof($end_times) && sizeof($productive_array) == sizeof($activity_type) && sizeOf($end_times) == sizeof($productive)){
+    if(sizeOf($start_times) == sizeof($end_times) && sizeof($productive_array) == sizeof($activity_type) && sizeOf($end_times) == sizeof($productive_array)){
         $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
 
         $day_id = insert_new_day($user_id, $day, $db);
