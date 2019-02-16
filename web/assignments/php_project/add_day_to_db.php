@@ -8,14 +8,10 @@
     $activity_type = $_POST["activity_type"];
     $notes = $_POST["notes"];
 
-    echo print_r($start_times);
-    echo "<br>";
-    echo print_r($end_times);
-    echo "<br>";
-    echo print_r($productive);
-    echo "<br>";
-    echo print_r($activity_type);
-    echo "<br>";
-    echo print_r($notes);
-    echo "<br>";
+    if(sizeOf($start_times) == sizeof($end_times) && sizeof($productive) == sizeof($activity_type) && sizeOf($end_times) == sizeof($productive)){
+        echo "Good Job!";
+    }
+    else {
+        echo "Way to go! You done messed up!";
+    }
 ?>
