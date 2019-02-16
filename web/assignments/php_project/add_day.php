@@ -48,7 +48,7 @@
         <?php include '../../home/nav.php'; ?>
         <div>
             <h1>Fill in the following information and click submit when done.</h1>
-            <form>
+            <form method="post">
                 <label for="date"><h3>Date of Activities</label>
                 <input type="date" id="date" name="date"></h3><br>
                 <table border=1 id="table">
