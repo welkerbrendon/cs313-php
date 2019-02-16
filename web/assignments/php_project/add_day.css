@@ -5,3 +5,7 @@ div {
 button {
     margin: 5px;
 }
+
+#submit {
+    font-size: 50%;
+}
