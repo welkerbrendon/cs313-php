@@ -17,12 +17,11 @@
                         <input type='radio' name='productive' value='false'>False";
 
     $start_time_options = "<select name='start_time'>";
-    $end_time_options = "<input type='select' name='end_time'>";
+    $end_time_options = "<select name='end_time'>";
     for($i = 0; $i <= 1440; $i += 30){
         $hour = intval($i / 60);
-        $hour = $hour == 0 ? 12 : ($hour > 12 ? $hour - 12 : $hour);
-
         $am_pm = $hour < 12 ? "am" : "pm";
+        $hour = $hour == 0 ? 12 : ($hour > 12 ? $hour - 12 : $hour);
 
         $minutes = ($i % 60 == 0) ? "00" : "30";
 
