@@ -9,17 +9,10 @@
     $activity_type = $_POST["activity_type"];
     $notes = $_POST["notes"];
 
-    echo "$day<br>";
-    echo "$start_times<br>";
-    echo "$end_times<br>";
-    echo "$productive<br>";
-    echo "$activity_type<br>";
-    echo "$notes<br>";
-
-    /*if(sizeOf($start_times) == sizeof($end_times) && sizeof($productive) == sizeof($activity_type) && sizeOf($end_times) == sizeof($productive)){
+    if(sizeOf($start_times) == sizeof($end_times) && sizeof($productive) == sizeof($activity_type) && sizeOf($end_times) == sizeof($productive)){
         $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
 
-        $day_id = insert_new_day($user_id, $db);
+        $day_id = insert_new_day($user_id, $day, $db);
         $type_id = NULL;
         $start = NULL;
         $end = NULL;
@@ -55,7 +48,7 @@
         echo "Way to go! You done messed up!";
     }
 
-    function insert_new_day($user_id, $db){
+    function insert_new_day($user_id, $day, $db){
         $day_statement = $db->prepare("INSERT INTO day (given_day, user_id, created_at, last_updated)
                                        VALUES (:date, :user_id, now(), now())");
         $day_statement->bindValue(":date", $day, PDO::PARAM_STR);
@@ -72,5 +65,5 @@
                                         AND universal='true'");
         $type_statement->execute();
         return $type_statement->fetch(PDO::FETCH_INT);
-    }*/
+    }
 ?>
