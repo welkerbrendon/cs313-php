@@ -8,10 +8,10 @@
     $activity_type = $_POST["activity_type"];
     $notes = $_POST["notes"];
 
-    $echo "$start_times<br>";
-    $echo "$end_times<br>";
-    $echo "$productive<br>";
-    $echo "$activity_type<br>";
-    $echo "$notes<br>";
+    echo "$start_times<br>";
+    echo "$end_times<br>";
+    echo "$productive<br>";
+    echo "$activity_type<br>";
+    echo "$notes<br>";
 
 ?>
