@@ -68,7 +68,7 @@
                                 <td>$activity_type_html</td>
                                 <td>
                                     <label for='note'>Notes: <br></label>
-                                    <textarea name='note' id='note'></textarea>
+                                    <textarea name='note' id='note' rows='4' cols='50'></textarea>
                                 </td>
                             </tr>";
                         }
