@@ -3,7 +3,7 @@
     require_once("obtaining_data_functions.php");
     $db = connect();
 
-    $day = $_POST["date"]
+    $day = $_POST["date"];
     $start_times = $_POST["start_time"];
     $end_times = $_POST["end_time"];
     $productive = $_POST["productive"];
