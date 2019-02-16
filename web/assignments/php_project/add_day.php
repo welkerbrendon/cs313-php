@@ -53,10 +53,10 @@
                 <input type="date" id="date" name="date"></h2><br>
                 <table border=1 id="table">
                     <tr>
-                        <th>Start Time</th>
-                        <th>End Time</th>
-                        <th>Productive</th>
-                        <th>Activity Type</th>
+                        <th width="10%">Start Time</th>
+                        <th width="10%">End Time</th>
+                        <th width="10%">Productive</th>
+                        <th width="10%">Activity Type</th>
                         <th>Notes</th>
                     </tr>
                     <?php
@@ -69,7 +69,7 @@
                                 <td>$activity_type_html</td>
                                 <td>
                                     <label for='note'>Notes: <br></label>
-                                    <textarea name='note' id='note' rows='4' cols='50'></textarea>
+                                    <textarea name='note' id='note' rows='8' cols='75'></textarea>
                                 </td>
                             </tr>";
                         }
