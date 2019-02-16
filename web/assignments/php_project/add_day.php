@@ -71,7 +71,7 @@
                                     <label for='note'>Notes: <br></label>
                                     <textarea name='note' id='note'></textarea>
                                 </td>
-                            </tr>"
+                            </tr>";
                         }
                     ?>
                 </table>
