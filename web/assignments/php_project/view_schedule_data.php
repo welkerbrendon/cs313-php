@@ -12,6 +12,7 @@
     }
     else {
         header("Location: sign_in.php");
+        exit;
     }
 ?>
 <!DOCTYPE html>
