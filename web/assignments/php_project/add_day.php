@@ -47,8 +47,8 @@
     <body>
         <?php include '../../home/nav.php'; ?>
         <div>
-            <h1>Fill in the following information and click submit when done.</h1>
-            <form method="post">
+            <h1>Fill in the following information and click save when done.</h1>
+            <form action="add_day_to_db.php" method="post">
                 <label for="date"><h2>Date of Activities</label>
                 <input type="date" id="date" name="date"></h2><br>
                 <table border=1 id="table">
