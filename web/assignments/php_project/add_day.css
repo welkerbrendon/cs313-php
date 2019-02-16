@@ -11,5 +11,5 @@ button {
 }
 
 label {
-    display: flex;
+    display: block;
 }
