@@ -4,4 +4,6 @@ function add_row(){
 
     var new_row = table.insertRow(table.rows.length - 1);
     new_row.innerHTML = table_row.innerHTML;
+
+    return false;
 }
