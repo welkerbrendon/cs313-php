@@ -12,7 +12,7 @@
     if(sizeOf($start_times) == sizeof($end_times) && sizeof($productive) == sizeof($activity_type) && sizeOf($end_times) == sizeof($productive)){
         $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
 
-        $day_id = insert_new_day($user_id);
+        $day_id = insert_new_day($user_id, $db);
         $type_id = NULL;
         $start = NULL;
         $end = NULL;
@@ -32,7 +32,7 @@
         $activity_statement->bingParam(":note", $note, PDO::PARAM_STR);
 
         for($i = 0; $i < sizeOf($start_times); $i++){
-            $type_id = get_type_id($activity_type[$i]);
+            $type_id = get_type_id($activity_type[$i], $db);
             $start = $start_times[$i];
             $end = $end_times[$i];
             $productive = $productive[$i];
@@ -48,7 +48,7 @@
         echo "Way to go! You done messed up!";
     }
 
-    function insert_new_day($user_id){
+    function insert_new_day($user_id, $db){
         $day_statement = $db->prepare("INSERT INTO day (given_day, user_id, created_at, last_updated)
                                        VALUES (:date, :user_id, now(), now())");
         $day_statement->bindValue(":date", $day, PDO::PARAM_STR);
@@ -58,7 +58,7 @@
         return $day_statement->lastInsertId();
     }
 
-    function get_type_id($type_name){
+    function get_type_id($type_name, $db){
         $type_statement = $db->prepare("SELECT id 
                                         FROM activity_type 
                                         WHERE type_name='$type_name'
