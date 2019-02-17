@@ -40,7 +40,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Schedule Tracker</title>
+        <title>Add Day</title>
         <link rel="stylesheet" href="/home/navbar.css">
         <link rel="stylesheet" href="add_day.css">
         <script src="add_day.js"></script>

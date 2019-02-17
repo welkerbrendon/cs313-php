@@ -23,13 +23,13 @@ CREATE TABLE activity (
     end_time TIME NOT NULL,
     productive BOOLEAN NOT NULL,
     notes TEXT,
-    last_updated TIME NOT NULL,
-    created_at TIME NOT NULL
+    last_updated TIMESTAMP NOT NULL,
+    created_at TIMESTAMP NOT NULL
 );
 
 CREATE TABLE activity_type (
     id SERIAL PRIMARY KEY,
     user_id UUID NOT NULL REFERENCES user_info(id),
     type_name VARCHAR(40) NOT NULL,
-    created_at TIME NOT NULL
+    created_at TIMESTAMP NOT NULL
 );
