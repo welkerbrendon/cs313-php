@@ -2,20 +2,20 @@
     require('obtaining_data_functions.php');
 
     $data = NULL;
-    if($_POST["time_period"] == "MostRecentDay"){
+    if($_GET["time_period"] == "MostRecentDay"){
         $data = get_most_recent_day($_COOKIE["username"], $_COOKIE["password"]);
     }
-    else if($_POST["time_period"] == "day") {
-        if($_POST["day"]){
+    else if($_GET["time_period"] == "day") {
+        if($_GET["day"]){
             $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_POST["day"]);
         }
         else {
             header("Location: view_schedule_data.php");
         }
     }
-    else if ($_POST["time_period"] == "week"){
-        if($_POST["start_of_week"]){
-            $start_of_week = $_POST["start_of_week"];
+    else if ($_GET["time_period"] == "week"){
+        if($_GET["start_of_week"]){
+            $start_of_week = $_GET["start_of_week"];
             $end_of_week = new DateTime($start_of_week);
             $end_of_week->add(new DateInterval('P6D'));
             $end_of_week = date_format($end_of_week, "Y-m-d");
@@ -26,27 +26,27 @@
             header("Location: view_schedule_data.php");
         }
     }
-    else if ($_POST["time_period"] == "month"){
-        if($_POST["month"]){
-            $start_of_month = $_POST["month"] . "-01";
+    else if ($_GET["time_period"] == "month"){
+        if($_GET["month"]){
+            $start_of_month = $_GET["month"] . "-01";
 
             $end_of_month = NULL;
-            $month = date_format($_POST["month"], "m");
-            echo $_POST["month"];
+            $month = date_format(new DATETIME($_GET["month"]), "m");
+            echo $_GET["month"];
             echo"<br>";
             echo $month;
             // switch($month){
             //     case 2:
-            //         $end_of_month = $_POST["month"] . "-28";
+            //         $end_of_month = $_GET["month"] . "-28";
             //         break;
             //     case 4:
             //     case 6:
             //     case 9:
             //     case 11:
-            //         $end_of_month = $_POST["month"] . "-30";
+            //         $end_of_month = $_GET["month"] . "-30";
             //         break;
             //     default:
-            //         $end_of_month = $_POST["month"] . "-31";
+            //         $end_of_month = $_GET["month"] . "-31";
             //         break;
             // }
 
@@ -57,8 +57,8 @@
         }
     }
     else {
-        if($_POST["start_date"] && $_POST["end_date"]){
-            $data = get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $_POST["start_date"], $_POST["end_date"]);
+        if($_GET["start_date"] && $_GET["end_date"]){
+            $data = get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $_GET["start_date"], $_GET["end_date"]);
         }
         else {
             header("Location: view_schedule_data.php");

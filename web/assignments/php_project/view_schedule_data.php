@@ -26,7 +26,7 @@
     <body>
         <?php include '../../home/nav.php';?>
         <h1>Please fill out form in order to see desired history</h1>
-        <form action="display.php" method="post" id="form">
+        <form action="display.php" method="get" id="form">
             <input type="radio" name="time_period" onclick="noInput()" value="MostRecentDay">Most Recent Day<br>
             <input type="radio" name="time_period" onclick="day()" value="day">Selected Day<br>
             <input type="radio" name="time_period" onclick="week()" value="week">Past Week<br>
