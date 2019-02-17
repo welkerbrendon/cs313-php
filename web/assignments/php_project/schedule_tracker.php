@@ -7,10 +7,6 @@
         setcookie("password", htmlspecialchars($_POST["password"]), time() + (60 * 30));
         $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
 
-        echo $_COOKIE["username"];
-        echo"-";
-        echo $_COOKIE["password"];
-
         if($user_id["user_id"]){
             setcookie("valid_user", "True", time() + (60 * 30));
         }
