@@ -9,3 +9,7 @@ button {
 #submit {
     font-size: 110%;
 }
+
+#error {
+    color: red;
+}
