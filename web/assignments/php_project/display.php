@@ -31,7 +31,7 @@
             $start_of_month = $_POST["month"] . "-01";
 
             $end_of_month = NULL;
-            $month = intval(date_format($_POST["month"]), "m"));
+            $month = intval(date_format($_POST["month"]), "m");
             switch($month){
                 case 2:
                     $end_of_month = $_POST["month"] . "-28";
