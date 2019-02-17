@@ -31,5 +31,6 @@ CREATE TABLE activity_type (
     id SERIAL PRIMARY KEY,
     user_id UUID NOT NULL REFERENCES user_info(id),
     type_name VARCHAR(40) NOT NULL,
+    universal BOOLEAN NOT NULL,
     created_at TIMESTAMP NOT NULL
 );

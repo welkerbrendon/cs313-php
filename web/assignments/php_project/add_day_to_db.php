@@ -74,6 +74,11 @@
         header("Location: add_day.php");
         exit;
     }
+    else if(!$day){
+        setcookie("bad_input", "no_date", time() + 2);
+        header("Location: add_day.php");
+        exit;
+    }
     else {
         setcookie("bad_input", "unknown", time() + 2);
         header("Location: add_day.php");
@@ -101,11 +106,10 @@
         return $day_statement->fetch(PDO::FETCH_NUM)[0];
     }
 
-    function get_type_id($type_name, $db){
+    function get_type_id($type_name $db){
         $type_statement = $db->prepare("SELECT id 
                                         FROM activity_type 
-                                        WHERE type_name='$type_name'
-                                        AND universal='true'");
+                                        WHERE type_name='$type_name'");
         $type_statement->execute();
         return $type_statement->fetch(PDO::FETCH_NUM)[0];
     }
