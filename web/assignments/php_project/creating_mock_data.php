@@ -14,7 +14,6 @@
         array_push($list_of_days, $index["id"]);
     }
 
-    $uuid = $uuid["id"];
     $activity_type = NULL;
     $start_time = NULL;
     $end_time = NULL;
