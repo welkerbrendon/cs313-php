@@ -32,6 +32,8 @@
 
             $end_of_month = NULL;
             $month = date_format($_POST["month"], "m");
+            echo $_POST["month"];
+            echo"<br>";
             echo $month;
             // switch($month){
             //     case 2:
