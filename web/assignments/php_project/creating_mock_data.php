@@ -4,7 +4,7 @@
 
     $select_statement = $db->prepare("SELECT id FROM user_info WHERE username='welkerbrendon'");
     $select_statement->execute();
-    $uuid = $select_statement->fetch(PDO::FETCH_ASSOC);
+    $uuid = $select_statement->fetch(PDO::FETCH_STR)[0];
 
     // $select_statement = $db->prepare("SELECT id FROM day");
     // $select_statement->execute();
