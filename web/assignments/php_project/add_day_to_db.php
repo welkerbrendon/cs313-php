@@ -9,7 +9,12 @@
     $activity_type = $_POST["activity_type"];
     $notes = $_POST["notes"];
 
-    if(sizeOf($start_times) == sizeof($end_times) && sizeof($productive_array) == sizeof($activity_type) && sizeOf($end_times) == sizeof($productive_array)){
+    $srt_eq_end = sizeOf($start_times) == sizeof($end_times);
+    $prod_eq_act = sizeof($productive_array) == sizeof($activity_type);
+    $end_eq_prod = sizeOf($end_times) == sizeof($productive_array);
+    $act_eq_srt = sizeof($activity_type) == sizeOf($start_times);
+
+    if($srt_eq_end && $prod_eq_act && $end_eq_prod){
         $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
 
         $day_id = insert_new_day($user_id, $day, $db);
@@ -44,8 +49,35 @@
         header("Location: add_day.php");
         exit;
     }
+    else if ($srt_eq_end && $act_eq_srt && !$prod_eq_act){
+        setcookie("bad_input", "productive", time() + 2);
+        header("Location: add_day.php");
+        exit;
+    }
+    else if(!$srt_eq_end){
+        setcookie("bad_input", "times", time() + 2);
+        header("Location: add_day.php");
+        exit;
+    }
+    else if($srt_eq_end && $end_eq_prod && !$act_eq_srt){
+        setcookie("bad_input", "activity_type", time() + 2);
+        header("Location: add_day.php");
+        exit;
+    }
+    else if($prod_eq_act && !$act_eq_srt){
+        setcookie("bad_input", "start_time", time() + 2);
+        header("Location: add_day.php");
+        exit;
+    }
+    else if($prod_eq_act && !$end_eq_prod){
+        setcookie("bad_input", "end_time", time() + 2);
+        header("Location: add_day.php");
+        exit;
+    }
     else {
-        echo "Way to go! You done messed up!";
+        setcookie("bad_input", "unknown", time() + 2);
+        header("Location: add_day.php");
+        exit;
     }
 
     function insert_new_day($user_id, $day, $db){
