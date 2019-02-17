@@ -7,7 +7,7 @@
     }
     else if($_GET["time_period"] == "day") {
         if($_GET["day"]){
-            $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_POST["day"]);
+            $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
         }
         else {
             header("Location: view_schedule_data.php");
