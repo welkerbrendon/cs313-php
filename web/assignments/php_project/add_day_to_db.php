@@ -106,7 +106,7 @@
         return $day_statement->fetch(PDO::FETCH_NUM)[0];
     }
 
-    function get_type_id($type_name $db){
+    function get_type_id($type_name, $db){
         $type_statement = $db->prepare("SELECT id 
                                         FROM activity_type 
                                         WHERE type_name='$type_name'");
