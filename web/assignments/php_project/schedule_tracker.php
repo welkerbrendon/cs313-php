@@ -3,16 +3,11 @@
     $db = connect();
 
     if(isset($_POST["username"]) && isset($_POST["password"])){
+        unset($_COOKIE["username"]);
+        unser($_COOKIE["username"]);
         setcookie("username", htmlspecialchars($_POST["username"]), time() + (60 * 30));
         setcookie("password", htmlspecialchars($_POST["password"]), time() + (60 * 30));
         $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
-
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        $cookie_username = $_COOKIE["username"];
-        $cookie_password = $_COOKIE["password"];
-
-        echo "$username-$password<br>$cookie_username-$cookie_password<br>$user_id<br>";
 
         if($user_id["user_id"]){
             setcookie("valid_user", "True", time() + (60 * 30));
