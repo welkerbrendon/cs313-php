@@ -2,7 +2,6 @@
     require('connect_to_db.php');
     
     function get_user_id($username, $password, $db){
-        echo "$username-$password<br>";
         $uuid_query = $db->prepare("SELECT id 
                                     FROM user_info 
                                     WHERE username=:username 
@@ -11,13 +10,10 @@
         $uuid_query->bindValue(":password", $password, PDO::PARAM_STR);
         $uuid_query->execute();
         $user_id_array = $uuid_query->fetch(PDO::FETCH_ASSOC);
-        $uuid= $user_id_array["id"];
-        echo "$uuid<br>";
-        return $uuid;
+        return $user_id_array["id"];
     }
 
     function get_most_recent_day($username, $password){
-        echo "<br>$username-$password<br>";
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
         $most_recent_day_id = NULL;
@@ -27,12 +23,11 @@
             $comparable_date = date('Y-m-d', strtotime("-$i days"));
             $find_day = $db->prepare("SELECT id 
                                       FROM day 
-                                      WHERE given_day='$comparable_date'");
+                                      WHERE id='$comparable_date-$user_id'");
             $find_day->execute();
             $most_recent_day_id = $find_day->fetch(PDO::FETCH_ASSOC);
             $most_recent_day_id = $most_recent_day_id["id"];
         }
-        echo $most_recent_day_id;
         $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity_type.type_name, activity.notes, day.given_day 
                                FROM activity
                                INNER JOIN day
