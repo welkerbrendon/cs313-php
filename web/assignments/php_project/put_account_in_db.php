@@ -13,7 +13,7 @@
 
             $db = connect();
 
-            $check_statement = $db->prepare("SELECT user_id 
+            $check_statement = $db->prepare("SELECT id 
                                              FROM user_info 
                                              WHERE username=:username 
                                              AND account_password=:password");
@@ -27,7 +27,7 @@
                 exit;
             }
             else {
-                $post_statement = $db->prepare("INSERT INTO user_info (user_id, username, account_password, created_at, last_active_time)
+                $post_statement = $db->prepare("INSERT INTO user_info (id, username, account_password, created_at, last_active_time)
                                                 VALUES (uuid_generate_v4(), :username, :password, now(), now())");
                 $post_statement->bindValue(":username", $username, PDO::PARAM_STR);
                 $post_statement->bindValue(":password", $password, PDO::PARAM_STR);

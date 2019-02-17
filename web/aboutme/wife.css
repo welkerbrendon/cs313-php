@@ -11,3 +11,7 @@ img.resize {
 p {
     padding-right: 25%;
 }
+
+div.body {
+    padding-left: 30px;
+}
