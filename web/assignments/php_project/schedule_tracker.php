@@ -4,7 +4,7 @@
 
     if(isset($_POST["username"]) && isset($_POST["password"])){
         unset($_COOKIE["username"]);
-        unser($_COOKIE["username"]);
+        unset($_COOKIE["username"]);
         setcookie("username", htmlspecialchars($_POST["username"]), time() + (60 * 30));
         setcookie("password", htmlspecialchars($_POST["password"]), time() + (60 * 30));
         $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
