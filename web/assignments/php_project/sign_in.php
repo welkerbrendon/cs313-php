@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Schedule Tracker</title>
+        <title>Sign In</title>
         <link rel="stylesheet" href="/home/navbar.css">
         <link rel="stylesheet" href="sign_in.css">
     </head>
