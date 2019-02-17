@@ -61,8 +61,8 @@
     $formatted_day = NULL;
     $id = NULL;
 
-    $insert_statement = $db->prepare("INSERT INTO day (id, given_day, user_id, created_at, last_updated) 
-        VALUES (:id, :day, :user_id, now(), now())");
+    $insert_statement = $db->prepare("INSERT INTO day (id, given_day, user_id, last_updated, created_at) 
+                                      VALUES (:id, :day, :user_id, now(), now())");
 
     $insert_statement->bindValue(":user_id", $uuid, PDO::PARAM_STR);
 

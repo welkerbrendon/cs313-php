@@ -11,7 +11,7 @@ CREATE TABLE day (
     given_day DATE NOT NULL,
     user_id UUID NOT NULL REFERENCES user_info(id),
     last_updated TIMESTAMP NOT NULL,
-    creation_time TIMESTAMP NOT NULL
+    created_at TIMESTAMP NOT NULL
 );
 
 CREATE TABLE activity (
