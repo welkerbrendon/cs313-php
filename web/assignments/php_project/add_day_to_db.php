@@ -81,8 +81,9 @@
     }
 
     function insert_new_day($user_id, $day, $db){
-        $day_statement = $db->prepare("INSERT INTO day (given_day, user_id, created_at, last_updated)
-                                       VALUES (:date, :user_id, now(), now())");
+        $day_statement = $db->prepare("INSERT INTO day (id, given_day, user_id, created_at, last_updated)
+                                       VALUES (:day_id, :date, :user_id, now(), now())");
+        $day_statement->bindValue(":day_id", "$day-$user_id", PDO::PARAM_STR);
         $day_statement->bindValue(":date", $day, PDO::PARAM_STR);
         $day_statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
 
