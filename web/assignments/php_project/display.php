@@ -31,7 +31,7 @@
             $start_of_month = $_GET["month"] . "-01";
 
             $end_of_month = NULL;
-            $month = date_format(new DATETIME($_GET["month"]), "m");
+            $month = intval(date_format(new DATETIME($_GET["month"]), "m"));
             echo $_GET["month"];
             echo"<br>";
             echo $month;
