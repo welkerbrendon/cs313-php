@@ -52,6 +52,7 @@
                               INNER JOIN day
                               ON activity.user_id=:user_id
                               AND day.id=:day_id
+                              AND activity.day_id=day.id
                               INNER JOIN activity_type
                               ON activity_type.id=activity.activity_type_id
                               ORDER BY start_time ASC");
