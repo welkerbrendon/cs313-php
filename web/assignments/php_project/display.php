@@ -29,7 +29,23 @@
     else if ($_POST["time_period"] == "month"){
         if($_POST["month"]){
             $start_of_month = $_POST["month"] . "-01";
-            $end_of_month = $_POST["month"] . "-31";
+
+            $end_of_month = NULL
+            $month = intval(date_format($_POST["month"]), "m"));
+            switch($month){
+                case 2:
+                    $end_of_month = $_POST["month"] . "-28";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    $end_of_month = $_POST["month"] . "-30";
+                    break;
+                default:
+                    $end_of_month = $_POST["month"] . "-31";
+                    break;
+            }
 
             $data = get_days_in_window($_COOKIE["username"], $_COOKIE["password"], $start_of_month, $end_of_month);
         }
