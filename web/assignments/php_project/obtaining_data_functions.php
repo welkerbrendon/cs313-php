@@ -21,7 +21,6 @@
         while($most_recent_day_id == NULL){
             $i++;
             $comparable_date = date('Y-m-d', strtotime("-$i days"));
-            echo $comparable_date;
             $find_day = $db->prepare("SELECT id 
                                       FROM day 
                                       WHERE given_day='$comparable_date'");
@@ -29,6 +28,7 @@
             $most_recent_day_id = $find_day->fetch(PDO::FETCH_ASSOC);
             $most_recent_day_id = $most_recent_day_id["id"];
         }
+        echo $most_recent_day_id;
         $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity_type.type_name, activity.notes, day.given_day 
                                FROM activity
                                INNER JOIN day
