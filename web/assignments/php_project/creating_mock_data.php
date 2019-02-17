@@ -58,7 +58,6 @@
     // }
 
     $given_day = NULL;
-    $formatted_day = NULL;
     $id = NULL;
 
     $insert_statement = $db->prepare("INSERT INTO day (id, given_day, user_id, last_updated, created_at) 
@@ -67,12 +66,11 @@
     $insert_statement->bindValue(":user_id", $uuid, PDO::PARAM_STR);
 
     $insert_statement->bindParam(":id", $id, PDO::PARAM_STR);
-    $insert_statement->bindParam(":day", $formatted_day, PDO::PARAM_STR);
+    $insert_statement->bindParam(":day", $given_day, PDO::PARAM_STR);
 
     for($i = 1; $i < 45; $i++){
         $given_day = date('Y-m-d', strtotime("-$i days"));
-        $formatted_day = date_format($given_day, "YYYY-MM-DD");
-        $id = "$formatted_day-$uuid";
+        $id = "$given_day-$uuid";
         
         $insert_statement->execute();
     } 
