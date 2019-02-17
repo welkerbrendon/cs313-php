@@ -68,7 +68,7 @@
     $insert_statement->bindParam(":id", $id, PDO::PARAM_STR);
     $insert_statement->bindParam(":day", $given_day, PDO::PARAM_STR);
 
-    for($i = 1; $i < 45; $i++){
+    for($i = 1; $i < 48; $i++){
         $given_day = date('Y-m-d', strtotime("-$i days"));
         $id = "$given_day-$uuid";
         
