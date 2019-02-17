@@ -70,7 +70,7 @@
                                FROM activity
                                INNER JOIN day
                                ON activity.user_id=:user_id
-                               AND day.given_day <= :end_day
+                               AND day.given_day < :end_day
                                AND day.given_day >= :start_day
                                AND day.id=activity.day_id
                                INNER JOIN activity_type
