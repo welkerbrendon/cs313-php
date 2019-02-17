@@ -48,7 +48,7 @@
             
             try{
                 $insert_statement->execute();
-                echo "Successfully add row!<br>";
+                echo "Successfully added row!<br>";
             }
             catch (Exception $e){
                 echo "$e<br>";
@@ -73,7 +73,6 @@
     //     $id = "$given_day-$uuid";
         
     //     $insert_statement->execute();
+    // echo "Successfully added row!<br>";
     // } 
-
-    // echo "Check db!";
 ?>
