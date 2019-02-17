@@ -21,6 +21,7 @@
         while($most_recent_day_id == NULL){
             $i++;
             $comparable_date = date('Y-m-d', strtotime("-$i days"));
+            echo $comparable_date;
             $find_day = $db->prepare("SELECT id 
                                       FROM day 
                                       WHERE given_day='$comparable_date'");
