@@ -2,6 +2,9 @@
     require('obtaining_data_functions.php');
     $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
 
+    $start_time_options = "";
+    $end_time_options = "";
+    $activity_type_html = "";
     function set_variables(){
         $start_time_options = "";
         $end_time_options = "";
