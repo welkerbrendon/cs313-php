@@ -4,38 +4,36 @@
 
     $start_time_options = "";
     $end_time_options = "";
-    $activity_type_html = "";
-    function set_variables(){
-        $start_time_options = "";
-        $end_time_options = "";
+    
+    for($i = 0; $i <= 1440; $i += 30){
+        $hour = intval($i / 60);
+        $am_pm = $hour < 12 || $hour == 24 ? "am" : "pm";
+        $adapted_hour = $hour == 0 ? 12 : ($hour > 12 ? $hour - 12 : $hour);
+
+        $minutes = ($i % 60 == 0) ? "00" : "30";
+
+        $readable_time = "$adapted_hour:$minutes $am_pm";
+        $time = "$hour:$minutes";
+        $time_as_option = "<option value='$time'>$readable_time</option>";
+
+        $start_time_options .= $time_as_option;
+        $end_time_options .= $time_as_option;
+    }
+
+    $start_time_options .= "</select>";
+    $end_time_options .= "</select>";
+
+    $db = connect();
+
+    $statement = $db->query("SELECT type_name FROM activity_type");
+
+    function create_activity_type_html(){
         $activity_type_html = "";
-        for($i = 0; $i <= 1440; $i += 30){
-            $hour = intval($i / 60);
-            $am_pm = $hour < 12 || $hour == 24 ? "am" : "pm";
-            $adapted_hour = $hour == 0 ? 12 : ($hour > 12 ? $hour - 12 : $hour);
-
-            $minutes = ($i % 60 == 0) ? "00" : "30";
-
-            $readable_time = "$adapted_hour:$minutes $am_pm";
-            $time = "$hour:$minutes";
-            $time_as_option = "<option value='$time'>$readable_time</option>";
-
-            $start_time_options .= $time_as_option;
-            $end_time_options .= $time_as_option;
-        }
-
-        $start_time_options .= "</select>";
-        $end_time_options .= "</select>";
-
-        $db = connect();
-
-        $statement = $db->query("SELECT type_name FROM activity_type");
-
         foreach($statement->fetchAll(PDO::FETCH_ASSOC) as $row){
             $type_name = $row["type_name"];
             $activity_type_html .= "<option value='$type_name'>$type_name</option>";
         }
-
+        return $activity_type_html;
     }
 ?>
 
@@ -66,8 +64,7 @@
                 $productive = $row["productive"];
                 $activity_type = $row["type_name"];
                 $note = $row["notes"];
-                
-                set_variables();
+
                 $start_time_options = "<select name='start_time[]'><option value='' selected disabled hidden>$start_time</option>" . $start_time_options;
                 $end_time_options = "<select name='end_time[]'><option value='' selected disabled hidden>$end_time</option>" . $end_time_options;
                 
@@ -81,6 +78,7 @@
                         <input type='checkbox' name='productive[]' value='false' checked>False";
                 }
                 
+                $activity_type_html = create_activity_type_html();
                 $activity_type_html = "<select name='activity_type[]'><option value='' selected disabled hidden>$activity_type</option>" . $activity_type_html;
 
                 echo "<tr>
