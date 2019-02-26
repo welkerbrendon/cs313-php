@@ -83,7 +83,7 @@
                                 $minutes = ($i % 60 == 0) ? "00" : "30";
 
                                 $readable_time = "$adapted_hour:$minutes $am_pm";
-                                $time = "$hour:$minutes";
+                                $time = "$hour:$minutes:00";
                                 $time_as_option = "<option value='$time'>$readable_time</option>";
 
                                 $start_time_options .= $time_as_option;
