@@ -93,6 +93,20 @@
                 $activity_type = $row["type_name"];
                 $note = $row["notes"];
 
+                $start_time_array = explode(":", $start_time);
+                $end_time_array = explode(":", $start_time);
+
+                $start_time_hour = intval($start_time_array[0]);
+                $end_time_hour = intval($end_time_array[0]);
+                        
+                $start_time = $start_time_hour == 0 ? 12 : ($start_time_hour > 12 ? $start_time_hour - 12 : $start_time_hour);
+                $start_time .= ":" . $start_time_array[1];
+                $start_time .= $start_time_hour < 12 || $start_time_hour == 24 ? "am" : "pm";
+
+                $end_time = $end_time_hour == 0 ? 12 : ($end_time_hour > 12 ? $end_time_hour - 12 : $end_time_hour);
+                $end_time .= ":" . $end_time_array[1];
+                $end_time .= $end_time_hour < 12 || $end_time_hour == 24 ? "am" : "pm";
+
                 echo "<tr>
                 <td>$start_time</td>
                 <td>$end_time</td>
