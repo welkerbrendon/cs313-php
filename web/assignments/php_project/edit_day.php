@@ -21,8 +21,8 @@
     <body>
         <?php include '../../home/nav.php'; ?>
         <div>
-            <h1><?php echo "<input type='text' value='$given_day' name='given_day' readonly>" ?></h1>
-            <form>
+            <form action="update_day.php" metho="post">
+                <h1><?php echo "<input type='text' value='$given_day' name='given_day' readonly>" ?></h1>
                 <table border=1>
                     <tr>
                         <th>Start Time</th>
