@@ -21,9 +21,9 @@
     </head>
     <body>
         <?php include '../../home/nav.php'; ?>
-        <div>
+        <div class="body">
             <form action="update_day.php" metho="post">
-                <h1><?php echo "<input type='text' value='$given_day' name='given_day' style='font-size:100%' readonly>" ?><h1>
+                <div id="heading"><h1><?php echo "<input type='text' value='$given_day' name='given_day' readonly>" ?><h1><div>
                 <table border=1>
                     <tr>
                         <th>Start Time</th>
