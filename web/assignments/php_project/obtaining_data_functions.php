@@ -51,7 +51,7 @@
     function get_given_day($username, $password, $day){
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
-        $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity_type.type_name, activity.notes, day.given_day 
+        $query = $db->prepare("SELECT activity.id, activity.start_time, activity.end_time, activity.productive, activity_type.type_name, activity.notes, day.given_day 
                                FROM activity 
                                INNER JOIN day 
                                ON activity.user_id=:user_id 
