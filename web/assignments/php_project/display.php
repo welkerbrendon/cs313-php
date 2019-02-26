@@ -1,4 +1,7 @@
 <?php  
+    require_once("check_if_logged_in.php");
+    check_if_logged_in();
+    
     require('obtaining_data_functions.php');
 
     $data = NULL;
