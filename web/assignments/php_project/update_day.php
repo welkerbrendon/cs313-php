@@ -30,12 +30,7 @@
 
         $activity_statement = $db->prepare("UPDATE activity 
                                             SET activity_type_id=:type_id, start_time=:start_time, end_time=:end_time, productive=:productive, notes=:note, last_updated=now()
-                                            WHERE user_id=:user_id 
-                                            AND day_id=:day_id
-                                            AND id=:id");
-
-        $activity_statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
-        $activity_statement->bindValue(":day_id", $day_id, PDO::PARAM_STR);
+                                            WHERE id=:id");
 
         $activity_statement->bindParam(":id", $id, PDO::PARAM_STR);
         $activity_statement->bindParam(":type_id", $type_id, PDO::PARAM_INT);
@@ -54,11 +49,8 @@
 
             echo "<br>$type_id<br>$start<br>$end<br>$productive<br>$note<br>$id<br>";
 
-            echo $activity_statement->error();
-            echo "<br>errors<br>";
+            echo $activity_statement->debugDumpParams();
             $activity_statement->execute();
-            echo $activity_statement->error();
-
         }
 
         header("Location: schedule_tracker.php");
