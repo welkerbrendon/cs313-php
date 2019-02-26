@@ -46,7 +46,7 @@
                         echo "<br>";
 
                         $start_time_hour = intval($start_time_array[0]);
-                        $end_time_hour = inval($end_time_array[0]);
+                        $end_time_hour = intval($end_time_array[0]);
                         echo "$start_time_hour<br>";
                         echo "$end_time_hour<br>";
                         $start_time = $start_time_hour == 0 ? 12 : ($start_time_hour > 12 ? $start_time_hour - 12 : $start_time_hour);
