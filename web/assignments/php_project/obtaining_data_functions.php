@@ -16,6 +16,7 @@
     function get_most_recent_day($username, $password){
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
+        echo $user_id;
         $most_recent_day_id = NULL;
         $i = -1;
         while($most_recent_day_id == NULL){
@@ -23,7 +24,7 @@
             $comparable_date = date('Y-m-d', strtotime("-$i days"));
             $find_day = $db->prepare("SELECT id 
                                       FROM day 
-                                      WHERE id='$comparable_date-$user_id'");
+                                      WHERE id='$user_id-$comparable_date'");
             $find_day->execute();
             $most_recent_day_id = $find_day->fetch(PDO::FETCH_ASSOC);
             $most_recent_day_id = $most_recent_day_id["id"];
