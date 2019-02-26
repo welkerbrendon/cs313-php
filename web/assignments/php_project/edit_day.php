@@ -74,8 +74,9 @@
                             $productive_html = "<input type='checkbox' name='productive[]' value='true'>True<br>
                                 <input type='checkbox' name='productive[]' value='false' checked>False";
                         }
-
-                        $activity_type_html = "<select name='activity_type[]'><option value='' selected disabled hidden>$activity_type</option>" . get_activity_type_html();
+                        
+                        $activity_type_html = get_activity_type_html();
+                        $activity_type_html = "<select name='activity_type[]'><option value='' selected disabled hidden>$activity_type</option>" . $activity_type_html;
 
                         echo "<tr>
                         <td>$start_time_options</td>
