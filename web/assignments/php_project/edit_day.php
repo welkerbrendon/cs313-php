@@ -1,9 +1,10 @@
 <?php
     require('obtaining_data_functions.php');
     $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
-    
+    echo print_r($data);
+    echo "<br>";
     $date = DateTime::createFromFormat("Y-m-d", $data[0]["given_day"]);
-    $date = $date->format("F d, Y");
+    //$date = $date->format("F d, Y");
 
     $start_time_options = "";
     $end_time_options = "";
