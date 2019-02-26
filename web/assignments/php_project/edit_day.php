@@ -4,12 +4,11 @@
     
     require('obtaining_data_functions.php');
     $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
-    echo print_r($data);
     $given_day = $date[0]["given_dat"];
     $given_day = DateTime::createFromFormat("Y-m-d", $date);
     $given_day = $given_day->format("F d, Y");
 ?>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head> 
         <title>Edit Day</title>
