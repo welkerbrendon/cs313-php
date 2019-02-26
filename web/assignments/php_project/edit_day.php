@@ -2,38 +2,39 @@
     require('obtaining_data_functions.php');
     $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
     $date = DateTime::createFromFormat("Y-m-d", $data[0]["given_day"]);
-    $date = $date->format("F d, Y");
+    //$date = $date->format("F d, Y");
 
-    function set_variables(){
-        $start_time_options = "";
-        $end_time_options = "";
-        for($i = 0; $i <= 1440; $i += 30){
-            $hour = intval($i / 60);
-            $am_pm = $hour < 12 || $hour == 24 ? "am" : "pm";
-            $adapted_hour = $hour == 0 ? 12 : ($hour > 12 ? $hour - 12 : $hour);
+    $start_time_options = "";
+    $end_time_options = "";
+    for($i = 0; $i <= 1440; $i += 30){
+        $hour = intval($i / 60);
+        $am_pm = $hour < 12 || $hour == 24 ? "am" : "pm";
+        $adapted_hour = $hour == 0 ? 12 : ($hour > 12 ? $hour - 12 : $hour);
 
-            $minutes = ($i % 60 == 0) ? "00" : "30";
+        $minutes = ($i % 60 == 0) ? "00" : "30";
 
-            $readable_time = "$adapted_hour:$minutes $am_pm";
-            $time = "$hour:$minutes";
-            $time_as_option = "<option value='$time'>$readable_time</option>";
+        $readable_time = "$adapted_hour:$minutes $am_pm";
+        $time = "$hour:$minutes";
+        $time_as_option = "<option value='$time'>$readable_time</option>";
 
-            $start_time_options .= $time_as_option;
-            $end_time_options .= $time_as_option;
-        }
+        $start_time_options .= $time_as_option;
+        $end_time_options .= $time_as_option;
+    }
 
-        $start_time_options .= "</select>";
-        $end_time_options .= "</select>";
+    $start_time_options .= "</select>";
+    $end_time_options .= "</select>";
 
-        $db = connect();
+    $db = connect();
 
-        $statement = $db->query("SELECT type_name FROM activity_type");
+    $statement = $db->query("SELECT type_name FROM activity_type");
 
+    function get_activity_type_html(){
         $activity_type_html = "";
         foreach($statement->fetchAll(PDO::FETCH_ASSOC) as $row){
             $type_name = $row["type_name"];
             $activity_type_html .= "<option value='$type_name'>$type_name</option>";
         }
+        return $activity_type_html;
     }
 ?>
 
@@ -61,7 +62,6 @@
                         $activity_type = $row["type_name"];
                         $note = $row["notes"];
 
-                        set_variables();
                         $start_time_options = "<select name='start_time[]'><option value='' selected disabled hidden>$start_time</option>" . $start_time_options;
                         $end_time_options = "<select name='end_time[]'><option value='' selected disabled hidden>$end_time</option>" . $end_time_options;
                         
@@ -75,7 +75,7 @@
                                 <input type='checkbox' name='productive[]' value='false' checked>False";
                         }
 
-                        $activity_type_html = "<select name='activity_type[]'><option value='' selected disabled hidden>$activity_type</option>" . $activity_type_html;
+                        $activity_type_html = "<select name='activity_type[]'><option value='' selected disabled hidden>$activity_type</option>" . get_activity_type_html();
 
                         echo "<tr>
                         <td>$start_time_options</td>
