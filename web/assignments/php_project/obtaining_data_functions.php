@@ -26,8 +26,8 @@
                                       FROM day 
                                       WHERE given_day=:comparable_date
                                       AND day.user_id=:user_id");
-            $db->bindValue(":comparable_date", $comparable_date, PDO::PARAM_STR);
-            $db->bindValue(":user_id", $user_id, PDO::PARAM_STR);
+            $find_day->bindValue(":comparable_date", $comparable_date, PDO::PARAM_STR);
+            $find_day->bindValue(":user_id", $user_id, PDO::PARAM_STR);
             echo "$comparable_date<br>";
             $find_day->execute();
             $most_recent_day_id = $find_day->fetch(PDO::FETCH_ASSOC);
