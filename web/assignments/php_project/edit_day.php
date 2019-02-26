@@ -1,13 +1,8 @@
 <?php
     require('obtaining_data_functions.php');
-    echo print_r($_GET);
-    echo print_r($_COOKIE);
     $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
     
-    echo print_r($data);
-    ?>
-    <?php
-    /*$date = DateTime::createFromFormat("Y-m-d", $data[0]["given_day"]);
+    $date = DateTime::createFromFormat("Y-m-d", $data[0]["given_day"]);
     $date = $date->format("F d, Y");
 
     $start_time_options = "";
