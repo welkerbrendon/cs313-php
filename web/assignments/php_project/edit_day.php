@@ -8,6 +8,7 @@
     $given_day = DateTime::createFromFormat("Y-m-d", $given_day);
     $given_day = $given_day->format("F d, Y");
 
+    $db = connect();
     $statement = $db->query("SELECT type_name FROM activity_type");
     $activity_type_names = $statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
