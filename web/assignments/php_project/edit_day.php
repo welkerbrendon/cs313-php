@@ -1,6 +1,7 @@
 <?php
     require('obtaining_data_functions.php');
     echo print_r($_GET);
+    echo print_r($_COOKIE);
     $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
     
     echo print_r($data);
