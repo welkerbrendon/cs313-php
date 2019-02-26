@@ -48,7 +48,7 @@
             $activity_statement->execute();
         }
 
-        header("Location: edit_day.php");
+        header("Location: schedule_tracker.php");
         exit;
     }
     else if ($srt_eq_end && $act_eq_srt && !$prod_eq_act){
