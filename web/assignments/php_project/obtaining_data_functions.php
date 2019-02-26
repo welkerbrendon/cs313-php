@@ -16,7 +16,7 @@
     function get_most_recent_day($username, $password){
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
-        echo "$username + $password="
+        echo "$username + $password=";
         echo "$user_id<br>";
         $most_recent_day_id = NULL;
         $i = -1;
