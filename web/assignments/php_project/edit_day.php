@@ -1,4 +1,7 @@
 <?php
+    require_once("check_if_logged_in.php");
+    check_if_logged_in();
+    
     require('obtaining_data_functions.php');
     $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
     echo print_r($data);
