@@ -51,16 +51,16 @@
     function get_given_day($username, $password, $day){
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
-
-        $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity_type.type_name, activity.notes, day.given_day
-                              FROM activity
-                              INNER JOIN day
-                              ON activity.user_id=:user_id
-                              AND day.id=:day_id
-                              AND activity.user_id=day.user_id
-                              INNER JOIN activity_type
-                              ON activity_type.id=activity.activity_type_id
-                              ORDER BY start_time ASC");
+        $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity_type.type_name, activity.notes, day.given_day 
+                               FROM activity 
+                               INNER JOIN day 
+                               ON activity.user_id=:user_id 
+                               AND day.user_id=activity.user_id 
+                               AND day.id=:day_id 
+                               AND activity.day_id=day.id 
+                               INNER JOIN activity_type 
+                               ON activity.activity_type_id=activity_type.id
+                               ORDER BY start_time ASC");
         $query->bindValue(":user_id", $user_id, PDO::PARAM_STR);
         $query->bindValue(":day_id", "$day-$user_id", PDO::PARAM_STR);
         $query->execute();
