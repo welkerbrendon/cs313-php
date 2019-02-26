@@ -35,33 +35,19 @@
                         $start_time = $row["start_time"];
                         $end_time = $row["end_time"];
                         
-                        try{
-                            echo"Try<br>";
                         $start_time_array = explode(":", $start_time);
                         $end_time_array = explode(":", $start_time);
-                        
-                        echo print_r($start_time_array);
-                        echo "<br>";
-                        echo print_r($end_time_array);
-                        echo "<br>";
 
                         $start_time_hour = intval($start_time_array[0]);
                         $end_time_hour = intval($end_time_array[0]);
-                        echo "$start_time_hour<br>";
-                        echo "$end_time_hour<br>";
+                        
                         $start_time = $start_time_hour == 0 ? 12 : ($start_time_hour > 12 ? $start_time_hour - 12 : $start_time_hour);
                         $start_time .= ":" . $start_time_array[1];
                         $start_time .= $start_time_hour < 12 || $start_time_hour == 24 ? "am" : "pm";
-                        echo "$start_time<br>";
+
                         $end_time = $end_time_hour == 0 ? 12 : ($end_time_hour > 12 ? $end_time_hour - 12 : $end_time_hour);
                         $end_time .= ":" . $end_time_array[1];
                         $end_time .= $end_time_hour < 12 || $end_time_hour == 24 ? "am" : "pm";
-                        echo "$end_time<br>";
-                        }
-                        catch(Exception $e){
-                            echo($e);
-                            echo "<br>";
-                        }
 
                         $productive = $row["productive"] == 1 ? "True" : "False";
                         $activity_type = $row["type_name"];
