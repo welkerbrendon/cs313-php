@@ -52,7 +52,13 @@
             $note = $notes[$i];
             $id = $ids[$i];
 
+            echo "<br>$type_id<br>$start<br>$end<br>$productive<br>$note<br>$id<br>";
+
+            echo $activity_statement->error();
+            echo "<br>errors<br>";
             $activity_statement->execute();
+            echo $activity_statement->error();
+
         }
 
         header("Location: schedule_tracker.php");
