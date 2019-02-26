@@ -30,7 +30,7 @@
 
             $most_recent_day_id = $find_day->fetch(PDO::FETCH_ASSOC);
             $most_recent_day_id = $most_recent_day_id["id"];
-            
+
             $i++;
         }
         $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity_type.type_name, activity.notes, day.given_day 
@@ -56,13 +56,13 @@
                               FROM activity
                               INNER JOIN day
                               ON activity.user_id=:user_id
-                              AND day.given_day=:day
+                              AND day.id=:day_id
                               AND activity.user_id=day.user_id
                               INNER JOIN activity_type
                               ON activity_type.id=activity.activity_type_id
                               ORDER BY start_time ASC");
         $query->bindValue(":user_id", $user_id, PDO::PARAM_STR);
-        $query->bindValue(":day", "$day", PDO::PARAM_STR);
+        $query->bindValue(":day_id", "$day-$user_id", PDO::PARAM_STR);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
