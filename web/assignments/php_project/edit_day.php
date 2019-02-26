@@ -1,4 +1,5 @@
 <?php
+    require_once("edit_day.php");
     require_once("check_if_logged_in.php");
     check_if_logged_in();
     
