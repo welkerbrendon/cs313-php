@@ -1,5 +1,4 @@
 <?php
-    require_once("add_day.php");
     require_once("check_if_logged_in.php");
     check_if_logged_in();
     
@@ -104,7 +103,6 @@
                         }
                     ?>
                 </table>
-                <p><button onclick="return add_row()">Add Row</button><button onclick="return delete_row()">Delete Row</button></p>
                 <input type="submit">
             </form>
         </div>
