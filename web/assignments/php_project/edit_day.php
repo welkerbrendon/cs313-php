@@ -17,12 +17,13 @@
     <head> 
         <title>Edit Day</title>
         <link rel="stylesheet" href="/home/navbar.css">
+        <link rel="stylesheet" href="edit_day.css">
     </head>
     <body>
         <?php include '../../home/nav.php'; ?>
         <div>
             <form action="update_day.php" metho="post">
-                <h1><?php echo "<input type='text' value='$given_day' name='given_day' readonly>" ?></h1>
+                <?php echo "<input type='text' value='$given_day' name='given_day' id='heading' readonly>" ?>
                 <table border=1>
                     <tr>
                         <th>Start Time</th>
