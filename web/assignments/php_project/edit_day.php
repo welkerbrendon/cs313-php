@@ -56,7 +56,7 @@
                             $activity_type = $row["type_name"];
                             $note = $row["notes"];
                             
-                            $activity_type_html = "<select name='activity_type[]'><option value='$activity_type' selected disabled hidden>$activity_type</option>";
+                            $activity_type_html = "<select name='activity_type[]'><option value='$activity_type' selected>$activity_type</option>";
                             foreach($activity_type_names as $row){
                                 $type_name = $row["type_name"];
                                 $activity_type_html .= "<option value='$type_name'>$type_name</option>";
@@ -71,8 +71,8 @@
                                                 <input type='checkbox' name='productive[]' value='false' checked>False";
                             }
 
-                            $start_time_options = "<select name='start_time[]'><option value='$start_time' selected disabled hidden>$start_time</option>";
-                            $end_time_options = "<select name='end_time[]'><option value='$end_time' selected disabled hidden>$end_time</option>";
+                            $start_time_options = "<select name='start_time[]'><option value='$start_time' selected>$start_time</option>";
+                            $end_time_options = "<select name='end_time[]'><option value='$end_time' selected>$end_time</option>";
                             for($i = 0; $i <= 1440; $i += 30){
                                 $hour = intval($i / 60);
                                 $am_pm = $hour < 12 || $hour == 24 ? "am" : "pm";
