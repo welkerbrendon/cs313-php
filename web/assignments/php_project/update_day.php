@@ -2,7 +2,9 @@
     require_once("obtaining_data_functions.php");
     $db = connect();
 
-    $day = $_POST["given_day"];
+    echo print_r($_POST);
+
+    /*$day = $_POST["given_day"];
     $start_times = $_POST["start_time"];
     $end_times = $_POST["end_time"];
     $productive_array = $_POST["productive"];
@@ -106,5 +108,5 @@
                                         WHERE type_name='$type_name'");
         $type_statement->execute();
         return $type_statement->fetch(PDO::FETCH_NUM)[0];
-    }
+    }*/
 ?>

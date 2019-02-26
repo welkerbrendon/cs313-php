@@ -35,6 +35,8 @@
                     </tr>
                     <?php
                         foreach($data as $row){
+                            $activity_id = $row["id"];
+
                             $start_time = $row["start_time"];
                             $end_time = $row["end_time"];
                             
@@ -91,7 +93,7 @@
                             $start_time_options .= "</select>";
                             $end_time_options .= "</select>";
 
-                            echo "<tr>
+                            echo "<input type='hidden' name='id[]' value='$activity_id'><tr>
                             <td>$start_time_options</td>
                             <td>$end_time_options</td>
                             <td>$productive_html</td>
