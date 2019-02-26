@@ -36,9 +36,14 @@
                         $end_time = $row["end_time"];
                         
                         try{
+                            echo"Try<br>";
                         $start_time_array = explode(":", $start_time);
                         $end_time_array = explode(":", $start_time);
                         
+                        echo print_r($start_time_array);
+                        echo "<br>";
+                        echo print_r($end_time_array);
+                        echo "<br>";
                         $start_time_hour = intval($start_time_array[0]);
                         $end_time_hour = inval($end_time_array[0]);
 
