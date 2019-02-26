@@ -44,7 +44,7 @@
     <body>
     <form>
         <div>
-            <table>
+            <table border=1>
                 <?php
                     echo "<h1>$date</h1>";
                     echo "<tr><th>Start Time</th>
