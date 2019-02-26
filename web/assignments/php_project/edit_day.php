@@ -27,6 +27,7 @@
                     <th>Notes</th>
                 </tr>
                 <?php
+                    echo "running php<br>";
                     $statement = $db->query("SELECT type_name FROM activity_type");
                     $activity_type_names = $statement->fetchAll(PDO::FETCH_ASSOC);
                     echo print_r($data);
