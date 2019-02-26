@@ -1,3 +1,7 @@
-div.body {
+div {
     padding-left:30px;
+}
+
+#heading {
+    font-size: 100%;
 }
