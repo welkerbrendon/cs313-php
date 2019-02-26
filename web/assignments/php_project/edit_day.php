@@ -1,6 +1,8 @@
 <?php
     require('obtaining_data_functions.php');
     $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
+    
+    $date = DateTime::createFromFormat("Y-m-d", $data[0]["given_day"])->format("F d, Y");
 
     $start_time_options = "";
     $end_time_options = "";
@@ -40,56 +42,53 @@
     </head>
     <body>
     <form>
-        <?php
-            foreach($data as $row){
-                if($row["given_day"] != $date){
-                    if($date != NULL){
-                        echo "</table></div>";
+        <div>
+            <table>
+                <?php
+                    echo "<h1>$date</h1>";
+                    echo "<tr><th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Productive</th>
+                        <th>Activity Type</th>
+                        <th>Notes</th></tr>";
+                    
+                    foreach($data as $row){
+                        $start_time = $row["start_time"];
+                        $end_time = $row["end_time"];
+                        $productive = $row["productive"];
+                        $activity_type = $row["type_name"];
+                        $note = $row["notes"];
+
+                        $start_time_options = "<select name='start_time[]'><option value='' selected disabled hidden>$start_time</option>" . $start_time_options;
+                        $end_time_options = "<select name='end_time[]'><option value='' selected disabled hidden>$end_time</option>" . $end_time_options;
+                        
+                        $productive_html = "";
+                        if($productive == 1){
+                            $productive_html = "<input type='checkbox' name='productive[]' value='true' checked>True<br>
+                                <input type='checkbox' name='productive[]' value='false'>False";
+                        }
+                        else {
+                            $productive_html = "<input type='checkbox' name='productive[]' value='true'>True<br>
+                                <input type='checkbox' name='productive[]' value='false' checked>False";
+                        }
+
+                        $activity_type_html = "<select name='activity_type[]'><option value='' selected disabled hidden>$activity_type</option>" . $activity_type_html;
+
+                        echo "<tr>
+                        <td>$start_time_options</td>
+                        <td>$end_time_options</td>
+                        <td>$productive_html</td>
+                        <td>$activity_type_html</td>
+                        <td>
+                            <label for='note'>Notes: (optional)<br></label>
+                            <textarea name='notes[]' id='note' rows='4' cols='75'>$note</textarea>
+                        </td>
+                        </tr>";
                     }
-                    $date = $row["given_day"];
-                    $date_time = DateTime::createFromFormat("Y-m-d", $date);
-                    echo "<h1>" . $date_time->format("F d, Y") . "</h1><div id='table'><table border='solid black 1px'>
-                    <tr><th>Start Time</th>
-                    <th>End Time</th>
-                    <th>Productive</th>
-                    <th>Activity Type</th>
-                    <th>Notes</th></tr>";
-                }
-                $start_time = $row["start_time"];
-                $end_time = $row["end_time"];
-                $productive = $row["productive"];
-                $activity_type = $row["type_name"];
-                $note = $row["notes"];
-
-                $start_time_options = "<select name='start_time[]'><option value='' selected disabled hidden>$start_time</option>" . $start_time_options;
-                $end_time_options = "<select name='end_time[]'><option value='' selected disabled hidden>$end_time</option>" . $end_time_options;
-                
-                $productive_html = "";
-                if($productive == 1){
-                    $productive_html = "<input type='checkbox' name='productive[]' value='true' checked>True<br>
-                        <input type='checkbox' name='productive[]' value='false'>False";
-                }
-                else {
-                    $productive_html = "<input type='checkbox' name='productive[]' value='true'>True<br>
-                        <input type='checkbox' name='productive[]' value='false' checked>False";
-                }
-
-                $activity_type_html = "<select name='activity_type[]'><option value='' selected disabled hidden>$activity_type</option>" . $activity_type_html;
-
-                echo "<tr>
-                <td>$start_time_options</td>
-                <td>$end_time_options</td>
-                <td>$productive_html</td>
-                <td>$activity_type_html</td>
-                <td>
-                    <label for='note'>Notes: (optional)<br></label>
-                    <textarea name='notes[]' id='note' rows='4' cols='75'>$note</textarea>
-                </td>
-                </tr>";
-            }
-        ?>
-        </table>
-        <input type="submit">
+                ?>
+                <input type="submit">
+            </table>
+        </div>
     </form>
     </body>
 </html>
