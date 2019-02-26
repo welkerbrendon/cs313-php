@@ -4,8 +4,8 @@
     
     require('obtaining_data_functions.php');
     $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
-    $given_day = $date[0]["given_day"];
-    $given_day = DateTime::createFromFormat("Y-m-d", $date);
+    $given_day = $data[0]["given_day"];
+    $given_day = DateTime::createFromFormat("Y-m-d", $given_day);
     $given_day = $given_day->format("F d, Y");
 ?>
 <!DOCTYPE html>
