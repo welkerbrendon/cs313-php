@@ -46,13 +46,13 @@
                             $start_time_hour = intval($start_time_array[0]);
                             $end_time_hour = intval($end_time_array[0]);
                             
-                            $start_time = $start_time_hour == 0 ? 12 : ($start_time_hour > 12 ? $start_time_hour - 12 : $start_time_hour);
-                            $start_time .= ":" . $start_time_array[1];
-                            $start_time .= $start_time_hour < 12 || $start_time_hour == 24 ? "am" : "pm";
+                            $start_time_readable = $start_time_hour == 0 ? 12 : ($start_time_hour > 12 ? $start_time_hour - 12 : $start_time_hour);
+                            $start_time_readable .= ":" . $start_time_array[1];
+                            $start_time_readable .= $start_time_hour < 12 || $start_time_hour == 24 ? "am" : "pm";
 
-                            $end_time = $end_time_hour == 0 ? 12 : ($end_time_hour > 12 ? $end_time_hour - 12 : $end_time_hour);
-                            $end_time .= ":" . $end_time_array[1];
-                            $end_time .= $end_time_hour < 12 || $end_time_hour == 24 ? "am" : "pm";
+                            $end_time_readable = $end_time_hour == 0 ? 12 : ($end_time_hour > 12 ? $end_time_hour - 12 : $end_time_hour);
+                            $end_time_readable .= ":" . $end_time_array[1];
+                            $end_time_readable .= $end_time_hour < 12 || $end_time_hour == 24 ? "am" : "pm";
 
                             $productive = $row["productive"] == 1 ? "True" : "False";
                             $activity_type = $row["type_name"];
@@ -73,8 +73,8 @@
                                                 <input type='checkbox' name='productive[]' value='false' checked>False";
                             }
 
-                            $start_time_options = "<select name='start_time[]'><option value='$start_time' selected>$start_time</option>";
-                            $end_time_options = "<select name='end_time[]'><option value='$end_time' selected>$end_time</option>";
+                            $start_time_options = "<select name='start_time[]'><option value='$start_time' selected>$start_time_readable</option>";
+                            $end_time_options = "<select name='end_time[]'><option value='$end_time' selected>$end_time_readable</option>";
                             for($i = 0; $i <= 1440; $i += 30){
                                 $hour = intval($i / 60);
                                 $am_pm = $hour < 12 || $hour == 24 ? "am" : "pm";

@@ -4,12 +4,13 @@
 
     echo print_r($_POST);
 
-    /*$day = $_POST["given_day"];
+    $day = $_POST["given_day"];
     $start_times = $_POST["start_time"];
     $end_times = $_POST["end_time"];
     $productive_array = $_POST["productive"];
     $activity_type = $_POST["activity_type"];
     $notes = $_POST["notes"];
+    $ids = $_POST["id"];
 
     $srt_eq_end = sizeOf($start_times) == sizeof($end_times);
     $prod_eq_act = sizeof($productive_array) == sizeof($activity_type);
@@ -25,15 +26,18 @@
         $end = NULL;
         $productive = NULL;
         $note = NULL;
+        $id = NULL;
 
         $activity_statement = $db->prepare("UPDATE activity 
                                             SET activity_type_id=:type_id, start_time=:start_time, end_time=:end_time, productive=:productive, notes=:note, last_updated=now()
                                             WHERE user_id=:user_id 
-                                            AND day_id=:day_id");
+                                            AND day_id=:day_id
+                                            AND id=:id");
 
         $activity_statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
         $activity_statement->bindValue(":day_id", $day_id, PDO::PARAM_STR);
 
+        $activity_statement->bindParam(":id", $id, PDO::PARAM_STR);
         $activity_statement->bindParam(":type_id", $type_id, PDO::PARAM_INT);
         $activity_statement->bindParam(":start_time", $start, PDO::PARAM_STR);
         $activity_statement->bindParam(":end_time", $end, PDO::PARAM_STR);
@@ -46,6 +50,7 @@
             $end = $end_times[$i];
             $productive = $productive_array[$i];
             $note = $notes[$i];
+            $id = $ids[$i];
 
             $activity_statement->execute();
         }
@@ -108,5 +113,5 @@
                                         WHERE type_name='$type_name'");
         $type_statement->execute();
         return $type_statement->fetch(PDO::FETCH_NUM)[0];
-    }*/
+    }
 ?>
