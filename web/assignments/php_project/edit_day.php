@@ -23,7 +23,7 @@
         <?php include '../../home/nav.php'; ?>
         <div>
             <form action="update_day.php" metho="post">
-                <h1><?php echo "<input type='text' value='$given_day' name='given_day' class='heading' readonly>" ?><h1>
+                <h1><?php echo "<input type='text' value='$given_day' name='given_day' style='font-size:100%' readonly>" ?><h1>
                 <table border=1>
                     <tr>
                         <th>Start Time</th>
