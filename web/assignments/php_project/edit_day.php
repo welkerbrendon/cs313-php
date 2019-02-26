@@ -29,7 +29,7 @@
                 <?php
                     $statement = $db->query("SELECT type_name FROM activity_type");
                     $activity_type_names = $statement->fetchAll(PDO::FETCH_ASSOC);
-                    echo sizeof($data);
+                    echo print_r($data);
                     foreach($data as $row){
                         $start_time = $row["start_time"];
                         $end_time = $row["end_time"];
