@@ -76,7 +76,7 @@
             foreach($data as $row){
                 if($row["given_day"] != $date){
                     if($date != NULL){
-                        echo "</table></div>";
+                        echo "</table><button onclick='edit_day.php?day='$date'>Edit Day</button></div>";
                     }
                     $date = $row["given_day"];
                     $date_time = DateTime::createFromFormat("Y-m-d", $date);
