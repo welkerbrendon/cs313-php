@@ -51,13 +51,13 @@
                               FROM activity
                               INNER JOIN day
                               ON activity.user_id=:user_id
-                              AND day.id=:day_id
-                              AND activity.day_id=day.id
+                              AND day.given_day=:day
+                              AND activity.user_id=day.user_id
                               INNER JOIN activity_type
                               ON activity_type.id=activity.activity_type_id
                               ORDER BY start_time ASC");
         $query->bindValue(":user_id", $user_id, PDO::PARAM_STR);
-        $query->bindValue(":day_id", "$day-$user_id", PDO::PARAM_STR);
+        $query->bindValue(":day", "$day", PDO::PARAM_STR);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
