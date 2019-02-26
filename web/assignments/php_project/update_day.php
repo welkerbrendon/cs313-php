@@ -25,12 +25,12 @@
         $note = NULL;
 
         $activity_statement = $db->prepare("UPDATE activity 
-                                            SET activity_type_id=:type_id, start_time=:start_time, end_time=:end_time, productive=:productive, notes=:note, last_updated=now(), created_at=now()
+                                            SET activity_type_id=:type_id, start_time=:start_time, end_time=:end_time, productive=:productive, notes=:note, last_updated=now()
                                             WHERE user_id=:user_id 
                                             AND day_id=:day_id");
 
         $activity_statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
-        $activity_statement->bindValue(":day_id", $day_id, PDO::PARAM_INT);
+        $activity_statement->bindValue(":day_id", $day_id, PDO::PARAM_STR);
 
         $activity_statement->bindParam(":type_id", $type_id, PDO::PARAM_INT);
         $activity_statement->bindParam(":start_time", $start, PDO::PARAM_STR);
