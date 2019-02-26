@@ -39,7 +39,7 @@
                             $end_time = $row["end_time"];
                             
                             $start_time_array = explode(":", $start_time);
-                            $end_time_array = explode(":", $start_time);
+                            $end_time_array = explode(":", $end_time);
 
                             $start_time_hour = intval($start_time_array[0]);
                             $end_time_hour = intval($end_time_array[0]);
