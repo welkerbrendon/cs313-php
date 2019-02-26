@@ -27,13 +27,11 @@
                     <th>Notes</th>
                 </tr>
                 <?php
-                    $data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
-
+                    //$data = get_given_day($_COOKIE["username"], $_COOKIE["password"], $_GET["day"]);
+                    echo print_r($data);
                     $statement = $db->query("SELECT type_name FROM activity_type");
                     $activity_type_names = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-                    echo print_r($data);
-                    
                     foreach($data as $row){
                         $start_time = $row["start_time"];
                         $end_time = $row["end_time"];
