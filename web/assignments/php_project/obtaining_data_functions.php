@@ -16,23 +16,22 @@
     function get_most_recent_day($username, $password){
         $db = connect();
         $user_id = get_user_id($username, $password, $db);
-        echo "$username + $password=";
-        echo "$user_id<br>";
         $most_recent_day_id = NULL;
-        $i = -1;
-        while($most_recent_day_id == NULL && i < 100){
-            $i++;
-            $comparable_date = date('Y-m-d', strtotime("-$i days"));
-            $find_day = $db->prepare("SELECT id 
+        $find_day = $db->prepare("SELECT id 
                                       FROM day 
                                       WHERE given_day=:comparable_date
                                       AND day.user_id=:user_id");
-            $find_day->bindValue(":comparable_date", $comparable_date, PDO::PARAM_STR);
-            $find_day->bindValue(":user_id", $user_id, PDO::PARAM_STR);
-            echo "$comparable_date<br>";
+        $find_day->bindParam(":comparable_date", $comparable_date, PDO::PARAM_STR);
+        $find_day->bindValue(":user_id", $user_id, PDO::PARAM_STR);
+        $i = 0;
+        while($most_recent_day_id == NULL && i < 100){
+            $comparable_date = date('Y-m-d', strtotime("-$i days"));
             $find_day->execute();
+
             $most_recent_day_id = $find_day->fetch(PDO::FETCH_ASSOC);
             $most_recent_day_id = $most_recent_day_id["id"];
+            
+            $i++;
         }
         $query = $db->prepare("SELECT activity.start_time, activity.end_time, activity.productive, activity_type.type_name, activity.notes, day.given_day 
                                FROM activity
