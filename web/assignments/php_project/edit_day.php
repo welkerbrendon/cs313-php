@@ -23,7 +23,7 @@
     <body>
         <?php include '../../home/nav.php'; ?>
         <div>
-            <form action="update_day.php" metho="post">
+            <form action="update_day.php" method="post">
                 <h1><?php echo "<input type='text' value='$given_day' name='given_day' id='heading' disabled>" ?></h1>
                 <table border=1 id="table">
                     <tr>
