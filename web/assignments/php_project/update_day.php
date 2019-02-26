@@ -46,10 +46,7 @@
             $productive = $productive_array[$i];
             $note = $notes[$i];
             $id = $ids[$i];
-
-            echo "<br>$type_id<br>$start<br>$end<br>$productive<br>$note<br>$id<br>";
-
-            echo $activity_statement->debugDumpParams();
+            
             $activity_statement->execute();
         }
 
