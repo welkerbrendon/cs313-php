@@ -19,12 +19,16 @@
         echo $user_id;
         $most_recent_day_id = NULL;
         $i = -1;
-        while($most_recent_day_id == NULL){
+        while($most_recent_day_id == NULL && i < 100){
             $i++;
             $comparable_date = date('Y-m-d', strtotime("-$i days"));
             $find_day = $db->prepare("SELECT id 
                                       FROM day 
-                                      WHERE id='$user_id-$comparable_date'");
+                                      WHERE given_day=:comparable_date
+                                      AND day.user_id=:user_id");
+            $db->bindValue(":comparable_date", $comparable_date, PDO::PARAM_STR);
+            $db->bindValue(":user_id", $user_id, PDO::PARAM_STR);
+            echo "$comparable_date<br>";
             $find_day->execute();
             $most_recent_day_id = $find_day->fetch(PDO::FETCH_ASSOC);
             $most_recent_day_id = $most_recent_day_id["id"];
