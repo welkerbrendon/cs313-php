@@ -18,7 +18,7 @@
         <?php include '../../home/nav.php'; ?>
         <div>
             <h1><?php echo $given_day ?></h1>
-            <table>
+            <table border=1>
                 <tr>
                     <th>Start Time</th>
                     <th>End Time</th>
@@ -29,6 +29,7 @@
                 <?php
                     $statement = $db->query("SELECT type_name FROM activity_type");
                     $activity_type_names = $statement->fetchAll(PDO::FETCH_ASSOC);
+                    echo sizeof($data);
                     foreach($data as $row){
                         $start_time = $row["start_time"];
                         $end_time = $row["end_time"];
