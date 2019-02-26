@@ -80,7 +80,7 @@
                         <td>
                             <label for='note'>Notes: (optional)<br></label>
                             <textarea name='notes[]' id='note' rows='4' cols='75'>$note</textarea>
-                        </td></tr>"
+                        </td></tr>";
                     }
                 ?>
             </table>
