@@ -18,6 +18,7 @@
         <title>Edit Day</title>
         <link rel="stylesheet" href="/home/navbar.css">
         <link rel="stylesheet" href="edit_day.css">
+        <script src="add_day.js"></script>
     </head>
     <body>
         <?php include '../../home/nav.php'; ?>
@@ -102,6 +103,7 @@
                         }
                     ?>
                 </table>
+                <p><button onclick="return add_row()">Add Row</button><button onclick="return delete_row()">Delete Row</button></p>
                 <input type="submit">
             </form>
         </div>
