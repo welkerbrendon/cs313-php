@@ -11,8 +11,11 @@
             setcookie("valid_user", "True", time() + (60 * 30));
         }
         else {
+            echo "Not considered valid user.<br> Return value from db=";
+            echo print_r($user_id);
+            echo "<br>";
             setcookie("valid_user", "False", time() + (60 * 30));
-            header("Location: sign_in.php");
+            //header("Location: sign_in.php");
         }
     }
     else if(isset($_COOKIE["username"]) && isset($_COOKIE["password"])){
@@ -23,12 +26,20 @@
             setcookie("valid_user", "True", time() + (60 * 30));
         }
         else {
+            echo "Not considered valid user.<br> Return value from db=";
+            echo print_r($user_id);
+            echo "<br>"; 
             setcookie("valid_user", "False", time() + (60 * 30));
-            header("Location: sign_in.php");
+            //header("Location: sign_in.php");
         }
     }
     else {
-        header("Location: sign_in.php");
+        echo "No POST data or COOKIES.<br> POST=";
+        echo print_r($_POST);
+        echo "<br>COOKIE=";
+        echo print_r($_COOKIE);
+        echo "<br>";
+        //header("Location: sign_in.php");
         exit;
     }
 ?>
