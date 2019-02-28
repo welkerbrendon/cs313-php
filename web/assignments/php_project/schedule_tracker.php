@@ -46,6 +46,7 @@
         <h1>Welcome to Your Schedule Tracker!</h1>
             <a href='view_schedule_data.php'><button>View History</button></a>
             <a href='add_day.php'><button>Add New Day</button></a>
+            <a href='select_day_to_edit.php'><button>Edit Day</button></a>
         </div>
     </body>
 </html>
