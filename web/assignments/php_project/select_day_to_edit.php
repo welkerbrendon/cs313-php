@@ -3,6 +3,7 @@
     <head>
         <title>Editing day</title>
         <link rel="stylesheet" href="/home/navbar.css">
+        <link rel="stylesheet" href="select_day_to_edit.css">
     </head>
     <body>
         <?php include '../../home/nav.php';?>
