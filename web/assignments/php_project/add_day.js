@@ -10,7 +10,7 @@ function add_row(){
 
 function delete_row(){
     var table = document.getElementById("table");
-    table.deleteRow(table.rows.length);
+    table.deleteRow(table.rows.length - 1);
 
     return false;
 }
