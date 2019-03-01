@@ -38,7 +38,6 @@
 
     $error_message = NULL;
     if(isset($_COOKIE["bad_input"])){
-        echo $_COOKIE["bad_input"];
         $error_message = "<h3 id='error'>";
         switch ($_COOKIE["bad_input"]){
             case "productive":
@@ -54,7 +53,7 @@
                 break;
             case "already_exists":
                 $day = $_COOKIE["day"];
-                $error_message .= "*That day has already been entered in at some point.*</h3><p>If you wish to edit that day
+                $error_message .= "*That day has already been entered at some point.*</h3><p>If you wish to edit that day
                 please use this link: <a href='edit_day.php?day='$day'>Edit $day</a></p>";
                 break;
             case "unknown":
