@@ -114,7 +114,7 @@
 
         $day_statement->execute();
 
-        return $day_statement->fetch(PDO::FETCH_NUM)[0];*/
+        return $day_statement->fetch(PDO::FETCH_NUM)[0];
     }
 
     function get_type_id($type_name, $db){
