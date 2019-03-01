@@ -38,6 +38,7 @@
 
     $error_message = NULL;
     if(isset($_COOKIE["bad_input"])){
+        echo $_COOKIE["bad_input"];
         $error_message = "<h3 id='error'>";
         switch ($_COOKIE["bad_input"]){
             case "productive":
