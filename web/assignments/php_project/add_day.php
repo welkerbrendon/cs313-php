@@ -54,7 +54,7 @@
             case "already_exists":
                 $day = $_COOKIE["day"];
                 $error_message .= "*That day has already been entered at some point.*</h3><p>If you wish to edit that day
-                please use this link: <a href='edit_day.php?day='" . $day . "'>Edit</a></p>";
+                please use this link: <a href='edit_day.php?day=" . $day . ">Edit</a></p>";
                 break;
             case "unknown":
                 $error_message .= "*Please make sure each activity entered has a start time, end time, activity type, and 
