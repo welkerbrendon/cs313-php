@@ -10,6 +10,7 @@
         <div class="not_nav">
             <h1>Please Sign In</h1>
             <?php
+                echo print_r($_COOKIE);
                 if($_COOKIE["valid_user"] == "False"){
                     echo "<h3 id='error'>*Invalid username and/or password.
                     Feel free to use the link below to create a new account.*</h3>";
