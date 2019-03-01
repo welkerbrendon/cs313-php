@@ -89,7 +89,7 @@
         $day_already_exists = $db->prepare("SELECT id FROM day WHERE id=:day_id");
         $day_already_exists->bindValue(":day_id", $day_id, PDO::PARAM_STR);
         $day_already_exists->execute();
-        if($day_already_exists->fetch(PDO::FETCH_NUM)[0]){
+        if($day_already_exists->fetch(PDO::FETCH_NUM)){
             setcookie("bad_input", "already_exists", time() + 2);
             setcookie("day", $day, time() + 2);
             header("Location: add_day.php");
