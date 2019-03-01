@@ -17,8 +17,8 @@
     if($srt_eq_end && $prod_eq_act && $end_eq_prod){
         $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
 
-        $day_id = insert_new_day($user_id, $day, $db);
-        $type_id = NULL;
+        /*$day_id = */insert_new_day($user_id, $day, $db);
+        /*$type_id = NULL;
         $start = NULL;
         $end = NULL;
         $productive = NULL;
@@ -83,7 +83,7 @@
         setcookie("bad_input", "unknown", time() + 2);
         header("Location: add_day.php");
         exit;
-    }
+    }*/
 
     function insert_new_day($user_id, $day, $db){
         $day_already_exists = $db->prepare("SELECT id FROM day WHERE id=:day_id");
@@ -96,7 +96,7 @@
             setcookie("day", $day, time() + 2);
             header("Location: add_day.php");
             exit;
-        }
+        }/*
         $day_statement = $db->prepare("INSERT INTO day (id, given_day, user_id, created_at, last_updated)
                                        VALUES (:day_id, :date, :user_id, now(), now())");
         $day_statement->bindValue(":day_id", "$day-$user_id", PDO::PARAM_STR);
@@ -114,7 +114,7 @@
 
         $day_statement->execute();
 
-        return $day_statement->fetch(PDO::FETCH_NUM)[0];
+        return $day_statement->fetch(PDO::FETCH_NUM)[0];*/
     }
 
     function get_type_id($type_name, $db){
