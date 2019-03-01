@@ -42,22 +42,23 @@
         $error_message = "<h3 id='error'>";
         switch ($_COOKIE["bad_input"]){
             case "productive":
-                $error_message = "*Please make sure to select one and only one option for whether an activity is productive.*</h3>";
+                $error_message .= "*Please make sure to select one and only one option for whether an activity is productive.*</h3>";
                 break;
             case "times":
             case "start_time":
             case "end_time":
-                $error_message = "*Please make sure to give a start AND end time for each activity entered.*</h3>";
+                $error_message .= "*Please make sure to give a start AND end time for each activity entered.*</h3>";
                 break;
             case "activity_type":
-                $error_message = "*Please make sure to select an activity type for each activity entered.*</h3>";
+                $error_message .= "*Please make sure to select an activity type for each activity entered.*</h3>";
                 break;
             case "already_exists":
                 $day = $_COOKIE["day"];
-                $error_message = "*That day has already been entered in at some point.*</h3><p>If you wish to edit that day
+                $error_message .= "*That day has already been entered in at some point.*</h3><p>If you wish to edit that day
                 please use this link: <a href='edit_day.php?day='$day'>Edit $day</a></p>";
+                break;
             case "unknown":
-                $error_message = "*Please make sure each activity entered has a start time, end time, activity type, and 
+                $error_message .= "*Please make sure each activity entered has a start time, end time, activity type, and 
                 is either labeled as productive or unproductive.*</h3>";
         }
     }
