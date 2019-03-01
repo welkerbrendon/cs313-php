@@ -38,21 +38,26 @@
 
     $error_message = NULL;
     if(isset($_COOKIE["bad_input"])){
+        $error_message = "<h3 id='error'>";
         switch ($_COOKIE["bad_input"]){
             case "productive":
-                $error_message = "*Please make sure to select one and only one option for whether an activity is productive.*";
+                $error_message = "*Please make sure to select one and only one option for whether an activity is productive.*</h3>";
                 break;
             case "times":
             case "start_time":
             case "end_time":
-                $error_message = "*Please make sure to give a start AND end time for each activity entered.*";
+                $error_message = "*Please make sure to give a start AND end time for each activity entered.*</h3>";
                 break;
             case "activity_type":
-                $error_message = "*Please make sure to select an activity type for each activity entered.*";
+                $error_message = "*Please make sure to select an activity type for each activity entered.*</h3>";
                 break;
+            case "already_exists":
+                $day = $_COOKIE["day"];
+                $error_message = "*That day has already been entered in at some point.*</h3><p>If you wish to edit that day
+                please use this link: <a href='edit_day.php?day='$day'>Edit $day</a></p>";
             case "unknown":
                 $error_message = "*Please make sure each activity entered has a start time, end time, activity type, and 
-                is either labeled as productive or unproductive.*";
+                is either labeled as productive or unproductive.*</h3>";
         }
     }
 
@@ -69,7 +74,7 @@
         <?php include '../../home/nav.php'; ?>
         <div>
             <h1>Fill in the following information and click save when done.</h1>
-            <h3 id="error"><?php echo $error_message; ?></h3>
+            <?php echo $error_message; ?>
             <form action="add_day_to_db.php" method="post">
                 <label for="date"><h2>Date of Activities</label>
                 <input type="date" id="date" name="date"></h2><br>
