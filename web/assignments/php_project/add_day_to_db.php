@@ -17,7 +17,7 @@
     if($srt_eq_end && $prod_eq_act && $end_eq_prod){
         $user_id = get_user_id($_COOKIE["username"], $_COOKIE["password"], $db);
 
-        /*$day_id = */insert_new_day($user_id, $day, $db);
+        /*$day_id = */insert_new_day($user_id, $day, $db);}
         /*$type_id = NULL;
         $start = NULL;
         $end = NULL;
