@@ -86,7 +86,7 @@
     }
 
     function insert_new_day($user_id, $day, $db){
-        $day_already_exists = $db->prepare("SELECT id FROM day WHERE day_id=:day_id");
+        $day_already_exists = $db->prepare("SELECT id FROM day WHERE id=:day_id");
         $day_already_exists->bindValue(":day_id", $day_id, PDO::PARAM_STR);
         $day_already_exists->execute();
         if($day_already_exists->fetch(PDO::FETCH_NUM)[0]){
